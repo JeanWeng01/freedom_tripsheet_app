@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Driver, TripSheet, AppScreen } from './types';
 import DriverSelectScreen from './screens/DriverSelectScreen';
 import RouteSelectScreen from './screens/RouteSelectScreen';
 import TripSheetScreen from './screens/TripSheetScreen';
 import SubmitScreen from './screens/SubmitScreen';
+import { syncTrip, submitTrip } from './utils/api';
+import type { SubmitResult } from './utils/api';
 
 const STORAGE_KEY = 'freedomTripState';
 const HISTORY_KEY = 'freedomTripHistory';
@@ -56,11 +58,27 @@ export default function App() {
   const [driver, setDriver] = useState<Driver | null>(saved.driver ?? null);
   const [trip, setTrip] = useState<TripSheet | null>(saved.trip ?? null);
   const [submittedTrip, setSubmittedTrip] = useState<TripSheet | null>(null);
+  const [submitResult, setSubmitResult] = useState<SubmitResult | null>(null);
 
-  // Auto-save on every state change
+  // Auto-save to localStorage on every state change
   useEffect(() => {
     saveState({ screen, driver, trip });
   }, [screen, driver, trip]);
+
+  // Periodic backend sync every 30s while trip is active
+  const syncRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  useEffect(() => {
+    if (screen !== 'trip-sheet' || !trip) {
+      if (syncRef.current) clearInterval(syncRef.current);
+      return;
+    }
+    syncRef.current = setInterval(() => {
+      if (trip) syncTrip(trip);
+    }, 30_000);
+    return () => {
+      if (syncRef.current) clearInterval(syncRef.current);
+    };
+  }, [screen, trip]);
 
   // Warn browser on refresh/close when trip is in progress
   useEffect(() => {
@@ -87,10 +105,21 @@ export default function App() {
     setTrip(t);
   }
 
-  function handleSubmit(t: TripSheet) {
+  async function handleSubmit(t: TripSheet) {
     archiveTrip(t);
-    setSubmittedTrip(t);
     clearState();
+
+    let result: SubmitResult | null = null;
+    try {
+      result = await submitTrip(t);
+    } catch (e) {
+      // Backend unavailable — proceed to confirm screen without download link.
+      // Data is safe in localStorage history.
+      console.warn('Backend submit failed:', e);
+    }
+
+    setSubmittedTrip(t);
+    setSubmitResult(result);
     setScreen('submit-confirm');
   }
 
@@ -104,6 +133,7 @@ export default function App() {
   function handleNewTrip() {
     setTrip(null);
     setSubmittedTrip(null);
+    setSubmitResult(null);
     setDriver(null);
     setScreen('driver-select');
   }
@@ -131,6 +161,7 @@ export default function App() {
       {screen === 'submit-confirm' && submittedTrip && (
         <SubmitScreen
           trip={submittedTrip}
+          submitResult={submitResult}
           onNewTrip={handleNewTrip}
         />
       )}

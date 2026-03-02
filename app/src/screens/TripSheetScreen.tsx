@@ -233,7 +233,7 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
       {activeTab === 'trip' && (
         <div className="flex-1 overflow-y-auto">
           <div className="px-4 py-4 space-y-3 pb-24">
-            <TripHeader header={trip.header} onChange={h => updateTrip({ header: h })} />
+            <TripHeader header={trip.header} tripId={trip.id} onChange={h => updateTrip({ header: h })} />
             <div className="text-sm text-slate-600 px-1">
               {stopCount} stops · hold to reorder
             </div>

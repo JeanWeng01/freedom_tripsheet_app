@@ -17,12 +17,15 @@ export function newId(): string {
 }
 
 /** Generate trip sheet unique ID: driverCode3 + weekdayCode + monthCode + dayCode */
+// Month codes: 1–9 = Jan–Sep, O = Oct, N = Nov, D = Dec
+const MONTH_CODES = ['1','2','3','4','5','6','7','8','9','O','N','D'];
+
 export function generateTripId(driverCode3: string, date: Date): string {
-  const weekdayCode = date.getDay(); // 0=Sun...6=Sat
-  const monthCode = date.getMonth() + 1; // 1-12
-  const dayCode = date.getDate(); // 1-31
-  // Format: 3-letter code + weekday(1) + month(1) + day(2) = 7 chars
-  return `${driverCode3}${weekdayCode}${monthCode}${String(dayCode).padStart(2, '0')}`;
+  const weekdayCode = date.getDay();           // 0=Sun … 6=Sat
+  const monthCode = MONTH_CODES[date.getMonth()]; // always 1 char
+  const dayCode = String(date.getDate()).padStart(2, '0');
+  // Format: 3-letter code + weekday(1) + month(1) + day(2) = 7 chars always
+  return `${driverCode3}${weekdayCode}${monthCode}${dayCode}`;
 }
 
 // ─── Time utilities ──────────────────────────────────────────────────────────

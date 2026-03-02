@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { CheckCircle, RotateCcw, Share2 } from 'lucide-react';
+import { CheckCircle, RotateCcw, Share2, Download, AlertTriangle } from 'lucide-react';
 import type { TripSheet, SRStop, LHStop, MDCStop } from '../types';
+import type { SubmitResult } from '../utils/api';
 import { minutesToLabel, stopDisplayName } from '../utils/tripUtils';
 
 interface Props {
   trip: TripSheet;
+  submitResult: SubmitResult | null;
   onNewTrip: () => void;
 }
 
@@ -41,7 +43,7 @@ function formatTripText(trip: TripSheet): string {
   return lines.join('\n');
 }
 
-export default function SubmitScreen({ trip, onNewTrip }: Props) {
+export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
   const [shareStatus, setShareStatus] = useState<'idle' | 'copied'>('idle');
 
   const { header, stops } = trip;
@@ -54,12 +56,11 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
   });
 
-  // Build simulated filename
   const dateForFile = new Date(header.date + 'T12:00:00').toLocaleDateString('en-CA', {
     year: 'numeric', month: '2-digit', day: '2-digit'
   }).replace(/-/g, '.');
   const firstName = header.driverName.split(' ')[0];
-  const filename = `[${dateForFile}] ${header.routeNumber} ${firstName}.xlsx`;
+  const filename = submitResult?.filename ?? `[${dateForFile}] ${header.routeNumber} ${firstName}.xlsx`;
 
   async function handleShare() {
     const text = formatTripText(trip);
@@ -77,23 +78,43 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
     }
   }
 
+  const isFlagged = submitResult?.status === 'flagged';
+  const backendDown = submitResult === null;
+
   return (
     <div className="flex flex-col h-dvh bg-slate-900 px-5">
       <div className="flex-1 flex flex-col items-center justify-center text-center">
         <img src="/logo.png" alt="Freedom Transportation" className="h-16 mb-4" />
 
-        {/* Success icon */}
         <div className="w-20 h-20 rounded-full bg-green-900/40 border-2 border-green-600 flex items-center justify-center mb-6">
           <CheckCircle className="w-10 h-10 text-green-400" />
         </div>
 
         <h1 className="text-2xl font-bold text-white mb-2">Trip sheet submitted!</h1>
-        <p className="text-slate-400 text-sm mb-8 max-w-sm">
-          Your trip data has been saved. The Excel file will be generated and ready for the owner.
+        <p className="text-slate-400 text-sm mb-6 max-w-sm">
+          Your trip data has been saved.
         </p>
 
+        {isFlagged && (
+          <div className="w-full max-w-sm flex items-start gap-2.5 bg-amber-900/20 border border-amber-700/50 rounded-xl px-3 py-2.5 mb-4 text-left">
+            <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+            <p className="text-amber-300 text-sm">
+              Excel file generated but flagged for review — the owner will check it.
+            </p>
+          </div>
+        )}
+
+        {backendDown && (
+          <div className="w-full max-w-sm flex items-start gap-2.5 bg-slate-800 border border-slate-600 rounded-xl px-3 py-2.5 mb-4 text-left">
+            <AlertTriangle className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
+            <p className="text-slate-400 text-sm">
+              Could not reach the server — data saved locally. Excel will be generated when the server is back online.
+            </p>
+          </div>
+        )}
+
         {/* Summary card */}
-        <div className="w-full max-w-sm bg-slate-800 border border-slate-700 rounded-2xl p-4 text-left space-y-3 mb-8">
+        <div className="w-full max-w-sm bg-slate-800 border border-slate-700 rounded-2xl p-4 text-left space-y-3 mb-6">
           <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Trip summary</div>
           <div className="space-y-2 text-sm">
             <Row label="Driver" value={header.driverName} />
@@ -106,12 +127,15 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
               <Row label="Finish time" value={minutesToLabel(finishTime)} />
             )}
             <Row label="Active stops" value={String(activeStops.length)} />
-            <Row label="Photos" value={String(trip.photoCount)} />
             <Row label="Trip ID" value={`#${trip.id}`} mono />
           </div>
           <div className="pt-2 border-t border-slate-700">
             <div className="text-xs text-slate-500 mb-1">Output file</div>
-            <div className="font-mono text-xs text-green-400 bg-green-950/30 px-2 py-1.5 rounded-lg break-all">
+            <div className={`font-mono text-xs px-2 py-1.5 rounded-lg break-all ${
+              isFlagged
+                ? 'text-amber-400 bg-amber-950/30'
+                : 'text-green-400 bg-green-950/30'
+            }`}>
               {filename}
             </div>
           </div>
@@ -120,6 +144,21 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
 
       {/* Actions */}
       <div className="pb-10 space-y-3">
+        {submitResult && (
+          <a
+            href={submitResult.downloadUrl}
+            download={submitResult.filename}
+            className={`w-full py-4 font-semibold rounded-2xl transition-colors flex items-center justify-center gap-2 ${
+              isFlagged
+                ? 'bg-amber-700 hover:bg-amber-600 text-white'
+                : 'bg-green-700 hover:bg-green-600 text-white'
+            }`}
+          >
+            <Download className="w-4 h-4" />
+            Download Excel file
+          </a>
+        )}
+
         <button
           onClick={handleShare}
           className="w-full py-4 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-2xl transition-colors flex items-center justify-center gap-2"
@@ -127,6 +166,7 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
           <Share2 className="w-4 h-4" />
           {shareStatus === 'copied' ? 'Copied to clipboard!' : 'Save / Share a copy'}
         </button>
+
         <button
           onClick={onNewTrip}
           className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-2xl transition-colors flex items-center justify-center gap-2"
@@ -134,6 +174,7 @@ export default function SubmitScreen({ trip, onNewTrip }: Props) {
           <RotateCcw className="w-4 h-4" />
           Start new trip sheet
         </button>
+
         <p className="text-xs text-center text-slate-600">
           A copy of this trip is saved locally on this device.
         </p>

@@ -5,7 +5,12 @@
       "Bash(npx tailwindcss init -p)",
       "Bash(npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities lucide-react clsx)",
       "Bash(npm install -D xlsx)",
-      "Bash(node scripts/extract-data.mjs)"
+      "Bash(node scripts/extract-data.mjs)",
+      "Bash(python -m venv venv)",
+      "Bash(source venv/Scripts/activate)",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(python -c \"import database; import excel_gen; import main; print\\(''All imports OK''\\)\")",
+      "Bash(curl -s http://localhost:8000/api/trips)"
     ]
   }
 }

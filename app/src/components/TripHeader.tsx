@@ -6,10 +6,11 @@ import { minutesToLabel } from '../utils/tripUtils';
 
 interface Props {
   header: TripHeaderType;
+  tripId: string;
   onChange: (updated: TripHeaderType) => void;
 }
 
-export default function TripHeader({ header, onChange }: Props) {
+export default function TripHeader({ header, tripId, onChange }: Props) {
   const [expanded, setExpanded] = useState(true);
 
   function update(patch: Partial<TripHeaderType>) {
@@ -30,7 +31,10 @@ export default function TripHeader({ header, onChange }: Props) {
       >
         <div className="flex-1 min-w-0">
           <div className="text-white font-semibold text-base">{header.routeNumber} — {header.driverName.split(' ')[0]}</div>
-          <div className="text-slate-400 text-sm mt-0.5">{dateLabel}</div>
+          <div className="flex items-baseline justify-between gap-2 mt-0.5">
+            <span className="text-slate-400 text-sm">{dateLabel}</span>
+            <span className="text-slate-500 text-xs font-mono flex-shrink-0">#{tripId}</span>
+          </div>
           <div className="flex items-center gap-3 mt-1.5 text-sm text-slate-500 flex-wrap">
             {header.clockInTime !== null && (
               <span className="text-green-500">Clock-in: {minutesToLabel(header.clockInTime)}</span>
