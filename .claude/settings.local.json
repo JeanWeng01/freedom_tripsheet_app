@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install -D tailwindcss@3 postcss autoprefixer)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities lucide-react clsx)",
+      "Bash(npm install -D xlsx)",
+      "Bash(node scripts/extract-data.mjs)"
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+import { useState, useEffect } from 'react';
+import type { Driver, TripSheet, AppScreen } from './types';
+import DriverSelectScreen from './screens/DriverSelectScreen';
+import RouteSelectScreen from './screens/RouteSelectScreen';
+import TripSheetScreen from './screens/TripSheetScreen';
+import SubmitScreen from './screens/SubmitScreen';
+
+const STORAGE_KEY = 'freedomTripState';
+const HISTORY_KEY = 'freedomTripHistory';
+
+interface PersistedState {
+  screen: AppScreen;
+  driver: Driver | null;
+  trip: TripSheet | null;
+}
+
+function loadState(): Partial<PersistedState> {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return {};
+}
+
+function saveState(state: PersistedState) {
+  try {
+    // Don't persist submit-confirm screen — always restart fresh after submit
+    const toSave = state.screen === 'submit-confirm'
+      ? { ...state, screen: 'driver-select' as AppScreen, trip: null }
+      : state;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
+  } catch {}
+}
+
+function clearState() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch {}
+}
+
+function archiveTrip(t: TripSheet) {
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY);
+    const history: TripSheet[] = raw ? JSON.parse(raw) : [];
+    history.unshift(t);
+    if (history.length > 10) history.splice(10);
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  } catch {}
+}
+
+export default function App() {
+  const saved = loadState();
+
+  const [screen, setScreen] = useState<AppScreen>(
+    // Restore to trip-sheet if there was an in-progress trip
+    saved.screen === 'trip-sheet' && saved.trip ? 'trip-sheet' : 'driver-select'
+  );
+  const [driver, setDriver] = useState<Driver | null>(saved.driver ?? null);
+  const [trip, setTrip] = useState<TripSheet | null>(saved.trip ?? null);
+  const [submittedTrip, setSubmittedTrip] = useState<TripSheet | null>(null);
+
+  // Auto-save on every state change
+  useEffect(() => {
+    saveState({ screen, driver, trip });
+  }, [screen, driver, trip]);
+
+  // Warn browser on refresh/close when trip is in progress
+  useEffect(() => {
+    if (screen !== 'trip-sheet') return;
+    const handler = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handler);
+    return () => window.removeEventListener('beforeunload', handler);
+  }, [screen]);
+
+  function handleDriverSelect(d: Driver) {
+    setDriver(d);
+    setScreen('route-select');
+  }
+
+  function handleTripStart(t: TripSheet) {
+    setTrip(t);
+    setScreen('trip-sheet');
+  }
+
+  function handleTripChange(t: TripSheet) {
+    setTrip(t);
+  }
+
+  function handleSubmit(t: TripSheet) {
+    archiveTrip(t);
+    setSubmittedTrip(t);
+    clearState();
+    setScreen('submit-confirm');
+  }
+
+  function handleDiscard() {
+    clearState();
+    setTrip(null);
+    setDriver(null);
+    setScreen('driver-select');
+  }
+
+  function handleNewTrip() {
+    setTrip(null);
+    setSubmittedTrip(null);
+    setDriver(null);
+    setScreen('driver-select');
+  }
+
+  return (
+    <div className="min-h-dvh bg-slate-900 text-slate-100">
+      {screen === 'driver-select' && (
+        <DriverSelectScreen onSelect={handleDriverSelect} />
+      )}
+      {screen === 'route-select' && driver && (
+        <RouteSelectScreen
+          driver={driver}
+          onBack={() => setScreen('driver-select')}
+          onStart={handleTripStart}
+        />
+      )}
+      {screen === 'trip-sheet' && trip && driver && (
+        <TripSheetScreen
+          trip={trip}
+          onTripChange={handleTripChange}
+          onSubmit={handleSubmit}
+          onDiscard={handleDiscard}
+        />
+      )}
+      {screen === 'submit-confirm' && submittedTrip && (
+        <SubmitScreen
+          trip={submittedTrip}
+          onNewTrip={handleNewTrip}
+        />
+      )}
+    </div>
+  );
+}

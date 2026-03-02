@@ -1,0 +1,1367 @@
+[
+  {
+    "code": "",
+    "name": "YUMMY MARKET MAPLE VAUGHAN",
+    "allowanceMinutes": 15
+  },
+  {
+    "code": "",
+    "name": "YUMMY MARKET 4400 DUFFERIN NORTH YORK",
+    "allowanceMinutes": 15
+  },
+  {
+    "code": "",
+    "name": "STARSKY FOODS DUNDAS - 3115 Dundas",
+    "allowanceMinutes": 15
+  },
+  {
+    "code": "",
+    "name": "STARSKY FOODS MISSISSAUGA - 2040 Dundas",
+    "allowanceMinutes": 15
+  },
+  {
+    "code": "",
+    "name": "EAST-WEST FOODS DIST.INC.",
+    "allowanceMinutes": 15
+  },
+  {
+    "code": "C162",
+    "name": "COSTCO CANADA #162 BRAMPTON",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C252",
+    "name": "COSTCO CANADA #252 BARRIE",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C1655",
+    "name": "COSTCO CANADA #1655 ISLINGTON",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C512",
+    "name": "COSTCO CANADA #512 KITCHENER",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C1265",
+    "name": "COSTCO CANADA #1265 ORILLIA",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C530",
+    "name": "COSTCO CANADA #530 NORTH LONDON",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C508",
+    "name": "COSTCO CANADA #508 LONDON",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C1105",
+    "name": "COSTCO CANADA #1105 ANCASTER",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C523",
+    "name": "COSTCO CANADA #523 ST.CATHARINES",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "C1273",
+    "name": "COSTCO CANADA #1273 STONEYCREEK",
+    "allowanceMinutes": 30
+  },
+  {
+    "code": "FDL6283",
+    "name": "FOODLAND #6283 THOROLD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "FDL6767",
+    "name": "FOODLAND #6767 TOTTENHAM",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "FDL6766",
+    "name": "FOODLAND #6766 SMITHVILLE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "FDL6837",
+    "name": "FOODLAND #6837 NEWCASTLE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "FDL3399",
+    "name": "FOODLAND #3399 STROUD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3881",
+    "name": "FRESHCO #3881 BARTON & STRATHEARNE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3815",
+    "name": "FRESHCO #3815 RYMAL RD & UPPER GAGE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3816",
+    "name": "FRESHCO #3816 AIRPORT CHALO",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3821",
+    "name": "FRESHCO #3821 BROCK & GEORGE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3822",
+    "name": "FRESHCO #3822 BROADWAY & DAWSON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3823",
+    "name": "FRESHCO #3823 JANE & DENSION",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3883",
+    "name": "FRESHCO #3883 BROCK & GILBERT",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9579",
+    "name": "FRESHCO #9579 QUEENSTON & NASH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3834",
+    "name": "FRESHCO #3834 BINBROOK",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3838",
+    "name": "FRESHCO #3838 DUNDAS & RUNNYMEDE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3842",
+    "name": "FRESHCO #3842 HURONTARIO",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3844",
+    "name": "FRESHCO #3844 GUELPH & SINCLAIR",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3846",
+    "name": "FRESHCO #3846 MAJOR MACKENZIE & WESTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3847",
+    "name": "FRESHCO #3847 SPEEDVALE & STEVENSON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3856",
+    "name": "FRESHCO #3856 DUFFERIN & DUPONT",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3857",
+    "name": "FRESHCO #3857 BOVAIRD & CONESTOGA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3889",
+    "name": "FRESHCO #3889 QUEEN & MCLAUGHLIN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3859",
+    "name": "FRESHCO #3859 DIXIE & DUNDAS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3860",
+    "name": "FRESHCO #3860 FINANCIAL",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3861",
+    "name": "FRESHCO #3861 BALDWIN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9550",
+    "name": "FRESHCO #9550 STEELES AV VAUGHAN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3865",
+    "name": "FRESHCO #3865 KINGSTON & WHITES",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3314",
+    "name": "FRESHCO #3314 NORTHCOTE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3870",
+    "name": "FRESHCO #3870 SIMCOE & BYNG",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9658",
+    "name": "FRESHCO #9658 BLOOR & DUNDAS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9662",
+    "name": "FRESHCO #9662 LAWRENCE & MIDLAND",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9587",
+    "name": "FRESHCO #9587 KING & WILSON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9679",
+    "name": "FRESHCO #9679 GERRARD & VICTORIA PK",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9572",
+    "name": "FRESHCO #9572 DUNDAS & ERINDALE STATION",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9578",
+    "name": "FRESHCO #9578 ALLISTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9690",
+    "name": "FRESHCO #9690 UPPER GAGE & FENNELL",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9705",
+    "name": "FRESHCO #9705 BRITANIA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9712",
+    "name": "FRESHCO #9712 THIRD LINE & DUNDAS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9563",
+    "name": "FRESHCO #9563 UPPER MID & WALKERS LINE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9576",
+    "name": "FRESHCO #9576 KING & TOWNLINE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9731",
+    "name": "FRESHCO #9731 ONTARIO & CARLTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9745",
+    "name": "FRESHCO #9745 BUNTING & WELLAND",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9748",
+    "name": "FRESHCO #9748 MAJOR MACKENZIE & LESLIE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9577",
+    "name": "FRESHCO #9577 LANSDOWNE & THE PARKWAY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9778",
+    "name": "FRESHCO #9778 JANE & FINCH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9548",
+    "name": "FRESHCO #9548 BARTON & GAGE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9594",
+    "name": "FRESHCO #9594 BAYFIELD & LIVINGSTONE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3876",
+    "name": "FRESHCO #3876 MCCOWAN & ELLESMERE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3875",
+    "name": "FRESHCO #3875 MCCOWAN & 16TH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9868",
+    "name": "FRESHCO #9868 HY 2 & KENDALWOOD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9544",
+    "name": "FRESHCO #9544 EGLINTON & GABIAN WAY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9621",
+    "name": "FRESHCO #9621 WENTWORTH & CEDAR",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9575",
+    "name": "FRESHCO #9575 CITY CENTRE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9976",
+    "name": "FRESHCO #9976 TRENTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "P.C. #9604 BRIDLEWOOD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3850",
+    "name": "FRESHCO #3850 LESLIE & LAKESHORE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "2176407 ONTARIO INC. (FOODY MART)",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "ARAMARK MISSISSAUGA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "FARM BOY LAKESHORE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "GALATI MARKET FRESH #10534",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "HIGHLAND FARMS INC.(ELLE)",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "HIGHLAND FARMS INC.(MATHESON)",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "HIGHLAND FARMS INC.(VAUGHAN)",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "IMPERIAL COFFEE SERVICES INC.",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "SELENA / VAN HOUTTE COFFEE SERVICES INC",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "WORLDWIDE WHOLESALE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "M704",
+    "name": "METRO LOEB #704 LLOYD MANOR",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "M11037",
+    "name": "METRO LOEB #11037 DANFORTH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "M786",
+    "name": "METRO LOEB #786 DON MILLS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S639",
+    "name": "SOBEYS #639 ACTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S925",
+    "name": "SOBEYS #0925 OSHAWA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4719",
+    "name": "SOBEYS #4719 MILTON EXTRA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4726",
+    "name": "SOBEYS #4726 LAIRD & WICKSTEED",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4728",
+    "name": "SOBEYS #4728 TODMORDEN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4731",
+    "name": "SOBEYS #4731 BRONTE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4737",
+    "name": "SOBEYS #4737 STONEY CREEK",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S637",
+    "name": "SOBEYS #637 MAPLE GROVE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S641",
+    "name": "SOBEYS #641 HIGHLAND",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S642",
+    "name": "SOBEYS #642 GRIMSBY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S3657",
+    "name": "SOBEYS #3657 AJAX",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S659",
+    "name": "SOBEYS #659 CLARK & HILDA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S667",
+    "name": "SOBEYS #667 SOUTH AJAX",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4162",
+    "name": "SOBEYS #4162 BRADFORD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S6730",
+    "name": "SOBEYS #6730 FLAMBOROUGH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S685",
+    "name": "SOBEYS #685 IRA NEEDLES",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S694",
+    "name": "SOBEYS #694 ANCASTER EXTRA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S707",
+    "name": "SOBEYS #707 NORTH PARK",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S7368",
+    "name": "SOBEYS #7368 ALCONA BEACH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S7380",
+    "name": "SOBEYS #7380 BRAMPTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S7383",
+    "name": "SOBEYS #7383 QUEENSWAY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S741",
+    "name": "SOBEYS #741 KIPLING",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S742",
+    "name": "SOBEYS #742 BURLINGTON  EXTRA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S743",
+    "name": "SOBEYS #743 BAYVIEW AVE AURORA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S7466",
+    "name": "SOBEYS #7466 ORANGEVILLE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S777",
+    "name": "SOBEYS #777 ABBEY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S794",
+    "name": "SOBEYS #794 VAUGHAN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S851",
+    "name": "SOBEYS #851 WHITBY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S859",
+    "name": "SOBEYS #859 BEAMSVILLE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S865",
+    "name": "SOBEYS #865 MAYFIELD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S916",
+    "name": "SOBEYS #916 SCOTT/NIAGARA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S922",
+    "name": "SOBEYS #922 MISSISSAUGA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S928",
+    "name": "SOBEYS #928 JEFFERSON SQUARE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4064",
+    "name": "SOBEYS #4064 GLENDALE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S938",
+    "name": "SOBEYS #938 DANFORTH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S939",
+    "name": "SOBEYS #939 DUPONT",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "",
+    "name": "FOODLAND #6358 ELMIRA",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9742",
+    "name": "FRESHCO #9742 UNIVERSITY & BRIDGE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3811",
+    "name": "FRESHCO #3811 KALAR & LUNDY'S LANE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9718",
+    "name": "FRESHCO #9718 ONTARIO & SOUTHWORTH",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9876",
+    "name": "FRESHCO #9876 DUNDAS & MAIN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9547",
+    "name": "FRESHCO #9547 WEBER & FRANKLIN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9564",
+    "name": "FRESHCO #9564 HESPELER & DUNDAS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3902",
+    "name": "FRESHCO #3902 ST DAVID & GORDON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S709",
+    "name": "SOBEYS #709 SHELLARD LANE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S878",
+    "name": "SOBEYS #878 WATERLOO",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S6715",
+    "name": "SOBEYS #6715 FONTHILL",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S852",
+    "name": "SOBEYS #852 FISCHER HALLMAN",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S649",
+    "name": "SOBEYS #649 BRIDGEPORT",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S678",
+    "name": "SOBEYS #678 CAMBRIDGE",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S6729",
+    "name": "SOBEYS #6729 SOUTH PELHAM",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S4729",
+    "name": "SOBEYS #4729 NORTHFIELD",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S915",
+    "name": "SOBEYS #915 NIAGARA FALLS",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "S6716",
+    "name": "SOBEYS #6716 NEW HAMBURG",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3313",
+    "name": "FRESHCO #3313 BATHURST",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3894",
+    "name": "FRESHCO #3894 ST LAURENT",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9612",
+    "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F4015",
+    "name": "FRESHCO #4015 TAUNTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F9611",
+    "name": "FRESHCO #9611 THOMAS &10 TH CHALO.",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3817",
+    "name": "FRESHCO #3817 WINCHESTER",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3892",
+    "name": "FRESHCO #3892 CLARINGTON",
+    "allowanceMinutes": 45
+  },
+  {
+    "code": "F3837",
+    "name": "FRESHCO #3837 COTTRELLE & 50",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "F9693",
+    "name": "FRESHCO #9693 GOREWAY",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "F3887",
+    "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "F3887PM",
+    "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "F9888",
+    "name": "FRESHCO #9888 CHINGUA & SANDALWOOD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C151",
+    "name": "COSTCO CANADA #151 MARKHAM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C591",
+    "name": "COSTCO CANADA #591 PETERBORO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1667",
+    "name": "COSTCO CANADA #1667 HARRY WALKER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1668",
+    "name": "COSTCO CANADA #1668 NEWMARKET BC",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1740",
+    "name": "COSTCO CANADA #1740 BUSINESS CENTER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C253",
+    "name": "COSTCO CANADA #253 BURLINGTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1591",
+    "name": "COSTCO CANADA #1591 NORTH OSHAWA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1128",
+    "name": "COSTCO CANADA #1128 OSHAWA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1168",
+    "name": "COSTCO CANADA #1168 GUELPH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1169",
+    "name": "COSTCO CANADA #1169 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1248",
+    "name": "COSTCO CANADA #1248 WATERLOO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1248PM",
+    "name": "COSTCO CANADA #1248 WATERLOO PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1261",
+    "name": "COSTCO CANADA #1261 VAUGHAN",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1261PM",
+    "name": "COSTCO CANADA #1261 VAUGHAN PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1316",
+    "name": "COSTCO CANADA #1316 THORNCLIFFE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C1414",
+    "name": "COSTCO CANADA #1414 NIAGARA FALLS",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C159",
+    "name": "COSTCO CANADA #159 AJAX",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C524",
+    "name": "COSTCO CANADA #524 ETOBICOKE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C526",
+    "name": "COSTCO CANADA #526 RODEO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C526PM",
+    "name": "COSTCO CANADA #526 RODEO PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C531",
+    "name": "COSTCO CANADA #531 LAIRD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C531PM",
+    "name": "COSTCO CANADA #531 LAIRD PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C535",
+    "name": "COSTCO CANADA #535 DOWNSVIEW",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C537",
+    "name": "COSTCO CANADA #537 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C537PM",
+    "name": "COSTCO CANADA #537 SCARBOROUGH PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C545",
+    "name": "COSTCO CANADA #545 MARKHAM EAST",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C545PM",
+    "name": "COSTCO CANADA #545 MARKHAM EAST PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C547",
+    "name": "COSTCO CANADA #547 WOODBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C592",
+    "name": "COSTCO CANADA #592 RICHMOND HILL",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C595",
+    "name": "COSTCO CANADA #595 BUSINESS CENTER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "C595PM",
+    "name": "COSTCO CANADA #595 BUSINESS CENTER PM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1156",
+    "name": "WAL MART SUPERCENTRE #1156 WATERLOO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3045",
+    "name": "WAL MART SUPERCENTRE #3045 KITCHENER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1199",
+    "name": "WAL MART SUPERCENTRE #1199 GUELPH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1000",
+    "name": "WAL MART SUPERCENTRE #1000 MILTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1001",
+    "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1004",
+    "name": "WAL MART SUPERCENTRE #1004 YORK",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1012",
+    "name": "WAL MART SUPERCENTRE #1012 KESWICK",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1023",
+    "name": "WAL MART SUPERCENTRE #1023 PARRY SOUND",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1029",
+    "name": "WAL MART SUPERCENTRE #1029 STOUFVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1039",
+    "name": "WAL MART SUPERCENTRE #1039 COLLINGWOOD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1054",
+    "name": "WAL MART SUPERCENTRE #1054 BRACEBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1056",
+    "name": "WAL MART SUPERCENTRE #1056 OSHAWA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1061",
+    "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1069",
+    "name": "WAL MART SUPERCENTRE #1069 PORT PERRY",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1079",
+    "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1080",
+    "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1081",
+    "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1083",
+    "name": "WAL MART SUPERCENTRE #1083 ALLISTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1087",
+    "name": "WAL MART SUPERCENTRE #1087 WASAGA BEACH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1095",
+    "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1101",
+    "name": "WAL MART SUPERCENTRE #1101 BRADFORD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1109",
+    "name": "WAL MART SUPERCENTRE #1109 MARKHAM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1115",
+    "name": "WAL MART SUPERCENTRE #1115 MAPLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1116",
+    "name": "WAL MART SUPERCENTRE #1116 RICHMOND HILL",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1117",
+    "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1120",
+    "name": "WAL MART SUPERCENTRE #1120 BRAMPTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1126",
+    "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1127",
+    "name": "WAL MART SUPERCENTRE #1127 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1139",
+    "name": "WAL MART SUPERCENTRE #1139 TORONTO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1151",
+    "name": "WAL MART SUPERCENTRE #1151 NORTH YORK",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1162",
+    "name": "WAL MART SUPERCENTRE #1162 PETERBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1188",
+    "name": "WAL MART SUPERCENTRE #1188 BRAMPTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1211",
+    "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3000",
+    "name": "WAL MART SUPERCENTRE #3000 AGINCOURT",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3001",
+    "name": "WAL MART SUPERCENTRE #3001 AJAX",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3031",
+    "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3034",
+    "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3053",
+    "name": "WAL MART SUPERCENTRE #3053 MARKHAM",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3054",
+    "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3055",
+    "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3062",
+    "name": "WAL MART SUPERCENTRE #3062 NEWMARKET",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3064",
+    "name": "WAL MART SUPERCENTRE #3064 OAKVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3071",
+    "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3105",
+    "name": "WAL MART SUPERCENTRE #3105 TORONTO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3106",
+    "name": "WAL MART SUPERCENTRE #3106 TORONTO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1130",
+    "name": "WAL MART SUPERCENTRE #1130 FERGUS",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3111",
+    "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3113",
+    "name": "WAL MART SUPERCENTRE #3113 WHITBY",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3122",
+    "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3123",
+    "name": "WAL MART SUPERCENTRE #3123 BARRIE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3130",
+    "name": "WAL MART SUPERCENTRE #3130 BRAMPTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3133",
+    "name": "WAL MART SUPERCENTRE #3133 COBOURG",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3135",
+    "name": "WAL MART SUPERCENTRE #3135 BRAMPTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3142",
+    "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3159",
+    "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3161",
+    "name": "WAL MART SUPERCENTRE #3161 OSHAWA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3166",
+    "name": "WAL MART SUPERCENTRE #3166 BARRIE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3174",
+    "name": "WAL MART SUPERCENTRE #3174 VAUGHAN",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3178",
+    "name": "WAL MART SUPERCENTRE #3178 TRENTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3186",
+    "name": "WAL MART SUPERCENTRE #3186 PICKERING",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3195",
+    "name": "WAL MART SUPERCENTRE #3195 RICHMOND HILL",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3635",
+    "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3645",
+    "name": "WAL MART SUPERCENTRE #3645 MIDLAND",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3653",
+    "name": "WAL MART SUPERCENTRE #3653 UXBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3654",
+    "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3740",
+    "name": "WAL MART SUPERCENTRE #3740 TORONTO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W5742",
+    "name": "WAL MART SUPERCENTRE #5742 BOLTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W5743",
+    "name": "WAL MART SUPERCENTRE #5743 HUNTSVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W5778",
+    "name": "WAL MART SUPERCENTRE #5778 AURORA",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W5831",
+    "name": "WAL MART SUPERCENTRE #5831 THORNHILL",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1121",
+    "name": "WAL MART SUPERCENTRE #1121 HAMILTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1111",
+    "name": "WAL MART SUPERCENTRE #1111 KITCHENER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3110",
+    "name": "WAL MART SUPERCENTRE #3110 WELLAND",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3088",
+    "name": "WAL MART SUPERCENTRE #3088 ST CATHARINES",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1042",
+    "name": "WAL MART SUPERCENTRE #1042 HANNON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3037",
+    "name": "WAL MART SUPERCENTRE #3037 HAMILTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3172",
+    "name": "WAL MART SUPERCENTRE #3172 ST CATHARINES",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3096",
+    "name": "WAL MART SUPERCENTRE #3096 HAMILTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3005",
+    "name": "WAL MART SUPERCENTRE #3005 BRANTFORD",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3144",
+    "name": "WAL MART SUPERCENTRE #3144 GUELPH",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3156",
+    "name": "WAL MART SUPERCENTRE #3156 WATERLOO",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3160",
+    "name": "WAL MART SUPERCENTRE #3160 NIAGARA FALLS",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1007",
+    "name": "WAL MART SUPERCENTRE #1007 KITCHENER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3152",
+    "name": "WAL MART SUPERCENTRE #3152 CAMBRIDGE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3170",
+    "name": "WAL MART SUPERCENTRE #3170 BURLINGTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3141",
+    "name": "WAL MART SUPERCENTRE #3141 BURLINGTON",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1107",
+    "name": "WAL MART SUPERCENTRE #1107 WATERDOWN",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3127",
+    "name": "WAL MART SUPERCENTRE #3127 ANCASTER",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3649",
+    "name": "WAL MART SUPERCENTRE #3649 FORT ERIE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W1164",
+    "name": "WAL MART SUPERCENTRE #1164 ST CATHARINES",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "W3200",
+    "name": "WAL MART SUPERCENTRE #3200 OAKVILLE",
+    "allowanceMinutes": 60
+  },
+  {
+    "code": "",
+    "name": "EAST-WEST FOODS",
+    "allowanceMinutes": 30
+  }
+]

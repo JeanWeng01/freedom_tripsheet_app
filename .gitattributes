@@ -1,0 +1,10 @@
+# Normalize line endings to LF on commit, keep LF on checkout
+* text=auto eol=lf
+
+# Force binary files to never be touched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.xlsx binary
+*.pdf binary

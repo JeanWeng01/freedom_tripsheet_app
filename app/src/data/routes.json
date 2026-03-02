@@ -1,0 +1,7292 @@
+[
+  {
+    "routeNumber": 1531,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "F9778-FRESHCO #9778 JANE & FINCH",
+        "code": "F9778",
+        "name": "FRESHCO #9778 JANE & FINCH"
+      },
+      {
+        "type": "store",
+        "raw": "F9544-FRESHCO #9544 EGLINTON & GABIAN WAY",
+        "code": "F9544",
+        "name": "FRESHCO #9544 EGLINTON & GABIAN WAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "C1667-COSTCO CANADA #1667 HARRY WALKER",
+        "code": "C1667",
+        "name": "COSTCO CANADA #1667 HARRY WALKER"
+      },
+      {
+        "type": "store",
+        "raw": "F9748-FRESHCO #9748 MAJOR MACKENZIE & LESLIE",
+        "code": "F9748",
+        "name": "FRESHCO #9748 MAJOR MACKENZIE & LESLIE"
+      },
+      {
+        "type": "store",
+        "raw": "F3846-FRESHCO #3846 MAJOR MACKENZIE & WESTON",
+        "code": "F3846",
+        "name": "FRESHCO #3846 MAJOR MACKENZIE & WESTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9612-FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+        "code": "F9612",
+        "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "store",
+        "raw": "F3875-FRESHCO #3875 MCCOWAN & 16TH",
+        "code": "F3875",
+        "name": "FRESHCO #3875 MCCOWAN & 16TH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F3861-FRESHCO #3861 BALDWIN",
+        "code": "F3861",
+        "name": "FRESHCO #3861 BALDWIN"
+      },
+      {
+        "type": "store",
+        "raw": "F3817-FRESHCO #3817 WINCHESTER",
+        "code": "F3817",
+        "name": "FRESHCO #3817 WINCHESTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S7368-SOBEYS #7368 ALCONA BEACH",
+        "code": "S7368",
+        "name": "SOBEYS #7368 ALCONA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "F9594-FRESHCO #9594 BAYFIELD & LIVINGSTONE",
+        "code": "F9594",
+        "name": "FRESHCO #9594 BAYFIELD & LIVINGSTONE"
+      },
+      {
+        "type": "store",
+        "raw": "F9578-FRESHCO #9578 ALLISTON",
+        "code": "F9578",
+        "name": "FRESHCO #9578 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "FDL6767-FOODLAND #6767 TOTTENHAM",
+        "code": "FDL6767",
+        "name": "FOODLAND #6767 TOTTENHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1248-COSTCO CANADA #1248 WATERLOO",
+        "code": "C1248",
+        "name": "COSTCO CANADA #1248 WATERLOO"
+      },
+      {
+        "type": "store",
+        "raw": "S685-SOBEYS #685 IRA NEEDLES",
+        "code": "S685",
+        "name": "SOBEYS #685 IRA NEEDLES"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1531,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3857-FRESHCO #3857 BOVAIRD & CONESTOGA",
+        "code": "F3857",
+        "name": "FRESHCO #3857 BOVAIRD & CONESTOGA"
+      },
+      {
+        "type": "store",
+        "raw": "F9612-FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+        "code": "F9612",
+        "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "S938-SOBEYS #938 DANFORTH",
+        "code": "S938",
+        "name": "SOBEYS #938 DANFORTH"
+      },
+      {
+        "type": "store",
+        "raw": "F3850-FRESHCO #3850 LESLIE & LAKESHORE",
+        "code": "F3850",
+        "name": "FRESHCO #3850 LESLIE & LAKESHORE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "F9550-FRESHCO #9550 STEELES AV VAUGHAN",
+        "code": "F9550",
+        "name": "FRESHCO #9550 STEELES AV VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "store",
+        "raw": "F3857-FRESHCO #3857 BOVAIRD & CONESTOGA",
+        "code": "F3857",
+        "name": "FRESHCO #3857 BOVAIRD & CONESTOGA"
+      },
+      {
+        "type": "store",
+        "raw": "F9575-FRESHCO #9575 CITY CENTRE",
+        "code": "F9575",
+        "name": "FRESHCO #9575 CITY CENTRE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "F9748-FRESHCO #9748 MAJOR MACKENZIE & LESLIE",
+        "code": "F9748",
+        "name": "FRESHCO #9748 MAJOR MACKENZIE & LESLIE"
+      },
+      {
+        "type": "store",
+        "raw": "S4162-SOBEYS #4162 BRADFORD",
+        "code": "S4162",
+        "name": "SOBEYS #4162 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "F3846-FRESHCO #3846 MAJOR MACKENZIE & WESTON",
+        "code": "F3846",
+        "name": "FRESHCO #3846 MAJOR MACKENZIE & WESTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526PM-COSTCO CANADA #526 RODEO PM",
+        "code": "C526PM",
+        "name": "COSTCO CANADA #526 RODEO PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F9587-FRESHCO #9587 KING & WILSON",
+        "code": "F9587",
+        "name": "FRESHCO #9587 KING & WILSON"
+      },
+      {
+        "type": "store",
+        "raw": "F4015-FRESHCO #4015 TAUNTON",
+        "code": "F4015",
+        "name": "FRESHCO #4015 TAUNTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9576-FRESHCO #9576 KING & TOWNLINE",
+        "code": "F9576",
+        "name": "FRESHCO #9576 KING & TOWNLINE"
+      },
+      {
+        "type": "store",
+        "raw": "F3892-FRESHCO #3892 CLARINGTON",
+        "code": "F3892",
+        "name": "FRESHCO #3892 CLARINGTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9621-FRESHCO #9621 WENTWORTH & CEDAR",
+        "code": "F9621",
+        "name": "FRESHCO #9621 WENTWORTH & CEDAR"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W3053-WAL MART SUPERCENTRE #3053 MARKHAM",
+        "code": "W3053",
+        "name": "WAL MART SUPERCENTRE #3053 MARKHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1532,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "F9748-FRESHCO #9748 MAJOR MACKENZIE & LESLIE",
+        "code": "F9748",
+        "name": "FRESHCO #9748 MAJOR MACKENZIE & LESLIE"
+      },
+      {
+        "type": "store",
+        "raw": "F3875-FRESHCO #3875 MCCOWAN & 16TH",
+        "code": "F3875",
+        "name": "FRESHCO #3875 MCCOWAN & 16TH"
+      },
+      {
+        "type": "store",
+        "raw": "F9550-FRESHCO #9550 STEELES AV VAUGHAN",
+        "code": "F9550",
+        "name": "FRESHCO #9550 STEELES AV VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C591-COSTCO CANADA #591 PETERBORO",
+        "code": "C591",
+        "name": "COSTCO CANADA #591 PETERBORO"
+      },
+      {
+        "type": "store",
+        "raw": "F9577-FRESHCO #9577 LANSDOWNE & THE PARKWAY",
+        "code": "F9577",
+        "name": "FRESHCO #9577 LANSDOWNE & THE PARKWAY"
+      },
+      {
+        "type": "store",
+        "raw": "W1162-WAL MART SUPERCENTRE #1162 PETERBOROUGH",
+        "code": "W1162",
+        "name": "WAL MART SUPERCENTRE #1162 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3071-WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+        "code": "W3071",
+        "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C591-COSTCO CANADA #591 PETERBORO",
+        "code": "C591",
+        "name": "COSTCO CANADA #591 PETERBORO"
+      },
+      {
+        "type": "store",
+        "raw": "F9577-FRESHCO #9577 LANSDOWNE & THE PARKWAY",
+        "code": "F9577",
+        "name": "FRESHCO #9577 LANSDOWNE & THE PARKWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3821-FRESHCO #3821 BROCK & GEORGE",
+        "code": "F3821",
+        "name": "FRESHCO #3821 BROCK & GEORGE"
+      },
+      {
+        "type": "store",
+        "raw": "F3892-FRESHCO #3892 CLARINGTON",
+        "code": "F3892",
+        "name": "FRESHCO #3892 CLARINGTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1248-COSTCO CANADA #1248 WATERLOO",
+        "code": "C1248",
+        "name": "COSTCO CANADA #1248 WATERLOO"
+      },
+      {
+        "type": "store",
+        "raw": "W1007-WAL MART SUPERCENTRE #1007 KITCHENER",
+        "code": "W1007",
+        "name": "WAL MART SUPERCENTRE #1007 KITCHENER"
+      },
+      {
+        "type": "store",
+        "raw": "F9612-FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+        "code": "F9612",
+        "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY"
+      },
+      {
+        "type": "store",
+        "raw": "S865-SOBEYS #865 MAYFIELD",
+        "code": "S865",
+        "name": "SOBEYS #865 MAYFIELD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526PM-COSTCO CANADA #526 RODEO PM",
+        "code": "C526PM",
+        "name": "COSTCO CANADA #526 RODEO PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C591-COSTCO CANADA #591 PETERBORO",
+        "code": "C591",
+        "name": "COSTCO CANADA #591 PETERBORO"
+      },
+      {
+        "type": "store",
+        "raw": "W1162-WAL MART SUPERCENTRE #1162 PETERBOROUGH",
+        "code": "W1162",
+        "name": "WAL MART SUPERCENTRE #1162 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F9577-FRESHCO #9577 LANSDOWNE & THE PARKWAY",
+        "code": "F9577",
+        "name": "FRESHCO #9577 LANSDOWNE & THE PARKWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3821-FRESHCO #3821 BROCK & GEORGE",
+        "code": "F3821",
+        "name": "FRESHCO #3821 BROCK & GEORGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3071-WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+        "code": "W3071",
+        "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C591-COSTCO CANADA #591 PETERBORO",
+        "code": "C591",
+        "name": "COSTCO CANADA #591 PETERBORO"
+      },
+      {
+        "type": "store",
+        "raw": "W3071-WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+        "code": "W3071",
+        "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1533,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C591-COSTCO CANADA #591 PETERBORO",
+        "code": "C591",
+        "name": "COSTCO CANADA #591 PETERBORO"
+      },
+      {
+        "type": "store",
+        "raw": "W1162-WAL MART SUPERCENTRE #1162 PETERBOROUGH",
+        "code": "W1162",
+        "name": "WAL MART SUPERCENTRE #1162 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3071-WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+        "code": "W3071",
+        "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F3821-FRESHCO #3821 BROCK & GEORGE",
+        "code": "F3821",
+        "name": "FRESHCO #3821 BROCK & GEORGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3881-FRESHCO #3881 BARTON & STRATHEARNE",
+        "code": "F3881",
+        "name": "FRESHCO #3881 BARTON & STRATHEARNE"
+      },
+      {
+        "type": "store",
+        "raw": "F9548-FRESHCO #9548 BARTON & GAGE",
+        "code": "F9548",
+        "name": "FRESHCO #9548 BARTON & GAGE"
+      },
+      {
+        "type": "store",
+        "raw": "F9579-FRESHCO #9579 QUEENSTON & NASH",
+        "code": "F9579",
+        "name": "FRESHCO #9579 QUEENSTON & NASH"
+      },
+      {
+        "type": "store",
+        "raw": "F3834-FRESHCO #3834 BINBROOK",
+        "code": "F3834",
+        "name": "FRESHCO #3834 BINBROOK"
+      },
+      {
+        "type": "store",
+        "raw": "F3815-FRESHCO #3815 RYMAL RD & UPPER GAGE",
+        "code": "F3815",
+        "name": "FRESHCO #3815 RYMAL RD & UPPER GAGE"
+      },
+      {
+        "type": "store",
+        "raw": "F9690-FRESHCO #9690 UPPER GAGE & FENNELL",
+        "code": "F9690",
+        "name": "FRESHCO #9690 UPPER GAGE & FENNELL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "F3847-FRESHCO #3847 SPEEDVALE & STEVENSON",
+        "code": "F3847",
+        "name": "FRESHCO #3847 SPEEDVALE & STEVENSON"
+      },
+      {
+        "type": "store",
+        "raw": "S639-SOBEYS #639 ACTON",
+        "code": "S639",
+        "name": "SOBEYS #639 ACTON"
+      },
+      {
+        "type": "store",
+        "raw": "F3844-FRESHCO #3844 GUELPH & SINCLAIR",
+        "code": "F3844",
+        "name": "FRESHCO #3844 GUELPH & SINCLAIR"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "S777-SOBEYS #777 ABBEY",
+        "code": "S777",
+        "name": "SOBEYS #777 ABBEY"
+      },
+      {
+        "type": "store",
+        "raw": "F9712-FRESHCO #9712 THIRD LINE & DUNDAS",
+        "code": "F9712",
+        "name": "FRESHCO #9712 THIRD LINE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F3894-FRESHCO #3894 ST LAURENT",
+        "code": "F3894",
+        "name": "FRESHCO #3894 ST LAURENT"
+      },
+      {
+        "type": "store",
+        "raw": "S4719-SOBEYS #4719 MILTON EXTRA",
+        "code": "S4719",
+        "name": "SOBEYS #4719 MILTON EXTRA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "S7466-SOBEYS #7466 ORANGEVILLE",
+        "code": "S7466",
+        "name": "SOBEYS #7466 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "F3822-FRESHCO #3822 BROADWAY & DAWSON",
+        "code": "F3822",
+        "name": "FRESHCO #3822 BROADWAY & DAWSON"
+      },
+      {
+        "type": "store",
+        "raw": "S639-SOBEYS #639 ACTON",
+        "code": "S639",
+        "name": "SOBEYS #639 ACTON"
+      },
+      {
+        "type": "store",
+        "raw": "F3844-FRESHCO #3844 GUELPH & SINCLAIR",
+        "code": "F3844",
+        "name": "FRESHCO #3844 GUELPH & SINCLAIR"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "C1655-COSTCO CANADA #1655 ISLINGTON",
+        "code": "C1655",
+        "name": "COSTCO CANADA #1655 ISLINGTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1139-WAL MART SUPERCENTRE #1139 TORONTO",
+        "code": "W1139",
+        "name": "WAL MART SUPERCENTRE #1139 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "F9705-FRESHCO #9705 BRITANIA",
+        "code": "F9705",
+        "name": "FRESHCO #9705 BRITANIA"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1551,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "F3847-FRESHCO #3847 SPEEDVALE & STEVENSON",
+        "code": "F3847",
+        "name": "FRESHCO #3847 SPEEDVALE & STEVENSON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "store",
+        "raw": "F9575-FRESHCO #9575 CITY CENTRE",
+        "code": "F9575",
+        "name": "FRESHCO #9575 CITY CENTRE"
+      },
+      {
+        "type": "store",
+        "raw": "F3887PM-FRESHCO #3887 BRAMALEA & SANDALWOOD PM",
+        "code": "F3887PM",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C252-COSTCO CANADA #252 BARRIE",
+        "code": "C252",
+        "name": "COSTCO CANADA #252 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "C1265-COSTCO CANADA #1265 ORILLIA",
+        "code": "C1265",
+        "name": "COSTCO CANADA #1265 ORILLIA"
+      },
+      {
+        "type": "store",
+        "raw": "FDL3399-FOODLAND #3399 STROUD",
+        "code": "FDL3399",
+        "name": "FOODLAND #3399 STROUD"
+      },
+      {
+        "type": "store",
+        "raw": "S7368-SOBEYS #7368 ALCONA BEACH",
+        "code": "S7368",
+        "name": "SOBEYS #7368 ALCONA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "F9578-FRESHCO #9578 ALLISTON",
+        "code": "F9578",
+        "name": "FRESHCO #9578 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "FDL6767-FOODLAND #6767 TOTTENHAM",
+        "code": "FDL6767",
+        "name": "FOODLAND #6767 TOTTENHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W3113-WAL MART SUPERCENTRE #3113 WHITBY",
+        "code": "W3113",
+        "name": "WAL MART SUPERCENTRE #3113 WHITBY"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F9868-FRESHCO #9868 HY 2 & KENDALWOOD",
+        "code": "F9868",
+        "name": "FRESHCO #9868 HY 2 & KENDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3883-FRESHCO #3883 BROCK & GILBERT",
+        "code": "F3883",
+        "name": "FRESHCO #3883 BROCK & GILBERT"
+      },
+      {
+        "type": "store",
+        "raw": "F3865-FRESHCO #3865 KINGSTON & WHITES",
+        "code": "F3865",
+        "name": "FRESHCO #3865 KINGSTON & WHITES"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1552,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "F3823-FRESHCO #3823 JANE & DENSION",
+        "code": "F3823",
+        "name": "FRESHCO #3823 JANE & DENSION"
+      },
+      {
+        "type": "store",
+        "raw": "F9544-FRESHCO #9544 EGLINTON & GABIAN WAY",
+        "code": "F9544",
+        "name": "FRESHCO #9544 EGLINTON & GABIAN WAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "store",
+        "raw": "C537PM-COSTCO CANADA #537 SCARBOROUGH PM",
+        "code": "C537PM",
+        "name": "COSTCO CANADA #537 SCARBOROUGH PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "F3857-FRESHCO #3857 BOVAIRD & CONESTOGA",
+        "code": "F3857",
+        "name": "FRESHCO #3857 BOVAIRD & CONESTOGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3174-WAL MART SUPERCENTRE #3174 VAUGHAN",
+        "code": "W3174",
+        "name": "WAL MART SUPERCENTRE #3174 VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F9576-FRESHCO #9576 KING & TOWNLINE",
+        "code": "F9576",
+        "name": "FRESHCO #9576 KING & TOWNLINE"
+      },
+      {
+        "type": "store",
+        "raw": "F9621-FRESHCO #9621 WENTWORTH & CEDAR",
+        "code": "F9621",
+        "name": "FRESHCO #9621 WENTWORTH & CEDAR"
+      },
+      {
+        "type": "store",
+        "raw": "F9868-FRESHCO #9868 HY 2 & KENDALWOOD",
+        "code": "F9868",
+        "name": "FRESHCO #9868 HY 2 & KENDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3865-FRESHCO #3865 KINGSTON & WHITES",
+        "code": "F3865",
+        "name": "FRESHCO #3865 KINGSTON & WHITES"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "S938-SOBEYS #938 DANFORTH",
+        "code": "S938",
+        "name": "SOBEYS #938 DANFORTH"
+      },
+      {
+        "type": "store",
+        "raw": "F3850-FRESHCO #3850 LESLIE & LAKESHORE",
+        "code": "F3850",
+        "name": "FRESHCO #3850 LESLIE & LAKESHORE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3200-WAL MART SUPERCENTRE #3200 OAKVILLE",
+        "code": "W3200",
+        "name": "WAL MART SUPERCENTRE #3200 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1127-WAL MART SUPERCENTRE #1127 MISSISSAUGA",
+        "code": "W1127",
+        "name": "WAL MART SUPERCENTRE #1127 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F9679-FRESHCO #9679 GERRARD & VICTORIA PK",
+        "code": "F9679",
+        "name": "FRESHCO #9679 GERRARD & VICTORIA PK"
+      },
+      {
+        "type": "store",
+        "raw": "S938-SOBEYS #938 DANFORTH",
+        "code": "S938",
+        "name": "SOBEYS #938 DANFORTH"
+      },
+      {
+        "type": "store",
+        "raw": "F3850-FRESHCO #3850 LESLIE & LAKESHORE",
+        "code": "F3850",
+        "name": "FRESHCO #3850 LESLIE & LAKESHORE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1553,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F9662-FRESHCO #9662 LAWRENCE & MIDLAND",
+        "code": "F9662",
+        "name": "FRESHCO #9662 LAWRENCE & MIDLAND"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3141-WAL MART SUPERCENTRE #3141 BURLINGTON",
+        "code": "W3141",
+        "name": "WAL MART SUPERCENTRE #3141 BURLINGTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3200-WAL MART SUPERCENTRE #3200 OAKVILLE",
+        "code": "W3200",
+        "name": "WAL MART SUPERCENTRE #3200 OAKVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1211-WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+        "code": "W1211",
+        "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F9611-FRESHCO #9611 THOMAS &10 TH CHALO.",
+        "code": "F9611",
+        "name": "FRESHCO #9611 THOMAS &10 TH CHALO."
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F9544-FRESHCO #9544 EGLINTON & GABIAN WAY",
+        "code": "F9544",
+        "name": "FRESHCO #9544 EGLINTON & GABIAN WAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3823-FRESHCO #3823 JANE & DENSION",
+        "code": "F3823",
+        "name": "FRESHCO #3823 JANE & DENSION"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "F9748-FRESHCO #9748 MAJOR MACKENZIE & LESLIE",
+        "code": "F9748",
+        "name": "FRESHCO #9748 MAJOR MACKENZIE & LESLIE"
+      },
+      {
+        "type": "store",
+        "raw": "F3875-FRESHCO #3875 MCCOWAN & 16TH",
+        "code": "F3875",
+        "name": "FRESHCO #3875 MCCOWAN & 16TH"
+      },
+      {
+        "type": "store",
+        "raw": "S4162-SOBEYS #4162 BRADFORD",
+        "code": "S4162",
+        "name": "SOBEYS #4162 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "F3846-FRESHCO #3846 MAJOR MACKENZIE & WESTON",
+        "code": "F3846",
+        "name": "FRESHCO #3846 MAJOR MACKENZIE & WESTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C592-COSTCO CANADA #592 RICHMOND HILL",
+        "code": "C592",
+        "name": "COSTCO CANADA #592 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "C1667-COSTCO CANADA #1667 HARRY WALKER",
+        "code": "C1667",
+        "name": "COSTCO CANADA #1667 HARRY WALKER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9550-FRESHCO #9550 STEELES AV VAUGHAN",
+        "code": "F9550",
+        "name": "FRESHCO #9550 STEELES AV VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1554,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "F3314-FRESHCO #3314 NORTHCOTE",
+        "code": "F3314",
+        "name": "FRESHCO #3314 NORTHCOTE"
+      },
+      {
+        "type": "store",
+        "raw": "F3856-FRESHCO #3856 DUFFERIN & DUPONT",
+        "code": "F3856",
+        "name": "FRESHCO #3856 DUFFERIN & DUPONT"
+      },
+      {
+        "type": "store",
+        "raw": "F9658-FRESHCO #9658 BLOOR & DUNDAS",
+        "code": "F9658",
+        "name": "FRESHCO #9658 BLOOR & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F3838-FRESHCO #3838 DUNDAS & RUNNYMEDE",
+        "code": "F3838",
+        "name": "FRESHCO #3838 DUNDAS & RUNNYMEDE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F3859-FRESHCO #3859 DIXIE & DUNDAS",
+        "code": "F3859",
+        "name": "FRESHCO #3859 DIXIE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F3842-FRESHCO #3842 HURONTARIO",
+        "code": "F3842",
+        "name": "FRESHCO #3842 HURONTARIO"
+      },
+      {
+        "type": "store",
+        "raw": "HIGHLAND FARMS INC.(MATHESON)",
+        "code": "",
+        "name": "HIGHLAND FARMS INC.(MATHESON)"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "store",
+        "raw": "C1655-COSTCO CANADA #1655 ISLINGTON",
+        "code": "C1655",
+        "name": "COSTCO CANADA #1655 ISLINGTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "F3857-FRESHCO #3857 BOVAIRD & CONESTOGA",
+        "code": "F3857",
+        "name": "FRESHCO #3857 BOVAIRD & CONESTOGA"
+      },
+      {
+        "type": "store",
+        "raw": "S707-SOBEYS #707 NORTH PARK",
+        "code": "S707",
+        "name": "SOBEYS #707 NORTH PARK"
+      },
+      {
+        "type": "store",
+        "raw": "F9575-FRESHCO #9575 CITY CENTRE",
+        "code": "F9575",
+        "name": "FRESHCO #9575 CITY CENTRE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1211-WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+        "code": "W1211",
+        "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F3842-FRESHCO #3842 HURONTARIO",
+        "code": "F3842",
+        "name": "FRESHCO #3842 HURONTARIO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "store",
+        "raw": "HIGHLAND FARMS INC.(MATHESON)",
+        "code": "",
+        "name": "HIGHLAND FARMS INC.(MATHESON)"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S637-SOBEYS #637 MAPLE GROVE",
+        "code": "S637",
+        "name": "SOBEYS #637 MAPLE GROVE"
+      },
+      {
+        "type": "store",
+        "raw": "S777-SOBEYS #777 ABBEY",
+        "code": "S777",
+        "name": "SOBEYS #777 ABBEY"
+      },
+      {
+        "type": "store",
+        "raw": "F3894-FRESHCO #3894 ST LAURENT",
+        "code": "F3894",
+        "name": "FRESHCO #3894 ST LAURENT"
+      },
+      {
+        "type": "store",
+        "raw": "S4719-SOBEYS #4719 MILTON EXTRA",
+        "code": "S4719",
+        "name": "SOBEYS #4719 MILTON EXTRA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F3842-FRESHCO #3842 HURONTARIO",
+        "code": "F3842",
+        "name": "FRESHCO #3842 HURONTARIO"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537PM-COSTCO CANADA #537 SCARBOROUGH PM",
+        "code": "C537PM",
+        "name": "COSTCO CANADA #537 SCARBOROUGH PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1556,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F9563-FRESHCO #9563 UPPER MID & WALKERS LINE",
+        "code": "F9563",
+        "name": "FRESHCO #9563 UPPER MID & WALKERS LINE"
+      },
+      {
+        "type": "store",
+        "raw": "F9712-FRESHCO #9712 THIRD LINE & DUNDAS",
+        "code": "F9712",
+        "name": "FRESHCO #9712 THIRD LINE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "S777-SOBEYS #777 ABBEY",
+        "code": "S777",
+        "name": "SOBEYS #777 ABBEY"
+      },
+      {
+        "type": "store",
+        "raw": "S637-SOBEYS #637 MAPLE GROVE",
+        "code": "S637",
+        "name": "SOBEYS #637 MAPLE GROVE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F9572-FRESHCO #9572 DUNDAS & ERINDALE STATION",
+        "code": "F9572",
+        "name": "FRESHCO #9572 DUNDAS & ERINDALE STATION"
+      },
+      {
+        "type": "store",
+        "raw": "F9705-FRESHCO #9705 BRITANIA",
+        "code": "F9705",
+        "name": "FRESHCO #9705 BRITANIA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3314-FRESHCO #3314 NORTHCOTE",
+        "code": "F3314",
+        "name": "FRESHCO #3314 NORTHCOTE"
+      },
+      {
+        "type": "store",
+        "raw": "F3856-FRESHCO #3856 DUFFERIN & DUPONT",
+        "code": "F3856",
+        "name": "FRESHCO #3856 DUFFERIN & DUPONT"
+      },
+      {
+        "type": "store",
+        "raw": "F9658-FRESHCO #9658 BLOOR & DUNDAS",
+        "code": "F9658",
+        "name": "FRESHCO #9658 BLOOR & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F3838-FRESHCO #3838 DUNDAS & RUNNYMEDE",
+        "code": "F3838",
+        "name": "FRESHCO #3838 DUNDAS & RUNNYMEDE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F3859-FRESHCO #3859 DIXIE & DUNDAS",
+        "code": "F3859",
+        "name": "FRESHCO #3859 DIXIE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F9572-FRESHCO #9572 DUNDAS & ERINDALE STATION",
+        "code": "F9572",
+        "name": "FRESHCO #9572 DUNDAS & ERINDALE STATION"
+      },
+      {
+        "type": "store",
+        "raw": "F9611-FRESHCO #9611 THOMAS &10 TH CHALO.",
+        "code": "F9611",
+        "name": "FRESHCO #9611 THOMAS &10 TH CHALO."
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C253-COSTCO CANADA #253 BURLINGTON",
+        "code": "C253",
+        "name": "COSTCO CANADA #253 BURLINGTON"
+      },
+      {
+        "type": "store",
+        "raw": "S4737-SOBEYS #4737 STONEY CREEK",
+        "code": "S4737",
+        "name": "SOBEYS #4737 STONEY CREEK"
+      },
+      {
+        "type": "store",
+        "raw": "F9579-FRESHCO #9579 QUEENSTON & NASH",
+        "code": "F9579",
+        "name": "FRESHCO #9579 QUEENSTON & NASH"
+      },
+      {
+        "type": "store",
+        "raw": "F9548-FRESHCO #9548 BARTON & GAGE",
+        "code": "F9548",
+        "name": "FRESHCO #9548 BARTON & GAGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1169-COSTCO CANADA #1169 MISSISSAUGA",
+        "code": "C1169",
+        "name": "COSTCO CANADA #1169 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "F3859-FRESHCO #3859 DIXIE & DUNDAS",
+        "code": "F3859",
+        "name": "FRESHCO #3859 DIXIE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C162-COSTCO CANADA #162 BRAMPTON",
+        "code": "C162",
+        "name": "COSTCO CANADA #162 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9612-FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+        "code": "F9612",
+        "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "S865-SOBEYS #865 MAYFIELD",
+        "code": "S865",
+        "name": "SOBEYS #865 MAYFIELD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1558,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "S707-SOBEYS #707 NORTH PARK",
+        "code": "S707",
+        "name": "SOBEYS #707 NORTH PARK"
+      },
+      {
+        "type": "store",
+        "raw": "S4719-SOBEYS #4719 MILTON EXTRA",
+        "code": "S4719",
+        "name": "SOBEYS #4719 MILTON EXTRA"
+      },
+      {
+        "type": "store",
+        "raw": "F3894-FRESHCO #3894 ST LAURENT",
+        "code": "F3894",
+        "name": "FRESHCO #3894 ST LAURENT"
+      },
+      {
+        "type": "store",
+        "raw": "F9611-FRESHCO #9611 THOMAS &10 TH CHALO.",
+        "code": "F9611",
+        "name": "FRESHCO #9611 THOMAS &10 TH CHALO."
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "store",
+        "raw": "F3876-FRESHCO #3876 MCCOWAN & ELLESMERE",
+        "code": "F3876",
+        "name": "FRESHCO #3876 MCCOWAN & ELLESMERE"
+      },
+      {
+        "type": "store",
+        "raw": "F9662-FRESHCO #9662 LAWRENCE & MIDLAND",
+        "code": "F9662",
+        "name": "FRESHCO #9662 LAWRENCE & MIDLAND"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "W5742-WAL MART SUPERCENTRE #5742 BOLTON",
+        "code": "W5742",
+        "name": "WAL MART SUPERCENTRE #5742 BOLTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3314-FRESHCO #3314 NORTHCOTE",
+        "code": "F3314",
+        "name": "FRESHCO #3314 NORTHCOTE"
+      },
+      {
+        "type": "store",
+        "raw": "F3856-FRESHCO #3856 DUFFERIN & DUPONT",
+        "code": "F3856",
+        "name": "FRESHCO #3856 DUFFERIN & DUPONT"
+      },
+      {
+        "type": "store",
+        "raw": "F9658-FRESHCO #9658 BLOOR & DUNDAS",
+        "code": "F9658",
+        "name": "FRESHCO #9658 BLOOR & DUNDAS"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C252-COSTCO CANADA #252 BARRIE",
+        "code": "C252",
+        "name": "COSTCO CANADA #252 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "C1265-COSTCO CANADA #1265 ORILLIA",
+        "code": "C1265",
+        "name": "COSTCO CANADA #1265 ORILLIA"
+      },
+      {
+        "type": "store",
+        "raw": "FDL3399-FOODLAND #3399 STROUD",
+        "code": "FDL3399",
+        "name": "FOODLAND #3399 STROUD"
+      },
+      {
+        "type": "store",
+        "raw": "S7368-SOBEYS #7368 ALCONA BEACH",
+        "code": "S7368",
+        "name": "SOBEYS #7368 ALCONA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1560,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C595-COSTCO CANADA #595 BUSINESS CENTER",
+        "code": "C595",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "F9576-FRESHCO #9576 KING & TOWNLINE",
+        "code": "F9576",
+        "name": "FRESHCO #9576 KING & TOWNLINE"
+      },
+      {
+        "type": "store",
+        "raw": "F9868-FRESHCO #9868 HY 2 & KENDALWOOD",
+        "code": "F9868",
+        "name": "FRESHCO #9868 HY 2 & KENDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3883-FRESHCO #3883 BROCK & GILBERT",
+        "code": "F3883",
+        "name": "FRESHCO #3883 BROCK & GILBERT"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "S3657-SOBEYS #3657 AJAX",
+        "code": "S3657",
+        "name": "SOBEYS #3657 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "S667-SOBEYS #667 SOUTH AJAX",
+        "code": "S667",
+        "name": "SOBEYS #667 SOUTH AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F3817-FRESHCO #3817 WINCHESTER",
+        "code": "F3817",
+        "name": "FRESHCO #3817 WINCHESTER"
+      },
+      {
+        "type": "store",
+        "raw": "F3861-FRESHCO #3861 BALDWIN",
+        "code": "F3861",
+        "name": "FRESHCO #3861 BALDWIN"
+      },
+      {
+        "type": "store",
+        "raw": "F9576-FRESHCO #9576 KING & TOWNLINE",
+        "code": "F9576",
+        "name": "FRESHCO #9576 KING & TOWNLINE"
+      },
+      {
+        "type": "store",
+        "raw": "S667-SOBEYS #667 SOUTH AJAX",
+        "code": "S667",
+        "name": "SOBEYS #667 SOUTH AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "F3876-FRESHCO #3876 MCCOWAN & ELLESMERE",
+        "code": "F3876",
+        "name": "FRESHCO #3876 MCCOWAN & ELLESMERE"
+      },
+      {
+        "type": "store",
+        "raw": "F9662-FRESHCO #9662 LAWRENCE & MIDLAND",
+        "code": "F9662",
+        "name": "FRESHCO #9662 LAWRENCE & MIDLAND"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C537-COSTCO CANADA #537 SCARBOROUGH",
+        "code": "C537",
+        "name": "COSTCO CANADA #537 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "F9679-FRESHCO #9679 GERRARD & VICTORIA PK",
+        "code": "F9679",
+        "name": "FRESHCO #9679 GERRARD & VICTORIA PK"
+      },
+      {
+        "type": "store",
+        "raw": "F9662-FRESHCO #9662 LAWRENCE & MIDLAND",
+        "code": "F9662",
+        "name": "FRESHCO #9662 LAWRENCE & MIDLAND"
+      },
+      {
+        "type": "store",
+        "raw": "F3876-FRESHCO #3876 MCCOWAN & ELLESMERE",
+        "code": "F3876",
+        "name": "FRESHCO #3876 MCCOWAN & ELLESMERE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "S3657-SOBEYS #3657 AJAX",
+        "code": "S3657",
+        "name": "SOBEYS #3657 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "S667-SOBEYS #667 SOUTH AJAX",
+        "code": "S667",
+        "name": "SOBEYS #667 SOUTH AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1561,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F3892-FRESHCO #3892 CLARINGTON",
+        "code": "F3892",
+        "name": "FRESHCO #3892 CLARINGTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9679-FRESHCO #9679 GERRARD & VICTORIA PK",
+        "code": "F9679",
+        "name": "FRESHCO #9679 GERRARD & VICTORIA PK"
+      },
+      {
+        "type": "store",
+        "raw": "F3865-FRESHCO #3865 KINGSTON & WHITES",
+        "code": "F3865",
+        "name": "FRESHCO #3865 KINGSTON & WHITES"
+      },
+      {
+        "type": "store",
+        "raw": "C545PM-COSTCO CANADA #545 MARKHAM EAST PM",
+        "code": "C545PM",
+        "name": "COSTCO CANADA #545 MARKHAM EAST PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S637-SOBEYS #637 MAPLE GROVE",
+        "code": "S637",
+        "name": "SOBEYS #637 MAPLE GROVE"
+      },
+      {
+        "type": "store",
+        "raw": "F9563-FRESHCO #9563 UPPER MID & WALKERS LINE",
+        "code": "F9563",
+        "name": "FRESHCO #9563 UPPER MID & WALKERS LINE"
+      },
+      {
+        "type": "store",
+        "raw": "F9712-FRESHCO #9712 THIRD LINE & DUNDAS",
+        "code": "F9712",
+        "name": "FRESHCO #9712 THIRD LINE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "S777-SOBEYS #777 ABBEY",
+        "code": "S777",
+        "name": "SOBEYS #777 ABBEY"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "store",
+        "raw": "F9690-FRESHCO #9690 UPPER GAGE & FENNELL",
+        "code": "F9690",
+        "name": "FRESHCO #9690 UPPER GAGE & FENNELL"
+      },
+      {
+        "type": "store",
+        "raw": "FDL6766-FOODLAND #6766 SMITHVILLE",
+        "code": "FDL6766",
+        "name": "FOODLAND #6766 SMITHVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "store",
+        "raw": "IMPERIAL COFFEE SERVICES INC.",
+        "code": "",
+        "name": "IMPERIAL COFFEE SERVICES INC."
+      },
+      {
+        "type": "store",
+        "raw": "F9550-FRESHCO #9550 STEELES AV VAUGHAN",
+        "code": "F9550",
+        "name": "FRESHCO #9550 STEELES AV VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "F9778-FRESHCO #9778 JANE & FINCH",
+        "code": "F9778",
+        "name": "FRESHCO #9778 JANE & FINCH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "store",
+        "raw": "F9611-FRESHCO #9611 THOMAS &10 TH CHALO.",
+        "code": "F9611",
+        "name": "FRESHCO #9611 THOMAS &10 TH CHALO."
+      },
+      {
+        "type": "store",
+        "raw": "S642-SOBEYS #642 GRIMSBY",
+        "code": "S642",
+        "name": "SOBEYS #642 GRIMSBY"
+      },
+      {
+        "type": "store",
+        "raw": "S859-SOBEYS #859 BEAMSVILLE",
+        "code": "S859",
+        "name": "SOBEYS #859 BEAMSVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1168-COSTCO CANADA #1168 GUELPH",
+        "code": "C1168",
+        "name": "COSTCO CANADA #1168 GUELPH"
+      },
+      {
+        "type": "store",
+        "raw": "F9572-FRESHCO #9572 DUNDAS & ERINDALE STATION",
+        "code": "F9572",
+        "name": "FRESHCO #9572 DUNDAS & ERINDALE STATION"
+      },
+      {
+        "type": "store",
+        "raw": "F3838-FRESHCO #3838 DUNDAS & RUNNYMEDE",
+        "code": "F3838",
+        "name": "FRESHCO #3838 DUNDAS & RUNNYMEDE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1562,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531-COSTCO CANADA #531 LAIRD",
+        "code": "C531",
+        "name": "COSTCO CANADA #531 LAIRD"
+      },
+      {
+        "type": "store",
+        "raw": "F9705-FRESHCO #9705 BRITANIA",
+        "code": "F9705",
+        "name": "FRESHCO #9705 BRITANIA"
+      },
+      {
+        "type": "store",
+        "raw": "HIGHLAND FARMS INC.(MATHESON)",
+        "code": "",
+        "name": "HIGHLAND FARMS INC.(MATHESON)"
+      },
+      {
+        "type": "store",
+        "raw": "F3842-FRESHCO #3842 HURONTARIO",
+        "code": "F3842",
+        "name": "FRESHCO #3842 HURONTARIO"
+      },
+      {
+        "type": "store",
+        "raw": "F3859-FRESHCO #3859 DIXIE & DUNDAS",
+        "code": "F3859",
+        "name": "FRESHCO #3859 DIXIE & DUNDAS"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C531PM-COSTCO CANADA #531 LAIRD PM",
+        "code": "C531PM",
+        "name": "COSTCO CANADA #531 LAIRD PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1565,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F4015-FRESHCO #4015 TAUNTON",
+        "code": "F4015",
+        "name": "FRESHCO #4015 TAUNTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9587-FRESHCO #9587 KING & WILSON",
+        "code": "F9587",
+        "name": "FRESHCO #9587 KING & WILSON"
+      },
+      {
+        "type": "store",
+        "raw": "F9868-FRESHCO #9868 HY 2 & KENDALWOOD",
+        "code": "F9868",
+        "name": "FRESHCO #9868 HY 2 & KENDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3883-FRESHCO #3883 BROCK & GILBERT",
+        "code": "F3883",
+        "name": "FRESHCO #3883 BROCK & GILBERT"
+      },
+      {
+        "type": "store",
+        "raw": "F3865-FRESHCO #3865 KINGSTON & WHITES",
+        "code": "F3865",
+        "name": "FRESHCO #3865 KINGSTON & WHITES"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1565,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F9679-FRESHCO #9679 GERRARD & VICTORIA PK",
+        "code": "F9679",
+        "name": "FRESHCO #9679 GERRARD & VICTORIA PK"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      },
+      {
+        "type": "mdc",
+        "raw": "DM - come Bobtail from MDC"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1565,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "F9712-FRESHCO #9712 THIRD LINE & DUNDAS",
+        "code": "F9712",
+        "name": "FRESHCO #9712 THIRD LINE & DUNDAS"
+      },
+      {
+        "type": "store",
+        "raw": "F9705-FRESHCO #9705 BRITANIA",
+        "code": "F9705",
+        "name": "FRESHCO #9705 BRITANIA"
+      },
+      {
+        "type": "store",
+        "raw": "F9572-FRESHCO #9572 DUNDAS & ERINDALE STATION",
+        "code": "F9572",
+        "name": "FRESHCO #9572 DUNDAS & ERINDALE STATION"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1565,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9621-FRESHCO #9621 WENTWORTH & CEDAR",
+        "code": "F9621",
+        "name": "FRESHCO #9621 WENTWORTH & CEDAR"
+      },
+      {
+        "type": "store",
+        "raw": "F9587-FRESHCO #9587 KING & WILSON",
+        "code": "F9587",
+        "name": "FRESHCO #9587 KING & WILSON"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F3861-FRESHCO #3861 BALDWIN",
+        "code": "F3861",
+        "name": "FRESHCO #3861 BALDWIN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3860-FRESHCO #3860 FINANCIAL",
+        "code": "F3860",
+        "name": "FRESHCO #3860 FINANCIAL"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "S707-SOBEYS #707 NORTH PARK",
+        "code": "S707",
+        "name": "SOBEYS #707 NORTH PARK"
+      },
+      {
+        "type": "store",
+        "raw": "S865-SOBEYS #865 MAYFIELD",
+        "code": "S865",
+        "name": "SOBEYS #865 MAYFIELD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3887PM-FRESHCO #3887 CHALO BRAMALEA & SANDALWOOD PM",
+        "code": "F3887PM",
+        "name": "FRESHCO #3887 CHALO BRAMALEA & SANDALWOOD PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3860-FRESHCO #3860 FINANCIAL",
+        "code": "F3860",
+        "name": "FRESHCO #3860 FINANCIAL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C162-COSTCO CANADA #162 BRAMPTON",
+        "code": "C162",
+        "name": "COSTCO CANADA #162 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3860-FRESHCO #3860 FINANCIAL",
+        "code": "F3860",
+        "name": "FRESHCO #3860 FINANCIAL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F3860-FRESHCO #3860 FINANCIAL",
+        "code": "F3860",
+        "name": "FRESHCO #3860 FINANCIAL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "F9888-FRESHCO #9888 CHINGUA & SANDALWOOD",
+        "code": "F9888",
+        "name": "FRESHCO #9888 CHINGUA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "S707-SOBEYS #707 NORTH PARK",
+        "code": "S707",
+        "name": "SOBEYS #707 NORTH PARK"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "store",
+        "raw": "F3816-FRESHCO #3816 AIRPORT CHALO",
+        "code": "F3816",
+        "name": "FRESHCO #3816 AIRPORT CHALO"
+      },
+      {
+        "type": "store",
+        "raw": "S707-SOBEYS #707 NORTH PARK",
+        "code": "S707",
+        "name": "SOBEYS #707 NORTH PARK"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1567,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3860-FRESHCO #3860 FINANCIAL",
+        "code": "F3860",
+        "name": "FRESHCO #3860 FINANCIAL"
+      },
+      {
+        "type": "store",
+        "raw": "F3887-FRESHCO #3887 BRAMALEA & SANDALWOOD",
+        "code": "F3887",
+        "name": "FRESHCO #3887 BRAMALEA & SANDALWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S639-SOBEYS #639 ACTON",
+        "code": "S639",
+        "name": "SOBEYS #639 ACTON"
+      },
+      {
+        "type": "store",
+        "raw": "F3844-FRESHCO #3844 GUELPH & SINCLAIR",
+        "code": "F3844",
+        "name": "FRESHCO #3844 GUELPH & SINCLAIR"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526-COSTCO CANADA #526 RODEO",
+        "code": "C526",
+        "name": "COSTCO CANADA #526 RODEO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "store",
+        "raw": "S7383-SOBEYS #7383 QUEENSWAY",
+        "code": "S7383",
+        "name": "SOBEYS #7383 QUEENSWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3314-FRESHCO #3314 NORTHCOTE",
+        "code": "F3314",
+        "name": "FRESHCO #3314 NORTHCOTE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261PM-COSTCO CANADA #1261 VAUGHAN PM",
+        "code": "C1261PM",
+        "name": "COSTCO CANADA #1261 VAUGHAN PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C159-COSTCO CANADA #159 AJAX",
+        "code": "C159",
+        "name": "COSTCO CANADA #159 AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "F9679-FRESHCO #9679 GERRARD & VICTORIA PK",
+        "code": "F9679",
+        "name": "FRESHCO #9679 GERRARD & VICTORIA PK"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "store",
+        "raw": "HIGHLAND FARMS INC.(MATHESON)",
+        "code": "",
+        "name": "HIGHLAND FARMS INC.(MATHESON)"
+      },
+      {
+        "type": "store",
+        "raw": "F9705-FRESHCO #9705 BRITANIA",
+        "code": "F9705",
+        "name": "FRESHCO #9705 BRITANIA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1316-COSTCO CANADA #1316 THORNCLIFFE",
+        "code": "C1316",
+        "name": "COSTCO CANADA #1316 THORNCLIFFE"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "F3856-FRESHCO #3856 DUFFERIN & DUPONT",
+        "code": "F3856",
+        "name": "FRESHCO #3856 DUFFERIN & DUPONT"
+      },
+      {
+        "type": "store",
+        "raw": "F3838-FRESHCO #3838 DUNDAS & RUNNYMEDE",
+        "code": "F3838",
+        "name": "FRESHCO #3838 DUNDAS & RUNNYMEDE"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "F3823-FRESHCO #3823 JANE & DENSION",
+        "code": "F3823",
+        "name": "FRESHCO #3823 JANE & DENSION"
+      },
+      {
+        "type": "store",
+        "raw": "F9544-FRESHCO #9544 EGLINTON & GABIAN WAY",
+        "code": "F9544",
+        "name": "FRESHCO #9544 EGLINTON & GABIAN WAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C547-COSTCO CANADA #547 WOODBRIDGE",
+        "code": "C547",
+        "name": "COSTCO CANADA #547 WOODBRIDGE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C524-COSTCO CANADA #524 ETOBICOKE",
+        "code": "C524",
+        "name": "COSTCO CANADA #524 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1081-WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+        "code": "W1081",
+        "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "F9778-FRESHCO #9778 JANE & FINCH",
+        "code": "F9778",
+        "name": "FRESHCO #9778 JANE & FINCH"
+      },
+      {
+        "type": "store",
+        "raw": "IMPERIAL COFFEE SERVICES INC.",
+        "code": "",
+        "name": "IMPERIAL COFFEE SERVICES INC."
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1570,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9594-FRESHCO #9594 BAYFIELD & LIVINGSTONE",
+        "code": "F9594",
+        "name": "FRESHCO #9594 BAYFIELD & LIVINGSTONE"
+      },
+      {
+        "type": "store",
+        "raw": "S7368-SOBEYS #7368 ALCONA BEACH",
+        "code": "S7368",
+        "name": "SOBEYS #7368 ALCONA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "F9578-FRESHCO #9578 ALLISTON",
+        "code": "F9578",
+        "name": "FRESHCO #9578 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "FDL6767-FOODLAND #6767 TOTTENHAM",
+        "code": "FDL6767",
+        "name": "FOODLAND #6767 TOTTENHAM"
+      },
+      {
+        "type": "store",
+        "raw": "S4162-SOBEYS #4162 BRADFORD",
+        "code": "S4162",
+        "name": "SOBEYS #4162 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "F3846-FRESHCO #3846 MAJOR MACKENZIE & WESTON",
+        "code": "F3846",
+        "name": "FRESHCO #3846 MAJOR MACKENZIE & WESTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "store",
+        "raw": "F3837-FRESHCO #3837 COTTRELLE & 50",
+        "code": "F3837",
+        "name": "FRESHCO #3837 COTTRELLE & 50"
+      },
+      {
+        "type": "store",
+        "raw": "F9612-FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY",
+        "code": "F9612",
+        "name": "FRESHCO #9612 CHALO FRESHCO CHINGUACOUSY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1261-COSTCO CANADA #1261 VAUGHAN",
+        "code": "C1261",
+        "name": "COSTCO CANADA #1261 VAUGHAN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C535-COSTCO CANADA #535 DOWNSVIEW",
+        "code": "C535",
+        "name": "COSTCO CANADA #535 DOWNSVIEW"
+      },
+      {
+        "type": "store",
+        "raw": "IMPERIAL COFFEE SERVICES INC.",
+        "code": "",
+        "name": "IMPERIAL COFFEE SERVICES INC."
+      },
+      {
+        "type": "store",
+        "raw": "F9544-FRESHCO #9544 EGLINTON & GABIAN WAY",
+        "code": "F9544",
+        "name": "FRESHCO #9544 EGLINTON & GABIAN WAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3200-WAL MART SUPERCENTRE #3200 OAKVILLE",
+        "code": "W3200",
+        "name": "WAL MART SUPERCENTRE #3200 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1127-WAL MART SUPERCENTRE #1127 MISSISSAUGA",
+        "code": "W1127",
+        "name": "WAL MART SUPERCENTRE #1127 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "S667-SOBEYS #667 SOUTH AJAX",
+        "code": "S667",
+        "name": "SOBEYS #667 SOUTH AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "S3657-SOBEYS #3657 AJAX",
+        "code": "S3657",
+        "name": "SOBEYS #3657 AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C545-COSTCO CANADA #545 MARKHAM EAST",
+        "code": "C545",
+        "name": "COSTCO CANADA #545 MARKHAM EAST"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9575-FRESHCO #9575 CITY CENTRE",
+        "code": "F9575",
+        "name": "FRESHCO #9575 CITY CENTRE"
+      },
+      {
+        "type": "store",
+        "raw": "F3857-FRESHCO #3857 BOVAIRD & CONESTOGA",
+        "code": "F3857",
+        "name": "FRESHCO #3857 BOVAIRD & CONESTOGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1128-COSTCO CANADA #1128 OSHAWA",
+        "code": "C1128",
+        "name": "COSTCO CANADA #1128 OSHAWA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1591-COSTCO CANADA #1591 NORTH OSHAWA",
+        "code": "C1591",
+        "name": "COSTCO CANADA #1591 NORTH OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "F3817-FRESHCO #3817 WINCHESTER",
+        "code": "F3817",
+        "name": "FRESHCO #3817 WINCHESTER"
+      },
+      {
+        "type": "store",
+        "raw": "F3861-FRESHCO #3861 BALDWIN",
+        "code": "F3861",
+        "name": "FRESHCO #3861 BALDWIN"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1571,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C151-COSTCO CANADA #151 MARKHAM",
+        "code": "C151",
+        "name": "COSTCO CANADA #151 MARKHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "S7466-SOBEYS #7466 ORANGEVILLE",
+        "code": "S7466",
+        "name": "SOBEYS #7466 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "F3822-FRESHCO #3822 BROADWAY & DAWSON",
+        "code": "F3822",
+        "name": "FRESHCO #3822 BROADWAY & DAWSON"
+      },
+      {
+        "type": "store",
+        "raw": "C1248PM-COSTCO CANADA #1248 WATERLOO PM",
+        "code": "C1248PM",
+        "name": "COSTCO CANADA #1248 WATERLOO PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1029-WAL MART SUPERCENTRE #1029 STOUFVILLE",
+        "code": "W1029",
+        "name": "WAL MART SUPERCENTRE #1029 STOUFVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W3653-WAL MART SUPERCENTRE #3653 UXBRIDGE",
+        "code": "W3653",
+        "name": "WAL MART SUPERCENTRE #3653 UXBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "store",
+        "raw": "W5831-WAL MART SUPERCENTRE #5831 THORNHILL",
+        "code": "W5831",
+        "name": "WAL MART SUPERCENTRE #5831 THORNHILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W5831-WAL MART SUPERCENTRE #5831 THORNHILL",
+        "code": "W5831",
+        "name": "WAL MART SUPERCENTRE #5831 THORNHILL"
+      },
+      {
+        "type": "store",
+        "raw": "W1139-WAL MART SUPERCENTRE #1139 TORONTO",
+        "code": "W1139",
+        "name": "WAL MART SUPERCENTRE #1139 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3105-WAL MART SUPERCENTRE #3105 TORONTO",
+        "code": "W3105",
+        "name": "WAL MART SUPERCENTRE #3105 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9693-FRESHCO #9693 GOREWAY",
+        "code": "F9693",
+        "name": "FRESHCO #9693 GOREWAY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3064-WAL MART SUPERCENTRE #3064 OAKVILLE",
+        "code": "W3064",
+        "name": "WAL MART SUPERCENTRE #3064 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1572,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1211-WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+        "code": "W1211",
+        "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W1151-WAL MART SUPERCENTRE #1151 NORTH YORK",
+        "code": "W1151",
+        "name": "WAL MART SUPERCENTRE #1151 NORTH YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W3105-WAL MART SUPERCENTRE #3105 TORONTO",
+        "code": "W3105",
+        "name": "WAL MART SUPERCENTRE #3105 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3000-WAL MART SUPERCENTRE #3000 AGINCOURT",
+        "code": "W3000",
+        "name": "WAL MART SUPERCENTRE #3000 AGINCOURT"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W3133-WAL MART SUPERCENTRE #3133 COBOURG",
+        "code": "W3133",
+        "name": "WAL MART SUPERCENTRE #3133 COBOURG"
+      },
+      {
+        "type": "store",
+        "raw": "W3178-WAL MART SUPERCENTRE #3178 TRENTON",
+        "code": "W3178",
+        "name": "WAL MART SUPERCENTRE #3178 TRENTON"
+      },
+      {
+        "type": "store",
+        "raw": "F9976-FRESHCO #9976 TRENTON",
+        "code": "F9976",
+        "name": "FRESHCO #9976 TRENTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3122-WAL MART SUPERCENTRE #3122 BELLEVILLE",
+        "code": "W3122",
+        "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3071-WAL MART SUPERCENTRE #3071 PETERBOROUGH",
+        "code": "W3071",
+        "name": "WAL MART SUPERCENTRE #3071 PETERBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3133-WAL MART SUPERCENTRE #3133 COBOURG",
+        "code": "W3133",
+        "name": "WAL MART SUPERCENTRE #3133 COBOURG"
+      },
+      {
+        "type": "store",
+        "raw": "W3178-WAL MART SUPERCENTRE #3178 TRENTON",
+        "code": "W3178",
+        "name": "WAL MART SUPERCENTRE #3178 TRENTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3122-WAL MART SUPERCENTRE #3122 BELLEVILLE",
+        "code": "W3122",
+        "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3113-WAL MART SUPERCENTRE #3113 WHITBY",
+        "code": "W3113",
+        "name": "WAL MART SUPERCENTRE #3113 WHITBY"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W1001-WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+        "code": "W1001",
+        "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "F9976-FRESHCO #9976 TRENTON",
+        "code": "F9976",
+        "name": "FRESHCO #9976 TRENTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W3133-WAL MART SUPERCENTRE #3133 COBOURG",
+        "code": "W3133",
+        "name": "WAL MART SUPERCENTRE #3133 COBOURG"
+      },
+      {
+        "type": "store",
+        "raw": "W3178-WAL MART SUPERCENTRE #3178 TRENTON",
+        "code": "W3178",
+        "name": "WAL MART SUPERCENTRE #3178 TRENTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3122-WAL MART SUPERCENTRE #3122 BELLEVILLE",
+        "code": "W3122",
+        "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1001-WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+        "code": "W1001",
+        "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3122-WAL MART SUPERCENTRE #3122 BELLEVILLE",
+        "code": "W3122",
+        "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "F9976-FRESHCO #9976 TRENTON",
+        "code": "F9976",
+        "name": "FRESHCO #9976 TRENTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3178-WAL MART SUPERCENTRE #3178 TRENTON",
+        "code": "W3178",
+        "name": "WAL MART SUPERCENTRE #3178 TRENTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1573,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1001-WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+        "code": "W1001",
+        "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "F9577-FRESHCO #9577 LANSDOWNE & THE PARKWAY",
+        "code": "F9577",
+        "name": "FRESHCO #9577 LANSDOWNE & THE PARKWAY"
+      },
+      {
+        "type": "store",
+        "raw": "W3133-WAL MART SUPERCENTRE #3133 COBOURG",
+        "code": "W3133",
+        "name": "WAL MART SUPERCENTRE #3133 COBOURG"
+      },
+      {
+        "type": "store",
+        "raw": "W3122-WAL MART SUPERCENTRE #3122 BELLEVILLE",
+        "code": "W3122",
+        "name": "WAL MART SUPERCENTRE #3122 BELLEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1575,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1575,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "F3876-FRESHCO #3876 MCCOWAN & ELLESMERE",
+        "code": "F3876",
+        "name": "FRESHCO #3876 MCCOWAN & ELLESMERE"
+      },
+      {
+        "type": "store",
+        "raw": "F4015-FRESHCO #4015 TAUNTON",
+        "code": "F4015",
+        "name": "FRESHCO #4015 TAUNTON"
+      },
+      {
+        "type": "store",
+        "raw": "C595PM-COSTCO CANADA #595 BUSINESS CENTER PM",
+        "code": "C595PM",
+        "name": "COSTCO CANADA #595 BUSINESS CENTER PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1855,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C1740-COSTCO CANADA #1740 BUSINESS CENTER",
+        "code": "C1740",
+        "name": "COSTCO CANADA #1740 BUSINESS CENTER"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3200-WAL MART SUPERCENTRE #3200 OAKVILLE",
+        "code": "W3200",
+        "name": "WAL MART SUPERCENTRE #3200 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1127-WAL MART SUPERCENTRE #1127 MISSISSAUGA",
+        "code": "W1127",
+        "name": "WAL MART SUPERCENTRE #1127 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W1001-WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+        "code": "W1001",
+        "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3064-WAL MART SUPERCENTRE #3064 OAKVILLE",
+        "code": "W3064",
+        "name": "WAL MART SUPERCENTRE #3064 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "F9594-FRESHCO #9594 BAYFIELD & LIVINGSTONE",
+        "code": "F9594",
+        "name": "FRESHCO #9594 BAYFIELD & LIVINGSTONE"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1029-WAL MART SUPERCENTRE #1029 STOUFVILLE",
+        "code": "W1029",
+        "name": "WAL MART SUPERCENTRE #1029 STOUFVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3653-WAL MART SUPERCENTRE #3653 UXBRIDGE",
+        "code": "W3653",
+        "name": "WAL MART SUPERCENTRE #3653 UXBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W5778-WAL MART SUPERCENTRE #5778 AURORA",
+        "code": "W5778",
+        "name": "WAL MART SUPERCENTRE #5778 AURORA"
+      },
+      {
+        "type": "store",
+        "raw": "W3062-WAL MART SUPERCENTRE #3062 NEWMARKET",
+        "code": "W3062",
+        "name": "WAL MART SUPERCENTRE #3062 NEWMARKET"
+      },
+      {
+        "type": "store",
+        "raw": "W1139-WAL MART SUPERCENTRE #1139 TORONTO",
+        "code": "W1139",
+        "name": "WAL MART SUPERCENTRE #1139 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1117-WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+        "code": "W1117",
+        "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W1117-WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+        "code": "W1117",
+        "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3000-WAL MART SUPERCENTRE #3000 AGINCOURT",
+        "code": "W3000",
+        "name": "WAL MART SUPERCENTRE #3000 AGINCOURT"
+      },
+      {
+        "type": "store",
+        "raw": "W3195-WAL MART SUPERCENTRE #3195 RICHMOND HILL",
+        "code": "W3195",
+        "name": "WAL MART SUPERCENTRE #3195 RICHMOND HILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1856,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3034-WAL MART SUPERCENTRE #3034 GEORGETOWN",
+        "code": "W3034",
+        "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W5778-WAL MART SUPERCENTRE #5778 AURORA",
+        "code": "W5778",
+        "name": "WAL MART SUPERCENTRE #5778 AURORA"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1109-WAL MART SUPERCENTRE #1109 MARKHAM",
+        "code": "W1109",
+        "name": "WAL MART SUPERCENTRE #1109 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W1029-WAL MART SUPERCENTRE #1029 STOUFVILLE",
+        "code": "W1029",
+        "name": "WAL MART SUPERCENTRE #1029 STOUFVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3053-WAL MART SUPERCENTRE #3053 MARKHAM",
+        "code": "W3053",
+        "name": "WAL MART SUPERCENTRE #3053 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1117-WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+        "code": "W1117",
+        "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1081-WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+        "code": "W1081",
+        "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1117-WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+        "code": "W1117",
+        "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3106-WAL MART SUPERCENTRE #3106 TORONTO",
+        "code": "W3106",
+        "name": "WAL MART SUPERCENTRE #3106 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W1151-WAL MART SUPERCENTRE #1151 NORTH YORK",
+        "code": "W1151",
+        "name": "WAL MART SUPERCENTRE #1151 NORTH YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1101-WAL MART SUPERCENTRE #1101 BRADFORD",
+        "code": "W1101",
+        "name": "WAL MART SUPERCENTRE #1101 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "W1012-WAL MART SUPERCENTRE #1012 KESWICK",
+        "code": "W1012",
+        "name": "WAL MART SUPERCENTRE #1012 KESWICK"
+      },
+      {
+        "type": "store",
+        "raw": "W1116-WAL MART SUPERCENTRE #1116 RICHMOND HILL",
+        "code": "W1116",
+        "name": "WAL MART SUPERCENTRE #1116 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "W5831-WAL MART SUPERCENTRE #5831 THORNHILL",
+        "code": "W5831",
+        "name": "WAL MART SUPERCENTRE #5831 THORNHILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1861,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W1116-WAL MART SUPERCENTRE #1116 RICHMOND HILL",
+        "code": "W1116",
+        "name": "WAL MART SUPERCENTRE #1116 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "W5831-WAL MART SUPERCENTRE #5831 THORNHILL",
+        "code": "W5831",
+        "name": "WAL MART SUPERCENTRE #5831 THORNHILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "C526PM-COSTCO CANADA #526 RODEO PM",
+        "code": "C526PM",
+        "name": "COSTCO CANADA #526 RODEO PM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3166-WAL MART SUPERCENTRE #3166 BARRIE",
+        "code": "W3166",
+        "name": "WAL MART SUPERCENTRE #3166 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3195-WAL MART SUPERCENTRE #3195 RICHMOND HILL",
+        "code": "W3195",
+        "name": "WAL MART SUPERCENTRE #3195 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1139-WAL MART SUPERCENTRE #1139 TORONTO",
+        "code": "W1139",
+        "name": "WAL MART SUPERCENTRE #1139 TORONTO"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1083-WAL MART SUPERCENTRE #1083 ALLISTON",
+        "code": "W1083",
+        "name": "WAL MART SUPERCENTRE #1083 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3166-WAL MART SUPERCENTRE #3166 BARRIE",
+        "code": "W3166",
+        "name": "WAL MART SUPERCENTRE #3166 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3034-WAL MART SUPERCENTRE #3034 GEORGETOWN",
+        "code": "W3034",
+        "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3166-WAL MART SUPERCENTRE #3166 BARRIE",
+        "code": "W3166",
+        "name": "WAL MART SUPERCENTRE #3166 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "W1083-WAL MART SUPERCENTRE #1083 ALLISTON",
+        "code": "W1083",
+        "name": "WAL MART SUPERCENTRE #1083 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "S7466-SOBEYS #7466 ORANGEVILLE",
+        "code": "S7466",
+        "name": "SOBEYS #7466 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W5742-WAL MART SUPERCENTRE #5742 BOLTON",
+        "code": "W5742",
+        "name": "WAL MART SUPERCENTRE #5742 BOLTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3062-WAL MART SUPERCENTRE #3062 NEWMARKET",
+        "code": "W3062",
+        "name": "WAL MART SUPERCENTRE #3062 NEWMARKET"
+      },
+      {
+        "type": "store",
+        "raw": "W1083-WAL MART SUPERCENTRE #1083 ALLISTON",
+        "code": "W1083",
+        "name": "WAL MART SUPERCENTRE #1083 ALLISTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3166-WAL MART SUPERCENTRE #3166 BARRIE",
+        "code": "W3166",
+        "name": "WAL MART SUPERCENTRE #3166 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1863,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1004-WAL MART SUPERCENTRE #1004 YORK",
+        "code": "W1004",
+        "name": "WAL MART SUPERCENTRE #1004 YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W3159-WAL MART SUPERCENTRE #3159 SCARBOROUGH",
+        "code": "W3159",
+        "name": "WAL MART SUPERCENTRE #3159 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W1117-WAL MART SUPERCENTRE #1117 SCARBOROUGH",
+        "code": "W1117",
+        "name": "WAL MART SUPERCENTRE #1117 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3635-WAL MART SUPERCENTRE #3635 SCARBOROUGH",
+        "code": "W3635",
+        "name": "WAL MART SUPERCENTRE #3635 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3105-WAL MART SUPERCENTRE #3105 TORONTO",
+        "code": "W3105",
+        "name": "WAL MART SUPERCENTRE #3105 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3064-WAL MART SUPERCENTRE #3064 OAKVILLE",
+        "code": "W3064",
+        "name": "WAL MART SUPERCENTRE #3064 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3034-WAL MART SUPERCENTRE #3034 GEORGETOWN",
+        "code": "W3034",
+        "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3034-WAL MART SUPERCENTRE #3034 GEORGETOWN",
+        "code": "W3034",
+        "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3105-WAL MART SUPERCENTRE #3105 TORONTO",
+        "code": "W3105",
+        "name": "WAL MART SUPERCENTRE #3105 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3053-WAL MART SUPERCENTRE #3053 MARKHAM",
+        "code": "W3053",
+        "name": "WAL MART SUPERCENTRE #3053 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W3195-WAL MART SUPERCENTRE #3195 RICHMOND HILL",
+        "code": "W3195",
+        "name": "WAL MART SUPERCENTRE #3195 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "W1116-WAL MART SUPERCENTRE #1116 RICHMOND HILL",
+        "code": "W1116",
+        "name": "WAL MART SUPERCENTRE #1116 RICHMOND HILL"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3053-WAL MART SUPERCENTRE #3053 MARKHAM",
+        "code": "W3053",
+        "name": "WAL MART SUPERCENTRE #3053 MARKHAM"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3064-WAL MART SUPERCENTRE #3064 OAKVILLE",
+        "code": "W3064",
+        "name": "WAL MART SUPERCENTRE #3064 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1000-WAL MART SUPERCENTRE #1000 MILTON",
+        "code": "W1000",
+        "name": "WAL MART SUPERCENTRE #1000 MILTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1211-WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+        "code": "W1211",
+        "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1126-WAL MART SUPERCENTRE #1126 MISSISSAUGA",
+        "code": "W1126",
+        "name": "WAL MART SUPERCENTRE #1126 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1151-WAL MART SUPERCENTRE #1151 NORTH YORK",
+        "code": "W1151",
+        "name": "WAL MART SUPERCENTRE #1151 NORTH YORK"
+      },
+      {
+        "type": "store",
+        "raw": "W3174-WAL MART SUPERCENTRE #3174 VAUGHAN",
+        "code": "W3174",
+        "name": "WAL MART SUPERCENTRE #3174 VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W5742-WAL MART SUPERCENTRE #5742 BOLTON",
+        "code": "W5742",
+        "name": "WAL MART SUPERCENTRE #5742 BOLTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1864,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W1069-WAL MART SUPERCENTRE #1069 PORT PERRY",
+        "code": "W1069",
+        "name": "WAL MART SUPERCENTRE #1069 PORT PERRY"
+      },
+      {
+        "type": "store",
+        "raw": "W3113-WAL MART SUPERCENTRE #3113 WHITBY",
+        "code": "W3113",
+        "name": "WAL MART SUPERCENTRE #3113 WHITBY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3740-WAL MART SUPERCENTRE #3740 TORONTO",
+        "code": "W3740",
+        "name": "WAL MART SUPERCENTRE #3740 TORONTO"
+      },
+      {
+        "type": "store",
+        "raw": "W3174-WAL MART SUPERCENTRE #3174 VAUGHAN",
+        "code": "W3174",
+        "name": "WAL MART SUPERCENTRE #3174 VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "W1081-WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+        "code": "W1081",
+        "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W5742-WAL MART SUPERCENTRE #5742 BOLTON",
+        "code": "W5742",
+        "name": "WAL MART SUPERCENTRE #5742 BOLTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "W3161-WAL MART SUPERCENTRE #3161 OSHAWA",
+        "code": "W3161",
+        "name": "WAL MART SUPERCENTRE #3161 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W1001-WAL MART SUPERCENTRE #1001 BOWMANVILLE",
+        "code": "W1001",
+        "name": "WAL MART SUPERCENTRE #1001 BOWMANVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3113-WAL MART SUPERCENTRE #3113 WHITBY",
+        "code": "W3113",
+        "name": "WAL MART SUPERCENTRE #3113 WHITBY"
+      },
+      {
+        "type": "store",
+        "raw": "W1080-WAL MART SUPERCENTRE #1080 SCARBOROUGH",
+        "code": "W1080",
+        "name": "WAL MART SUPERCENTRE #1080 SCARBOROUGH"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1056-WAL MART SUPERCENTRE #1056 OSHAWA",
+        "code": "W1056",
+        "name": "WAL MART SUPERCENTRE #1056 OSHAWA"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W1069-WAL MART SUPERCENTRE #1069 PORT PERRY",
+        "code": "W1069",
+        "name": "WAL MART SUPERCENTRE #1069 PORT PERRY"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1095-WAL MART SUPERCENTRE #1095 WOODBRIDGE",
+        "code": "W1095",
+        "name": "WAL MART SUPERCENTRE #1095 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1081-WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+        "code": "W1081",
+        "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3034-WAL MART SUPERCENTRE #3034 GEORGETOWN",
+        "code": "W3034",
+        "name": "WAL MART SUPERCENTRE #3034 GEORGETOWN"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1061-WAL MART SUPERCENTRE #1061 MISSISSAUGA",
+        "code": "W1061",
+        "name": "WAL MART SUPERCENTRE #1061 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "store",
+        "raw": "W1079-WAL MART SUPERCENTRE #1079 HUTTONVILLE",
+        "code": "W1079",
+        "name": "WAL MART SUPERCENTRE #1079 HUTTONVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3130-WAL MART SUPERCENTRE #3130 BRAMPTON",
+        "code": "W3130",
+        "name": "WAL MART SUPERCENTRE #3130 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1866,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3166-WAL MART SUPERCENTRE #3166 BARRIE",
+        "code": "W3166",
+        "name": "WAL MART SUPERCENTRE #3166 BARRIE"
+      },
+      {
+        "type": "store",
+        "raw": "W1101-WAL MART SUPERCENTRE #1101 BRADFORD",
+        "code": "W1101",
+        "name": "WAL MART SUPERCENTRE #1101 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "W1012-WAL MART SUPERCENTRE #1012 KESWICK",
+        "code": "W1012",
+        "name": "WAL MART SUPERCENTRE #1012 KESWICK"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W1188-WAL MART SUPERCENTRE #1188 BRAMPTON",
+        "code": "W1188",
+        "name": "WAL MART SUPERCENTRE #1188 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3142-WAL MART SUPERCENTRE #3142 ORANGEVILLE",
+        "code": "W3142",
+        "name": "WAL MART SUPERCENTRE #3142 ORANGEVILLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1101-WAL MART SUPERCENTRE #1101 BRADFORD",
+        "code": "W1101",
+        "name": "WAL MART SUPERCENTRE #1101 BRADFORD"
+      },
+      {
+        "type": "store",
+        "raw": "W3062-WAL MART SUPERCENTRE #3062 NEWMARKET",
+        "code": "W3062",
+        "name": "WAL MART SUPERCENTRE #3062 NEWMARKET"
+      },
+      {
+        "type": "store",
+        "raw": "W1012-WAL MART SUPERCENTRE #1012 KESWICK",
+        "code": "W1012",
+        "name": "WAL MART SUPERCENTRE #1012 KESWICK"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3654-WAL MART SUPERCENTRE #3654 MISSISSAUGA",
+        "code": "W3654",
+        "name": "WAL MART SUPERCENTRE #3654 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3064-WAL MART SUPERCENTRE #3064 OAKVILLE",
+        "code": "W3064",
+        "name": "WAL MART SUPERCENTRE #3064 OAKVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1211-WAL MART SUPERCENTRE #1211 MISSISSAUGA",
+        "code": "W1211",
+        "name": "WAL MART SUPERCENTRE #1211 MISSISSAUGA"
+      },
+      {
+        "type": "store",
+        "raw": "W3054-WAL MART SUPERCENTRE #3054 MEADOWVALE",
+        "code": "W3054",
+        "name": "WAL MART SUPERCENTRE #3054 MEADOWVALE"
+      },
+      {
+        "type": "store",
+        "raw": "W3055-WAL MART SUPERCENTRE #3055 MISSISSAUGA",
+        "code": "W3055",
+        "name": "WAL MART SUPERCENTRE #3055 MISSISSAUGA"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3174-WAL MART SUPERCENTRE #3174 VAUGHAN",
+        "code": "W3174",
+        "name": "WAL MART SUPERCENTRE #3174 VAUGHAN"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3195-WAL MART SUPERCENTRE #3195 RICHMOND HILL",
+        "code": "W3195",
+        "name": "WAL MART SUPERCENTRE #3195 RICHMOND HILL"
+      },
+      {
+        "type": "store",
+        "raw": "W3000-WAL MART SUPERCENTRE #3000 AGINCOURT",
+        "code": "W3000",
+        "name": "WAL MART SUPERCENTRE #3000 AGINCOURT"
+      },
+      {
+        "type": "store",
+        "raw": "W1109-WAL MART SUPERCENTRE #1109 MARKHAM",
+        "code": "W1109",
+        "name": "WAL MART SUPERCENTRE #1109 MARKHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W3186-WAL MART SUPERCENTRE #3186 PICKERING",
+        "code": "W3186",
+        "name": "WAL MART SUPERCENTRE #3186 PICKERING"
+      },
+      {
+        "type": "store",
+        "raw": "W1069-WAL MART SUPERCENTRE #1069 PORT PERRY",
+        "code": "W1069",
+        "name": "WAL MART SUPERCENTRE #1069 PORT PERRY"
+      },
+      {
+        "type": "store",
+        "raw": "W3113-WAL MART SUPERCENTRE #3113 WHITBY",
+        "code": "W3113",
+        "name": "WAL MART SUPERCENTRE #3113 WHITBY"
+      },
+      {
+        "type": "store",
+        "raw": "W3001-WAL MART SUPERCENTRE #3001 AJAX",
+        "code": "W3001",
+        "name": "WAL MART SUPERCENTRE #3001 AJAX"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3111-WAL MART SUPERCENTRE #3111 SCARBOROUGH",
+        "code": "W3111",
+        "name": "WAL MART SUPERCENTRE #3111 SCARBOROUGH"
+      },
+      {
+        "type": "store",
+        "raw": "W5778-WAL MART SUPERCENTRE #5778 AURORA",
+        "code": "W5778",
+        "name": "WAL MART SUPERCENTRE #5778 AURORA"
+      },
+      {
+        "type": "store",
+        "raw": "W3653-WAL MART SUPERCENTRE #3653 UXBRIDGE",
+        "code": "W3653",
+        "name": "WAL MART SUPERCENTRE #3653 UXBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1029-WAL MART SUPERCENTRE #1029 STOUFVILLE",
+        "code": "W1029",
+        "name": "WAL MART SUPERCENTRE #1029 STOUFVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1109-WAL MART SUPERCENTRE #1109 MARKHAM",
+        "code": "W1109",
+        "name": "WAL MART SUPERCENTRE #1109 MARKHAM"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1868,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3031-WAL MART SUPERCENTRE #3031 ETOBICOKE",
+        "code": "W3031",
+        "name": "WAL MART SUPERCENTRE #3031 ETOBICOKE"
+      },
+      {
+        "type": "store",
+        "raw": "W1081-WAL MART SUPERCENTRE #1081 WOODBRIDGE",
+        "code": "W1081",
+        "name": "WAL MART SUPERCENTRE #1081 WOODBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W1115-WAL MART SUPERCENTRE #1115 MAPLE",
+        "code": "W1115",
+        "name": "WAL MART SUPERCENTRE #1115 MAPLE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - additional SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1120-WAL MART SUPERCENTRE #1120 BRAMPTON",
+        "code": "W1120",
+        "name": "WAL MART SUPERCENTRE #1120 BRAMPTON"
+      },
+      {
+        "type": "store",
+        "raw": "W3135-WAL MART SUPERCENTRE #3135 BRAMPTON",
+        "code": "W3135",
+        "name": "WAL MART SUPERCENTRE #3135 BRAMPTON"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Sunday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W5743-WAL MART SUPERCENTRE #5743 HUNTSVILLE",
+        "code": "W5743",
+        "name": "WAL MART SUPERCENTRE #5743 HUNTSVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1023-WAL MART SUPERCENTRE #1023 PARRY SOUND",
+        "code": "W1023",
+        "name": "WAL MART SUPERCENTRE #1023 PARRY SOUND"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Monday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1054-WAL MART SUPERCENTRE #1054 BRACEBRIDGE",
+        "code": "W1054",
+        "name": "WAL MART SUPERCENTRE #1054 BRACEBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W3645-WAL MART SUPERCENTRE #3645 MIDLAND",
+        "code": "W3645",
+        "name": "WAL MART SUPERCENTRE #3645 MIDLAND"
+      },
+      {
+        "type": "store",
+        "raw": "W1087-WAL MART SUPERCENTRE #1087 WASAGA BEACH",
+        "code": "W1087",
+        "name": "WAL MART SUPERCENTRE #1087 WASAGA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "W1039-WAL MART SUPERCENTRE #1039 COLLINGWOOD",
+        "code": "W1039",
+        "name": "WAL MART SUPERCENTRE #1039 COLLINGWOOD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Tuesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W5743-WAL MART SUPERCENTRE #5743 HUNTSVILLE",
+        "code": "W5743",
+        "name": "WAL MART SUPERCENTRE #5743 HUNTSVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W3645-WAL MART SUPERCENTRE #3645 MIDLAND",
+        "code": "W3645",
+        "name": "WAL MART SUPERCENTRE #3645 MIDLAND"
+      },
+      {
+        "type": "store",
+        "raw": "W1039-WAL MART SUPERCENTRE #1039 COLLINGWOOD",
+        "code": "W1039",
+        "name": "WAL MART SUPERCENTRE #1039 COLLINGWOOD"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Wednesday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1054-WAL MART SUPERCENTRE #1054 BRACEBRIDGE",
+        "code": "W1054",
+        "name": "WAL MART SUPERCENTRE #1054 BRACEBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W5743-WAL MART SUPERCENTRE #5743 HUNTSVILLE",
+        "code": "W5743",
+        "name": "WAL MART SUPERCENTRE #5743 HUNTSVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1023-WAL MART SUPERCENTRE #1023 PARRY SOUND",
+        "code": "W1023",
+        "name": "WAL MART SUPERCENTRE #1023 PARRY SOUND"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Thursday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W3645-WAL MART SUPERCENTRE #3645 MIDLAND",
+        "code": "W3645",
+        "name": "WAL MART SUPERCENTRE #3645 MIDLAND"
+      },
+      {
+        "type": "store",
+        "raw": "W1087-WAL MART SUPERCENTRE #1087 WASAGA BEACH",
+        "code": "W1087",
+        "name": "WAL MART SUPERCENTRE #1087 WASAGA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "W1039-WAL MART SUPERCENTRE #1039 COLLINGWOOD",
+        "code": "W1039",
+        "name": "WAL MART SUPERCENTRE #1039 COLLINGWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Friday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1054-WAL MART SUPERCENTRE #1054 BRACEBRIDGE",
+        "code": "W1054",
+        "name": "WAL MART SUPERCENTRE #1054 BRACEBRIDGE"
+      },
+      {
+        "type": "store",
+        "raw": "W5743-WAL MART SUPERCENTRE #5743 HUNTSVILLE",
+        "code": "W5743",
+        "name": "WAL MART SUPERCENTRE #5743 HUNTSVILLE"
+      },
+      {
+        "type": "store",
+        "raw": "W1023-WAL MART SUPERCENTRE #1023 PARRY SOUND",
+        "code": "W1023",
+        "name": "WAL MART SUPERCENTRE #1023 PARRY SOUND"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  },
+  {
+    "routeNumber": 1869,
+    "day": "Saturday",
+    "stops": [
+      {
+        "type": "mdc",
+        "raw": "MDC - arrive with Bobtail, take SR trailer"
+      },
+      {
+        "type": "store",
+        "raw": "W1039-WAL MART SUPERCENTRE #1039 COLLINGWOOD",
+        "code": "W1039",
+        "name": "WAL MART SUPERCENTRE #1039 COLLINGWOOD"
+      },
+      {
+        "type": "store",
+        "raw": "W1087-WAL MART SUPERCENTRE #1087 WASAGA BEACH",
+        "code": "W1087",
+        "name": "WAL MART SUPERCENTRE #1087 WASAGA BEACH"
+      },
+      {
+        "type": "store",
+        "raw": "W3645-WAL MART SUPERCENTRE #3645 MIDLAND",
+        "code": "W3645",
+        "name": "WAL MART SUPERCENTRE #3645 MIDLAND"
+      },
+      {
+        "type": "store",
+        "raw": "W3123-WAL MART SUPERCENTRE #3123 BARRIE",
+        "code": "W3123",
+        "name": "WAL MART SUPERCENTRE #3123 BARRIE"
+      },
+      {
+        "type": "mdc",
+        "raw": "MDC - drop SR trailer, leave with Bobtail"
+      }
+    ]
+  }
+]
