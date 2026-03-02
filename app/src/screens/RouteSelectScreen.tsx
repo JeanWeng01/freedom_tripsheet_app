@@ -50,9 +50,12 @@ export default function RouteSelectScreen({ driver, onBack, onStart }: Props) {
   return (
     <div className="flex flex-col h-dvh bg-slate-900">
       <div className="px-4 pt-10 pb-4 flex-shrink-0">
-        <button onClick={onBack} className="flex items-center gap-1 text-slate-400 text-sm mb-4 -ml-1 p-1">
-          <ChevronLeft className="w-4 h-4" />Back
-        </button>
+        <div className="flex items-center justify-between mb-4">
+          <button onClick={onBack} className="flex items-center gap-1 text-slate-400 text-sm -ml-1 p-1">
+            <ChevronLeft className="w-4 h-4" />Back
+          </button>
+          <img src="/logo.png" alt="Freedom Transportation" className="h-8" />
+        </div>
         <div className="text-slate-400 text-sm mb-1">{driver.fullName}</div>
         <h1 className="text-2xl font-bold text-white">Select your route</h1>
         <p className="text-slate-400 text-sm mt-1">{dateStr}</p>
@@ -108,9 +111,6 @@ export default function RouteSelectScreen({ driver, onBack, onStart }: Props) {
             Off Day Route
           </div>
           <div className="bg-amber-950/30 border border-amber-800/40 rounded-xl p-4">
-            <p className="text-amber-400/80 text-xs mb-3">
-              Unplanned route — no prepopulated stops. You build the full stop list.
-            </p>
             <div className="flex gap-2 mb-3">
               {OFF_DAY_ROUTES.map(r => (
                 <button

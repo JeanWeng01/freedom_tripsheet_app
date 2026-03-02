@@ -1,19 +1,20 @@
 import { useState } from 'react';
-import { Camera, Send, Building2, Navigation, MapPin, Plus, Trash2, Flag } from 'lucide-react';
+import { Camera, Send, Building2, Navigation, MapPin, Plus, Trash2, Flag, Truck } from 'lucide-react';
 import {
   DndContext, closestCenter, PointerSensor, TouchSensor, useSensor, useSensors,
 } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, useSortable, verticalListSortingStrategy, arrayMove } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import type { TripSheet, TripStop, SRStop, LHStop, MDCStop, SegmentStop } from '../types';
+import type { TripSheet, TripStop, SRStop, LHStop, MDCStop, SegmentStop, TruckStop } from '../types';
 import TripHeader from '../components/TripHeader';
 import StopCard from '../components/StopCard';
 import MDCCard from '../components/MDCCard';
 import SegmentCard from '../components/SegmentCard';
+import TruckCard from '../components/TruckCard';
 import ValidationModal from '../components/ValidationModal';
 import LHRequisitionTab from './LHRequisitionTab';
-import { makeSRStop, makeLHStop, makeMDCStop, makeSpecialMDCStop, makeSegmentStop, getMDCAllowance } from '../utils/tripUtils';
+import { makeSRStop, makeLHStop, makeMDCStop, makeSpecialMDCStop, makeSegmentStop, makeTruckStop, getMDCAllowance } from '../utils/tripUtils';
 import { validateTrip } from '../utils/validation';
 
 interface Props {
@@ -40,6 +41,20 @@ function SortableStop({ stop, index, allStops, onUpdate, onDelete, onPhotoAdd }:
       <div ref={setNodeRef} style={style}>
         <SegmentCard
           stop={stop as SegmentStop}
+          onChange={s => onUpdate(s)}
+          onDelete={onDelete}
+          dragHandleProps={dragHandleProps}
+        />
+      </div>
+    );
+  }
+
+  // Truck stops — tractor change marker
+  if (stop.type === 'truck') {
+    return (
+      <div ref={setNodeRef} style={style}>
+        <TruckCard
+          stop={stop as TruckStop}
           onChange={s => onUpdate(s)}
           onDelete={onDelete}
           dragHandleProps={dragHandleProps}
@@ -118,10 +133,53 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
   function updateTrip(patch: Partial<TripSheet>) { onTripChange({ ...trip, ...patch }); }
 
   function updateStop(index: number, updated: TripStop) {
-    const stops = [...trip.stops]; stops[index] = updated; updateTrip({ stops });
+    const stops = [...trip.stops];
+    stops[index] = updated;
+
+    // Cascade trailer # forward: SR and MDC changes push to subsequent SR stops until next MDC
+    if (updated.type === 'sr' || updated.type === 'mdc') {
+      const newTrailer = updated.type === 'sr'
+        ? (updated as SRStop).trailerNumber
+        : (updated as MDCStop).trailerNumber;
+      const oldStop = trip.stops[index];
+      const oldTrailer = oldStop.type === 'sr'
+        ? (oldStop as SRStop).trailerNumber
+        : oldStop.type === 'mdc'
+          ? (oldStop as MDCStop).trailerNumber
+          : '';
+      if (newTrailer !== oldTrailer) {
+        for (let i = index + 1; i < stops.length; i++) {
+          const s = stops[i];
+          if (s.type === 'mdc') break;
+          if (s.type === 'lh' || s.type === 'segment' || s.type === 'truck') continue;
+          const sr = s as SRStop;
+          // MDC defines the whole segment — always overwrite
+          // SR change only propagates to matching-or-empty downstream stops
+          if (updated.type === 'mdc' || sr.trailerNumber === oldTrailer || sr.trailerNumber === '') {
+            stops[i] = { ...sr, trailerNumber: newTrailer };
+          }
+        }
+      }
+    }
+
+    updateTrip({ stops });
   }
 
   function insertStop(afterIndex: number, stop: TripStop) {
+    // Only SR stops inherit trailer # from nearest preceding SR or MDC (LH/truck/segment don't)
+    if (stop.type === 'sr') {
+      for (let i = afterIndex; i >= 0; i--) {
+        const s = trip.stops[i];
+        if (s.type === 'mdc') {
+          const mdcTrailer = (s as MDCStop).trailerNumber;
+          if (mdcTrailer) stop = { ...stop, trailerNumber: mdcTrailer } as TripStop;
+          break;
+        }
+        if (s.type === 'segment' || s.type === 'truck' || s.type === 'lh') continue;
+        const trailer = (s as SRStop).trailerNumber;
+        if (trailer) { stop = { ...stop, trailerNumber: trailer } as TripStop; break; }
+      }
+    }
     const stops = [...trip.stops]; stops.splice(afterIndex + 1, 0, stop);
     updateTrip({ stops }); setShowAddMenu(null);
   }
@@ -135,14 +193,14 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
   }
 
   const { stops } = trip;
-  const stopCount = stops.filter(s => s.type !== 'segment').length;
+  const stopCount = stops.filter(s => s.type !== 'segment' && s.type !== 'truck').length;
 
   return (
     <div className="flex flex-col h-dvh bg-slate-900">
       <div className="flex-shrink-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 px-4 py-3 flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          <div className="font-semibold text-white text-sm">Route {trip.header.routeNumber}</div>
-          <div className="text-slate-400 text-xs">{trip.header.driverName.split(' ')[0]} · {trip.header.dayOfWeek}</div>
+          <div className="font-semibold text-white text-base">Route {trip.header.routeNumber}</div>
+          <div className="text-slate-400 text-sm">{trip.header.driverName.split(' ')[0]} · {trip.header.dayOfWeek}</div>
         </div>
         <button
           onClick={() => setShowDiscard(true)}
@@ -164,7 +222,7 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
       <div className="flex-shrink-0 flex border-b border-slate-800 bg-slate-900">
         {(['trip', 'lh'] as Tab[]).map(tab => (
           <button key={tab} onClick={() => setActiveTab(tab)}
-            className={`flex-1 py-2.5 text-sm font-semibold transition-colors border-b-2 ${
+            className={`flex-1 py-2.5 text-base font-semibold transition-colors border-b-2 ${
               activeTab === tab ? 'text-blue-400 border-blue-500' : 'text-slate-500 border-transparent hover:text-slate-300'
             }`}>
             {tab === 'trip' ? 'Trip Sheet' : 'LH Requisition'}
@@ -176,7 +234,7 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
         <div className="flex-1 overflow-y-auto">
           <div className="px-4 py-4 space-y-3 pb-24">
             <TripHeader header={trip.header} onChange={h => updateTrip({ header: h })} />
-            <div className="text-xs text-slate-600 px-1">
+            <div className="text-sm text-slate-600 px-1">
               {stopCount} stops · hold to reorder
             </div>
             <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
@@ -191,7 +249,7 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
                     <div className="flex items-center justify-center py-0.5">
                       <button type="button"
                         onClick={() => setShowAddMenu(m => m?.afterIndex === index ? null : { afterIndex: index })}
-                        className="flex items-center gap-1 text-xs text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
+                        className="flex items-center gap-1 text-sm text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
                         <Plus className="w-3 h-3" />insert stop
                       </button>
                     </div>
@@ -202,7 +260,7 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
                 ))}
               </SortableContext>
             </DndContext>
-            <AddStopMenu onAdd={s => updateTrip({ stops: [...stops, s] })} onClose={() => {}} inline />
+            <AddStopMenu onAdd={s => insertStop(stops.length - 1, s)} onClose={() => {}} inline />
           </div>
         </div>
       )}
@@ -252,22 +310,29 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
         <div className="grid grid-cols-3 gap-2">
           <button type="button" onClick={() => onAdd(makeSRStop('', '', 30, true))}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors">
-            <MapPin className="w-5 h-5 text-slate-400" /><span className="text-xs text-slate-400">SR Store</span>
+            <MapPin className="w-5 h-5 text-slate-400" /><span className="text-sm text-slate-400">SR Store</span>
           </button>
           <button type="button" onClick={() => onAdd(makeLHStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-emerald-900/40 rounded-xl transition-colors">
-            <Navigation className="w-5 h-5 text-emerald-600" /><span className="text-xs text-emerald-600">LH Location</span>
+            <Navigation className="w-5 h-5 text-emerald-600" /><span className="text-sm text-emerald-600">LH Location</span>
           </button>
           <button type="button" onClick={() => onAdd(makeMDCStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-blue-900/40 rounded-xl transition-colors">
-            <Building2 className="w-5 h-5 text-blue-600" /><span className="text-xs text-blue-600">MDC Stop</span>
+            <Building2 className="w-5 h-5 text-blue-600" /><span className="text-sm text-blue-600">MDC Stop</span>
           </button>
         </div>
-        <button type="button" onClick={() => onAdd(makeSegmentStop())}
-          className="w-full flex items-center gap-2 justify-center py-2.5 border border-dashed border-slate-600 rounded-xl text-xs text-slate-500 hover:text-slate-400 hover:border-slate-500 transition-colors">
-          <Flag className="w-3.5 h-3.5" />
-          New route segment (different route #)
-        </button>
+        <div className="grid grid-cols-2 gap-2">
+          <button type="button" onClick={() => onAdd(makeSegmentStop())}
+            className="flex flex-col items-center gap-1.5 py-3 bg-slate-800/30 hover:bg-slate-800 border border-yellow-700/50 rounded-xl transition-colors text-yellow-700 hover:text-yellow-600">
+            <Flag className="w-5 h-5" />
+            <span className="text-sm text-center">New route segment</span>
+          </button>
+          <button type="button" onClick={() => onAdd(makeTruckStop())}
+            className="flex flex-col items-center gap-1.5 py-3 bg-slate-800/30 hover:bg-slate-800 border border-yellow-700/50 rounded-xl transition-colors text-yellow-700 hover:text-yellow-600">
+            <Truck className="w-5 h-5" />
+            <span className="text-sm text-center">New truck</span>
+          </button>
+        </div>
       </div>
     );
   }
@@ -292,8 +357,12 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
           <Building2 className="w-4 h-4" />MDC - Additional SR trailer
         </button>
         <button type="button" onClick={() => { onAdd(makeSegmentStop()); onClose(); }}
-          className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-slate-400 hover:bg-slate-700 rounded-lg transition-colors text-left border-t border-slate-700 mt-1 pt-2">
+          className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-yellow-700 hover:bg-slate-700 rounded-lg transition-colors text-left border-t border-slate-700 mt-1 pt-2">
           <Flag className="w-4 h-4" />New route segment
+        </button>
+        <button type="button" onClick={() => { onAdd(makeTruckStop()); onClose(); }}
+          className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-yellow-700 hover:bg-slate-700 rounded-lg transition-colors text-left">
+          <Truck className="w-4 h-4" />New truck
         </button>
       </div>
     </div>

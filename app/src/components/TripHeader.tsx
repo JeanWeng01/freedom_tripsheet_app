@@ -29,9 +29,9 @@ export default function TripHeader({ header, onChange }: Props) {
         onClick={() => setExpanded(!expanded)}
       >
         <div className="flex-1 min-w-0">
-          <div className="text-white font-semibold text-sm">{header.routeNumber} — {header.driverName.split(' ')[0]}</div>
-          <div className="text-slate-400 text-xs mt-0.5">{dateLabel}</div>
-          <div className="flex items-center gap-3 mt-1.5 text-xs text-slate-500 flex-wrap">
+          <div className="text-white font-semibold text-base">{header.routeNumber} — {header.driverName.split(' ')[0]}</div>
+          <div className="text-slate-400 text-sm mt-0.5">{dateLabel}</div>
+          <div className="flex items-center gap-3 mt-1.5 text-sm text-slate-500 flex-wrap">
             {header.clockInTime !== null && (
               <span className="text-green-500">Clock-in: {minutesToLabel(header.clockInTime)}</span>
             )}
@@ -50,7 +50,7 @@ export default function TripHeader({ header, onChange }: Props) {
 
           {/* Clock-in time */}
           <div>
-            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5">
+            <label className="block text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1.5">
               <Clock className="inline w-3 h-3 mr-1" />
               Clock-in / Pre-trip start time
             </label>
@@ -64,23 +64,23 @@ export default function TripHeader({ header, onChange }: Props) {
           {/* Tractor + Plate */}
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="block text-xs text-slate-500 mb-1">Tractor #</label>
+              <label className="block text-base text-slate-400 mb-1">Tractor #</label>
               <input
                 type="text"
                 value={header.tractorNumber}
                 onChange={e => update({ tractorNumber: e.target.value })}
                 placeholder="123"
-                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-500 mb-1">Plate #</label>
+              <label className="block text-base text-slate-400 mb-1">Plate #</label>
               <input
                 type="text"
                 value={header.plateNumber}
                 onChange={e => update({ plateNumber: e.target.value })}
                 placeholder="e.g. ABC1234"
-                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>
@@ -88,23 +88,23 @@ export default function TripHeader({ header, onChange }: Props) {
           {/* Starting + Finishing Hub */}
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="block text-xs text-slate-500 mb-1">Starting hub (km)</label>
+              <label className="block text-base text-slate-400 mb-1">Starting hub (km)</label>
               <input
                 type="text"
                 value={header.startingHub}
                 onChange={e => update({ startingHub: e.target.value })}
                 placeholder="km"
-                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-500 mb-1">Finishing hub (km)</label>
+              <label className="block text-base text-slate-400 mb-1">Finishing hub (km)</label>
               <input
                 type="text"
                 value={header.finishingHub}
                 onChange={e => update({ finishingHub: e.target.value })}
                 placeholder="km"
-                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2.5 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>

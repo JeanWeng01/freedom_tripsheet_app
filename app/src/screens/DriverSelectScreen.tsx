@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, Truck } from 'lucide-react';
+import { Search } from 'lucide-react';
 import type { Driver } from '../types';
 import driversData from '../data/drivers.json';
 
@@ -26,13 +26,8 @@ export default function DriverSelectScreen({ onSelect }: Props) {
     <div className="flex flex-col h-dvh bg-slate-900 dark:bg-slate-900">
       {/* Header */}
       <div className="px-4 pt-10 pb-4 bg-slate-900">
-        <div className="flex items-center gap-3 mb-1">
-          <div className="bg-blue-600 rounded-xl p-2">
-            <Truck className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xs font-semibold text-blue-400 uppercase tracking-widest">
-            Freedom Transportation
-          </span>
+        <div className="mb-1">
+          <img src="/logo.png" alt="Freedom Transportation" className="h-16" />
         </div>
         <h1 className="text-2xl font-bold text-white mt-3">Who's driving today?</h1>
         <p className="text-slate-400 text-sm mt-1">Select your name to start your trip sheet</p>

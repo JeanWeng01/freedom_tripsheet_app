@@ -25,6 +25,14 @@ export function validateTrip(trip: TripSheet): ValidationResult {
     hardBlocks.push('Plate number is missing.');
   }
 
+  if (!header.startingHub.trim()) {
+    hardBlocks.push('Starting hub reading (km) is missing.');
+  }
+
+  if (!header.finishingHub.trim()) {
+    hardBlocks.push('Finishing hub reading (km) is missing.');
+  }
+
   // Check final departure time (used as finish time)
   const lastActive = activeStops[activeStops.length - 1];
   if (lastActive && lastActive.departureTime === null) {
@@ -40,11 +48,6 @@ export function validateTrip(trip: TripSheet): ValidationResult {
       if (stop.departureTime < stop.arrivalTime) {
         hardBlocks.push(`Stop #${num} shows departure before arrival — this needs to be corrected.`);
       }
-    }
-
-    // Hub reading
-    if (!stop.hubReading.trim()) {
-      hardBlocks.push(`Stop #${num} is missing an odometer/hub reading.`);
     }
 
     // MDC-specific
@@ -65,6 +68,12 @@ export function validateTrip(trip: TripSheet): ValidationResult {
   });
 
   // ── Soft warnings ────────────────────────────────────────────────────────
+
+  // Missing hub readings on stops
+  const missingHub = activeStops.filter(s => !s.hubReading.trim());
+  if (missingHub.length > 0) {
+    softWarnings.push(`${missingHub.length} stop(s) are missing a hub reading — needed for mileage tracking.`);
+  }
 
   // Missing times on active stops
   const missingTimes = activeStops.filter(s => s.arrivalTime === null || s.departureTime === null);

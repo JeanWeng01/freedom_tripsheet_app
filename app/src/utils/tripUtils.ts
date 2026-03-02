@@ -1,4 +1,4 @@
-import type { TripStop, SRStop, LHStop, MDCStop, SegmentStop, MDCArrivingWith, MDCLeavingWith, Route, RouteStop, Store, LHRequisition, LHLeg, LHDeliveryRow } from '../types';
+import type { TripStop, SRStop, LHStop, MDCStop, SegmentStop, TruckStop, MDCArrivingWith, MDCLeavingWith, Route, RouteStop, Store, LHRequisition, LHLeg, LHDeliveryRow } from '../types';
 import routesData from '../data/routes.json';
 import storesData from '../data/stores.json';
 
@@ -80,6 +80,10 @@ export function makeSpecialMDCStop(activity: MDCStop['specialActivity']): MDCSto
 
 export function makeSegmentStop(routeNumber = ''): SegmentStop {
   return { id: newId(), type: 'segment', routeNumber };
+}
+
+export function makeTruckStop(tractorNumber = ''): TruckStop {
+  return { id: newId(), type: 'truck', tractorNumber };
 }
 
 // ─── MDC allowance lookup ─────────────────────────────────────────────────────
@@ -179,6 +183,7 @@ export function stopDisplayName(stop: TripStop): string {
     return 'MDC Stop';
   }
   if (stop.type === 'segment') return `Route ${stop.routeNumber || '???'} segment`;
+  if (stop.type === 'truck') return `New truck: ${stop.tractorNumber || '???'}`;
   return 'Unknown stop';
 }
 
@@ -187,6 +192,7 @@ export function stopShortCode(stop: TripStop): string {
   if (stop.type === 'lh') return 'LH';
   if (stop.type === 'mdc') return 'MDC';
   if (stop.type === 'segment') return '—';
+  if (stop.type === 'truck') return 'TRK';
   return '';
 }
 

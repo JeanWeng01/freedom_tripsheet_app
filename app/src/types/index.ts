@@ -37,7 +37,7 @@ export type StopFlag = 'SAME DAY SPECIAL' | 'MISSING CALL' | 'OFF DAY CALL' | 'C
 export type MDCArrivingWith = 'Bobtail' | 'SR trailer' | 'Linehaul trailer';
 export type MDCLeavingWith = 'Bobtail' | 'SR trailer' | 'Linehaul trailer';
 
-export type StopType = 'sr' | 'lh' | 'mdc' | 'segment';
+export type StopType = 'sr' | 'lh' | 'mdc' | 'segment' | 'truck';
 
 export interface BaseStop {
   id: string;
@@ -80,7 +80,13 @@ export interface SegmentStop {
   routeNumber: string;
 }
 
-export type TripStop = SRStop | LHStop | MDCStop | SegmentStop;
+export interface TruckStop {
+  id: string;
+  type: 'truck';
+  tractorNumber: string;
+}
+
+export type TripStop = SRStop | LHStop | MDCStop | SegmentStop | TruckStop;
 
 export interface TripHeader {
   driverName: string;

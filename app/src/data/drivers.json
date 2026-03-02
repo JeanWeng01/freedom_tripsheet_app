@@ -363,5 +363,10 @@
     "fullName": "Sukhpreet Singh",
     "payrollName": "SukhpreetS",
     "code3": "SKP"
+  },
+  {
+    "fullName": "Test User",
+    "payrollName": "Test User",
+    "code3": "TUU"
   }
 ]

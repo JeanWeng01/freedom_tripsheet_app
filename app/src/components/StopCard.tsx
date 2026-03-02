@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { MapPin, Navigation, Trash2, Flag, GripVertical } from 'lucide-react';
 import type { TripStop, SRStop, LHStop, StopFlag } from '../types';
 import TimeSelect from './TimeSelect';
 import StoreSearch from './StoreSearch';
 import { minutesToLabel } from '../utils/tripUtils';
+import { vibrate } from '../utils/haptics';
 
 const FLAGS: StopFlag[] = ['SAME DAY SPECIAL', 'MISSING CALL', 'OFF DAY CALL', 'CHEESE OFF DAY'];
 
@@ -31,6 +32,18 @@ export default function StopCard({
   const [expanded, setExpanded] = useState(false);
   const [showFlags, setShowFlags] = useState(!!stop.flag);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  function handleCollapse() {
+    vibrate();
+    setExpanded(false);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const keyDiv = cardRef.current?.parentElement?.parentElement;
+      const prevKeyDiv = keyDiv?.previousElementSibling;
+      const scrollTarget = prevKeyDiv?.children[1] ?? cardRef.current;
+      scrollTarget?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+  }
 
   function update(patch: Partial<TripStop>) {
     onChange({ ...stop, ...patch } as TripStop);
@@ -52,7 +65,7 @@ export default function StopCard({
   const bgClass = isSR ? 'bg-slate-800/60' : 'bg-emerald-950/20';
 
   return (
-    <div className={`border rounded-2xl overflow-hidden ${borderClass} ${bgClass}`}>
+    <div ref={cardRef} className={`border rounded-2xl overflow-hidden ${borderClass} ${bgClass}`}>
       {/* Card header */}
       <div className="flex items-start gap-1 px-2 py-3">
 
@@ -78,26 +91,26 @@ export default function StopCard({
               <Navigation className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
             )}
             {isLH && (
-              <span className="text-xs px-1.5 py-0.5 rounded border border-emerald-800/50 text-emerald-500 font-medium">
+              <span className="text-sm px-1.5 py-0.5 rounded border border-emerald-800/50 text-emerald-500 font-medium">
                 LH
               </span>
             )}
             {isDuplicate && (
-              <span className="text-xs px-1.5 py-0.5 rounded border border-amber-600 bg-amber-900/30 text-amber-400 font-bold">
+              <span className="text-sm px-2 py-0.5 rounded border border-amber-600 bg-amber-900/30 text-amber-400 font-bold">
                 ×2
               </span>
             )}
             {stop.flag && (
-              <span className={`text-xs px-1.5 py-0.5 rounded border font-medium ${FLAG_STYLES[stop.flag]}`}>
+              <span className={`text-sm px-1.5 py-0.5 rounded border font-medium ${FLAG_STYLES[stop.flag]}`}>
                 {stop.flag}
               </span>
             )}
           </div>
 
           {/* Store/location name */}
-          <div className={`font-medium text-sm ${isMissing ? 'line-through text-slate-500' : 'text-white'}`}>
+          <div className={`font-medium text-base ${isMissing ? 'line-through text-slate-500' : 'text-white'}`}>
             {isSR && sr!.storeCode && (
-              <span className="font-mono text-slate-400 text-xs mr-1.5">{sr!.storeCode}</span>
+              <span className="font-mono text-slate-400 text-sm mr-1.5">{sr!.storeCode}</span>
             )}
             <span className={!displayName ? 'text-slate-500 italic' : ''}>
               {displayName || (isSR ? 'Select store →' : 'Enter location →')}
@@ -105,12 +118,12 @@ export default function StopCard({
           </div>
 
           {/* Time summary */}
-          <div className="flex items-center gap-2 mt-0.5 text-xs flex-wrap">
+          <div className="flex items-center gap-2 mt-0.5 text-base flex-wrap">
             {stop.arrivalTime !== null && (
               <span className="text-green-500">→ {minutesToLabel(stop.arrivalTime)}</span>
             )}
             {stop.departureTime !== null && (
-              <span className={isOverAllowance ? 'text-orange-400 font-semibold' : 'text-green-500'}>
+              <span className={isOverAllowance ? 'text-orange-400' : 'text-green-500'}>
                 {minutesToLabel(stop.departureTime)} →{isOverAllowance && ' ⚠'}
               </span>
             )}
@@ -125,7 +138,7 @@ export default function StopCard({
 
         {/* Expand chevron */}
         <div
-          className="text-slate-600 flex-shrink-0 mt-1 px-1 cursor-pointer text-xs"
+          className="text-slate-600 flex-shrink-0 mt-1 px-1 cursor-pointer text-sm"
           onClick={() => { setExpanded(!expanded); setShowDeleteConfirm(false); }}
         >
           {expanded ? '▲' : '▼'}
@@ -139,7 +152,7 @@ export default function StopCard({
           {/* Location entry */}
           {isSR && (
             <div>
-              <label className="block text-xs text-slate-400 mb-1">Store</label>
+              <label className="block text-sm text-slate-400 mb-1">Store</label>
               <StoreSearch
                 value={sr!.storeName}
                 storeCode={sr!.storeCode}
@@ -153,20 +166,20 @@ export default function StopCard({
           )}
           {isLH && (
             <div>
-              <label className="block text-xs text-slate-400 mb-1">Location name</label>
+              <label className="block text-sm text-slate-400 mb-1">Location name</label>
               <input
                 type="text"
                 value={lh!.locationName}
                 onChange={e => update({ locationName: e.target.value } as Partial<LHStop>)}
-                placeholder="Enter linehaul location name..."
-                className="w-full px-3 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-600 focus:outline-none focus:border-emerald-600"
+                placeholder="Destination name"
+                className="w-full px-3 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-emerald-600"
               />
             </div>
           )}
 
           {/* Times */}
           <div>
-            <label className="block text-xs text-slate-400 mb-1.5">Times</label>
+            <label className="block text-sm text-slate-400 mb-1.5">Times</label>
             <div className="flex gap-2">
               <TimeSelect value={stop.arrivalTime} onChange={v => update({ arrivalTime: v })} placeholder="Arrival" />
               <div className={`flex-1 ${isOverAllowance ? 'ring-2 ring-orange-500 rounded-xl' : ''}`}>
@@ -174,63 +187,53 @@ export default function StopCard({
               </div>
             </div>
             {isOverAllowance && (
-              <p className="text-orange-400 text-xs mt-1.5">Over allowance — add a comment explaining the wait time</p>
+              <p className="text-orange-400 text-sm mt-1.5">Over allowance — add a comment explaining the wait time</p>
             )}
           </div>
 
-          {/* Fields grid */}
-          <div className="grid grid-cols-2 gap-2">
+          {/* Fields grid — 3 columns */}
+          <div className="grid grid-cols-3 gap-2">
             <div>
-              <label className="block text-xs text-slate-400 mb-1">Trailer #</label>
+              <label className="block text-base text-slate-400 mb-1">Trailer #</label>
               <input
                 type="text"
                 value={stop.trailerNumber}
                 onChange={e => update({ trailerNumber: e.target.value })}
                 placeholder="T—"
-                className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-400 mb-1">Reefer temp</label>
+              <label className="block text-base text-slate-400 mb-1">Reefer °C</label>
               <input
                 type="text"
                 value={stop.reeferTemp}
                 onChange={e => update({ reeferTemp: e.target.value })}
                 placeholder="°C"
-                className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-400 mb-1">Hub reading</label>
+              <label className="block text-base text-slate-400 mb-1">Hub km</label>
               <input
                 type="text"
                 value={stop.hubReading}
                 onChange={e => update({ hubReading: e.target.value })}
                 placeholder="km"
-                className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label className="block text-xs text-slate-400 mb-1">BOL #</label>
-              <input
-                type="text"
-                value={stop.bolNumber}
-                onChange={e => update({ bolNumber: e.target.value })}
-                placeholder="BOL—"
-                className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                className="w-full px-2 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>
 
           {/* Comment */}
           <div>
-            <label className="block text-xs text-slate-400 mb-1">Comment (wait time reason, incident, etc.)</label>
+            <label className="block text-base text-slate-400 mb-1">Comment</label>
             <textarea
               value={stop.comment}
               onChange={e => update({ comment: e.target.value })}
               placeholder={isDuplicate && !stop.comment ? 'Second visit — why are you back? (explain here)' : 'Add notes...'}
               rows={2}
-              className={`w-full px-2.5 py-2 bg-slate-800 border rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none resize-none ${
+              className={`w-full px-2.5 py-2 bg-slate-800 border rounded-lg text-white text-base placeholder-slate-600 focus:outline-none resize-none ${
                 isOverAllowance
                   ? 'border-orange-500 focus:border-orange-400'
                   : isDuplicate && !stop.comment
@@ -245,7 +248,7 @@ export default function StopCard({
             <button
               type="button"
               onClick={() => setShowFlags(!showFlags)}
-              className={`flex items-center gap-2 text-sm px-4 py-2.5 rounded-xl border font-semibold transition-colors w-full justify-center ${
+              className={`flex items-center gap-2 text-base px-4 py-2.5 rounded-xl border font-semibold transition-colors w-full justify-center ${
                 stop.flag
                   ? 'border-orange-500 text-orange-300 bg-orange-900/30'
                   : 'border-amber-700 text-amber-400 bg-amber-900/20 hover:bg-amber-900/40 hover:border-amber-600'
@@ -261,7 +264,7 @@ export default function StopCard({
                     key={f}
                     type="button"
                     onClick={() => { update({ flag: stop.flag === f ? null : f }); if (stop.flag === f) setShowFlags(false); }}
-                    className={`text-xs px-2.5 py-1.5 rounded-lg border transition-colors ${
+                    className={`text-sm px-2.5 py-1.5 rounded-lg border transition-colors ${
                       stop.flag === f
                         ? FLAG_STYLES[f]
                         : 'border-slate-700 text-slate-400 hover:border-slate-500'
@@ -277,19 +280,19 @@ export default function StopCard({
           {/* Delete / confirmation */}
           {showDeleteConfirm ? (
             <div className="border border-slate-700 rounded-xl p-3 bg-slate-800/50">
-              <p className="text-xs text-slate-400 mb-2">Remove this stop?</p>
+              <p className="text-sm text-slate-400 mb-2">Remove this stop?</p>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={() => { update({ flag: 'MISSING CALL' }); setShowDeleteConfirm(false); }}
-                  className="flex-1 text-xs py-2 rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-700 transition-colors"
+                  className="flex-1 text-sm py-2 rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-700 transition-colors"
                 >
                   Mark as Missing Call
                 </button>
                 <button
                   type="button"
                   onClick={onDelete}
-                  className="flex-1 text-xs py-2 rounded-lg border border-red-800/50 bg-red-900/20 text-red-400 hover:bg-red-900/30 transition-colors"
+                  className="flex-1 text-sm py-2 rounded-lg border border-red-800/50 bg-red-900/20 text-red-400 hover:bg-red-900/30 transition-colors"
                 >
                   Delete stop
                 </button>
@@ -297,17 +300,24 @@ export default function StopCard({
               <button
                 type="button"
                 onClick={() => setShowDeleteConfirm(false)}
-                className="w-full mt-1.5 text-xs text-slate-600 hover:text-slate-500 py-1"
+                className="w-full mt-1.5 text-sm text-slate-600 hover:text-slate-500 py-1"
               >
                 Cancel
               </button>
             </div>
           ) : (
-            <div className="flex justify-end">
+            <div className="flex items-center justify-between">
+              <button
+                type="button"
+                onClick={handleCollapse}
+                className="text-slate-600 hover:text-slate-400 transition-colors px-2 py-1 text-sm"
+              >
+                ▲ collapse
+              </button>
               <button
                 type="button"
                 onClick={() => setShowDeleteConfirm(true)}
-                className="flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg border border-slate-700 text-red-400/60 hover:text-red-400 hover:border-red-800/50 transition-colors"
+                className="flex items-center gap-1.5 text-sm px-2.5 py-1.5 rounded-lg border border-slate-700 text-red-400/60 hover:text-red-400 hover:border-red-800/50 transition-colors"
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 Remove stop

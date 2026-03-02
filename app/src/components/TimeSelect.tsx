@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 import { minutesToLabel, nowMinutes } from '../utils/tripUtils';
+import { vibrate } from '../utils/haptics';
 import timeSlotsData from '../data/timeSlots.json';
 
 interface TimeSlot { label: string; value: number; }
@@ -39,6 +40,7 @@ export default function TimeSelect({ value, onChange, placeholder = 'Time', comp
   }, [open, value]);
 
   function logNow() {
+    vibrate();
     const now = nowMinutes();
     // Snap to nearest slot
     const nearest = timeSlots.reduce((prev, curr) =>
@@ -56,7 +58,7 @@ export default function TimeSelect({ value, onChange, placeholder = 'Time', comp
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className={`w-full flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
+          className={`w-full flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-base font-medium transition-colors ${
             label
               ? 'bg-green-900/40 border-green-700/60 text-green-300'
               : 'bg-slate-700/50 border-slate-600 text-slate-400 hover:border-slate-500'
@@ -75,7 +77,7 @@ export default function TimeSelect({ value, onChange, placeholder = 'Time', comp
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-xl border text-sm transition-colors ${
+        className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-xl border text-base transition-colors ${
           label
             ? 'bg-green-900/30 border-green-700/50 text-green-300'
             : 'bg-slate-700/50 border-slate-600 text-slate-400 hover:border-slate-500'
@@ -117,7 +119,7 @@ function TimeDropdown({
       <button
         type="button"
         onClick={onLogNow}
-        className="w-full px-3 py-2.5 text-sm font-semibold text-blue-400 hover:bg-slate-700 border-b border-slate-700 flex items-center gap-2"
+        className="w-full px-3 py-2.5 text-base font-semibold text-blue-400 hover:bg-slate-700 border-b border-slate-700 flex items-center gap-2"
       >
         <Clock className="w-3.5 h-3.5" />
         Log current time
@@ -128,8 +130,8 @@ function TimeDropdown({
           <button
             key={slot.value}
             type="button"
-            onClick={() => { onChange(slot.value); setOpen(false); }}
-            className={`w-full px-3 py-2.5 text-sm text-left transition-colors ${
+            onClick={() => { vibrate(); onChange(slot.value); setOpen(false); }}
+            className={`w-full px-3 py-2.5 text-base text-left transition-colors ${
               value === slot.value
                 ? 'bg-blue-700 text-white font-semibold'
                 : 'text-slate-200 hover:bg-slate-700'
