@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import { CheckCircle, RotateCcw, Share2, Download, AlertTriangle } from 'lucide-react';
+import { CheckCircle, RotateCcw, Download, AlertTriangle } from 'lucide-react';
 import type { TripSheet, SRStop, LHStop, MDCStop } from '../types';
 import type { SubmitResult } from '../utils/api';
-import { minutesToLabel, stopDisplayName } from '../utils/tripUtils';
+import { minutesToLabel } from '../utils/tripUtils';
 
 interface Props {
   trip: TripSheet;
@@ -10,42 +9,7 @@ interface Props {
   onNewTrip: () => void;
 }
 
-function formatTripText(trip: TripSheet): string {
-  const { header, stops } = trip;
-  const activeStops = stops.filter(
-    (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && !s.skipped
-  );
-
-  const dateLabel = new Date(header.date + 'T12:00:00').toLocaleDateString('en-CA', {
-    weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
-  });
-
-  const lines: string[] = [
-    'FREEDOM TRANSPORTATION',
-    `Route ${header.routeNumber} — ${header.driverName}`,
-    dateLabel,
-    '',
-    `Tractor: ${header.tractorNumber || '—'} | Plate: ${header.plateNumber || '—'}`,
-    header.clockInTime !== null ? `Clock-in: ${minutesToLabel(header.clockInTime)}` : '',
-    '',
-    `STOPS (${activeStops.length}):`,
-    ...activeStops.map((stop, i) => {
-      const name = stopDisplayName(stop);
-      const arr = stop.arrivalTime !== null ? minutesToLabel(stop.arrivalTime) : '--';
-      const dep = stop.departureTime !== null ? minutesToLabel(stop.departureTime) : '--';
-      return `${i + 1}. ${name} — ${arr} → ${dep}`;
-    }),
-    '',
-    `Photos: ${trip.photoCount}`,
-    `Trip ID: #${trip.id}`,
-  ].filter(l => l !== undefined);
-
-  return lines.join('\n');
-}
-
 export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
-  const [shareStatus, setShareStatus] = useState<'idle' | 'copied'>('idle');
-
   const { header, stops } = trip;
   const activeStops = stops.filter(
     (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && !s.skipped
@@ -56,27 +20,12 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
   });
 
-  const dateForFile = new Date(header.date + 'T12:00:00').toLocaleDateString('en-CA', {
-    year: 'numeric', month: '2-digit', day: '2-digit'
-  }).replace(/-/g, '.');
+  const d = new Date(header.date + 'T12:00:00');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  const yyyy = d.getFullYear();
   const firstName = header.driverName.split(' ')[0];
-  const filename = submitResult?.filename ?? `[${dateForFile}] ${header.routeNumber} ${firstName}.xlsx`;
-
-  async function handleShare() {
-    const text = formatTripText(trip);
-    const title = `Trip Sheet — Route ${header.routeNumber} — ${firstName}`;
-    try {
-      if (navigator.share) {
-        await navigator.share({ title, text });
-      } else {
-        await navigator.clipboard.writeText(text);
-        setShareStatus('copied');
-        setTimeout(() => setShareStatus('idle'), 2500);
-      }
-    } catch {
-      // User cancelled share or clipboard failed — silent
-    }
-  }
+  const filename = submitResult?.filename ?? `${mm}.${dd} ${header.routeNumber} ${firstName} ${yyyy}.xlsx`;
 
   const isFlagged = submitResult?.status === 'flagged';
   const backendDown = submitResult === null;
@@ -158,14 +107,6 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
             Download Excel file
           </a>
         )}
-
-        <button
-          onClick={handleShare}
-          className="w-full py-4 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-2xl transition-colors flex items-center justify-center gap-2"
-        >
-          <Share2 className="w-4 h-4" />
-          {shareStatus === 'copied' ? 'Copied to clipboard!' : 'Save / Share a copy'}
-        </button>
 
         <button
           onClick={onNewTrip}

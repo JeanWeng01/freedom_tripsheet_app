@@ -10,7 +10,8 @@
       "Bash(source venv/Scripts/activate)",
       "Bash(pip install -r requirements.txt)",
       "Bash(python -c \"import database; import excel_gen; import main; print\\(''All imports OK''\\)\")",
-      "Bash(curl -s http://localhost:8000/api/trips)"
+      "Bash(curl -s http://localhost:8000/api/trips)",
+      "Bash(python -c \":*)"
     ]
   }
 }

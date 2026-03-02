@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 import XLSX from 'xlsx';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const TEMPLATE_PATH = join(__dirname, '../../Freedom Trip Sheet Template - SHARED WITH DRIVERS.xlsx');
+const TEMPLATE_PATH = join(__dirname, '../../Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx');
 const OUT_DIR = join(__dirname, '../src/data');
 
 mkdirSync(OUT_DIR, { recursive: true });

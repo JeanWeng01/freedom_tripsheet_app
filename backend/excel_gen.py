@@ -8,10 +8,11 @@ from datetime import datetime
 import shutil
 
 import openpyxl
+from openpyxl.utils import get_column_letter
 
 TEMPLATE_PATH = (
     Path(__file__).parent.parent
-    / "Freedom Trip Sheet Template - SHARED WITH DRIVERS.xlsx"
+    / "Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx"
 )
 
 OUTPUT_READY = Path(__file__).parent / "output" / "ready"
@@ -165,9 +166,13 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
 
     # ── Filename ──────────────────────────────────────────────────────────────
     date_obj = datetime.strptime(header["date"], "%Y-%m-%d")
-    date_str = date_obj.strftime("%m.%d.%Y")
     first_name = header["driverName"].split()[0]
-    filename = f"[{date_str}] {header['routeNumber']} {first_name}.xlsx"
+    filename = (
+        f"{date_obj.strftime('%m.%d')} "
+        f"{header['routeNumber']} "
+        f"{first_name} "
+        f"{date_obj.strftime('%Y')}.xlsx"
+    )
 
     # ── Load template ──────────────────────────────────────────────────────────
     wb = openpyxl.load_workbook(TEMPLATE_PATH)
@@ -176,6 +181,9 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
     # ── Header cells ──────────────────────────────────────────────────────────
     ws["A2"] = header["driverName"]
     ws["C2"] = header["routeNumber"]
+    ws["J2"] = date_obj                         # Excel date value, YYYY-MM-DD display
+    ws["J2"].number_format = "YYYY-MM-DD"
+    ws["K2"] = trip.get("id", "")              # unique trip sheet code
 
     _write_time(ws, "D2", header.get("clockInTime"))
 
@@ -241,6 +249,27 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
             ws[f"I{row_num}"] = row["reefer"]
         if row["bol"]:
             ws[f"J{row_num}"] = row["bol"]
+
+    # ── LH Requisition tab ────────────────────────────────────────────────────
+    ws_lh = wb["LH Requisition"]
+    lh_legs = trip.get("lhRequisition", {}).get("legs", [])
+    for i, leg in enumerate(lh_legs):
+        col = get_column_letter(3 + i)  # C=leg0, D=leg1, E=leg2, …
+
+        trailer = (leg.get("trailerNumber") or "").upper()
+        if trailer:
+            ws_lh[f"{col}12"] = trailer
+
+        dep_loc = leg.get("departureLocation") or ""
+        if dep_loc:
+            ws_lh[f"{col}13"] = dep_loc
+
+        dest_loc = leg.get("destinationLocation") or ""
+        if dest_loc:
+            ws_lh[f"{col}14"] = dest_loc
+
+        _write_time(ws_lh, f"{col}16", leg.get("actualDepartureTime"))
+        _write_time(ws_lh, f"{col}17", leg.get("arrivalTime"))
 
     # ── Save ──────────────────────────────────────────────────────────────────
     out_path = (OUTPUT_READY if status == "ready" else OUTPUT_FLAGGED) / filename

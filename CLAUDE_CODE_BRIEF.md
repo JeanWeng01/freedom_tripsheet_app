@@ -22,7 +22,7 @@ Build a mobile-first web app (React + Next.js or Vite) that replaces a Google Sh
 
 ## What Exists Today
 
-Drivers currently use a Google Sheets template (attached as `Freedom_Trip_Sheet_Template_-_SHARED_WITH_DRIVERS.xlsx`). Each day, they copy the template, fill in their stops with arrival/departure times, trailer numbers, BOL numbers, etc. The sheet has complex formulas that auto-calculate wait times, flag off-day deliveries, detect duplicate stops, rank stores by wait time overage, etc. The owner then downloads these as Excel files and processes them with VBA macros for invoicing and payroll.
+Drivers currently use a Google Sheets template (attached as `Freedom_Trip_Sheet_Template_-_ADAPTED_FOR_APP.xlsx`). Each day, they copy the template, fill in their stops with arrival/departure times, trailer numbers, BOL numbers, etc. The sheet has complex formulas that auto-calculate wait times, flag off-day deliveries, detect duplicate stops, rank stores by wait time overage, etc. The owner then downloads these as Excel files and processes them with VBA macros for invoicing and payroll.
 
 **Time is recorded in 15-minute increments** from 12:00 AM to 11:45 PM for ease of dropdown entry and calculation.
 
@@ -213,12 +213,14 @@ When driver submits:
 3. Fill in ONLY the driver-input cells:
    - A2 = driver name
    - C2 = route number
-   - D2 = start time, E2 = finish time
+   - D2 = start time, E2 = finish time (auto-populated from last stop departure)
+   - J2 = trip date, written as an Excel date value with YYYY-MM-DD display format
+   - K2 = unique trip sheet code (e.g. PFR1302)
    - Rows 4-20: C = location name, D = arrival time, E = departure time, F = wait time reason, G = hub reading, H = trailer number, I = reefer temp, J = BOL number
    - A4:A20 = special flags (SAME DAY SPECIAL, etc.) if any
    - For the SR → LH split case: output as two rows, consuming two row slots
 4. **ALL existing formulas in the template stay untouched** — columns L through Z, rows 23-34 summary section, all of it. The formulas calculate based on the filled-in data.
-5. Save as `[MM.DD.YYYY] [ROUTE] [DriverFirstName].xlsx` . (Split driver's full name from their name selection drop down box and use only the first word in trip sheet file name.)
+5. Save as `MM.DD ROUTE# DriverFirstName YYYY.xlsx` (e.g. `03.02 1531 Jean 2026.xlsx`). Split driver's full name and use only the first word.
 6. Store in a designated output folder (or upload to Google Drive / cloud storage).
 7. **Verification step**: After generating the Excel file, the backend opens it programmatically, recalculates, and checks for formula errors (e.g., #REF!, #VALUE!, #N/A in cells that shouldn't have them), missing data in critical cells, or row count mismatches. If everything passes, the file goes to the output folder. If anything fails:
 - The file gets moved to a separate flagged folder (not mixed in with good files).
@@ -280,7 +282,7 @@ Motive is the fleet GPS/telemetry platform. This integration is an **audit aid f
 
 ## Files
 
-The Excel template (`Freedom_Trip_Sheet_Template_-_SHARED_WITH_DRIVERS.xlsx`) is the source of truth for:
+The Excel template (`Freedom_Trip_Sheet_Template_-_ADAPTED_FOR_APP.xlsx`) is the source of truth for:
 - All route-day stop sequences (RouteData tab)
 - Store lists, short codes, full names, and time allowances (Sources tab)
 - Driver names and codes (Sources tab col B)

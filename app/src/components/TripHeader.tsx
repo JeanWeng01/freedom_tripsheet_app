@@ -17,9 +17,9 @@ export default function TripHeader({ header, tripId, onChange }: Props) {
     onChange({ ...header, ...patch });
   }
 
-  const dateLabel = new Date(header.date + 'T12:00:00').toLocaleDateString('en-CA', {
-    weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
-  });
+  const d = new Date(header.date + 'T12:00:00');
+  const dayOfWeek = d.toLocaleDateString('en-CA', { weekday: 'long' });
+  const dateShort = d.toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' });
 
   return (
     <div className="bg-slate-800/80 border border-slate-700 rounded-2xl overflow-hidden">
@@ -32,9 +32,10 @@ export default function TripHeader({ header, tripId, onChange }: Props) {
         <div className="flex-1 min-w-0">
           <div className="text-white font-semibold text-base">{header.routeNumber} — {header.driverName.split(' ')[0]}</div>
           <div className="flex items-baseline justify-between gap-2 mt-0.5">
-            <span className="text-slate-400 text-sm">{dateLabel}</span>
+            <span className="text-slate-400 text-sm">{dayOfWeek}</span>
             <span className="text-slate-500 text-xs font-mono flex-shrink-0">#{tripId}</span>
           </div>
+          <div className="text-slate-500 text-xs mt-0.5">{dateShort}</div>
           <div className="flex items-center gap-3 mt-1.5 text-sm text-slate-500 flex-wrap">
             {header.clockInTime !== null && (
               <span className="text-green-500">Clock-in: {minutesToLabel(header.clockInTime)}</span>
