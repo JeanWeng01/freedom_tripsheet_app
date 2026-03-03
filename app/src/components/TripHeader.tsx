@@ -33,7 +33,7 @@ export default function TripHeader({ header, tripId, onChange }: Props) {
           <div className="text-white font-semibold text-base">{header.routeNumber} — {header.driverName.split(' ')[0]}</div>
           <div className="flex items-baseline justify-between gap-2 mt-0.5">
             <span className="text-slate-400 text-sm">{dayOfWeek}</span>
-            <span className="text-slate-500 text-xs font-mono flex-shrink-0">#{tripId}</span>
+            <span className="text-xs font-mono bg-slate-700 text-slate-300 px-2 py-0.5 rounded-md flex-shrink-0">#{tripId}</span>
           </div>
           <div className="text-slate-500 text-xs mt-0.5">{dateShort}</div>
           <div className="flex items-center gap-3 mt-1.5 text-sm text-slate-500 flex-wrap">
@@ -69,7 +69,7 @@ export default function TripHeader({ header, tripId, onChange }: Props) {
           {/* Tractor + Plate */}
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="block text-base text-slate-400 mb-1">Tractor #</label>
+              <label className="block text-base text-slate-400 mb-1">Truck #</label>
               <input
                 type="text"
                 value={header.tractorNumber}

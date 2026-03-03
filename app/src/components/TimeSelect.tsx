@@ -12,9 +12,10 @@ interface Props {
   onChange: (v: number | null) => void;
   placeholder?: string;
   compact?: boolean;
+  disabled?: boolean;
 }
 
-export default function TimeSelect({ value, onChange, placeholder = 'Time', compact = false }: Props) {
+export default function TimeSelect({ value, onChange, placeholder = 'Time', compact = false, disabled = false }: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -76,16 +77,19 @@ export default function TimeSelect({ value, onChange, placeholder = 'Time', comp
     <div ref={ref} className="relative flex-1">
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        disabled={disabled}
+        onClick={() => !disabled && setOpen(!open)}
         className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-xl border text-base transition-colors ${
-          label
-            ? 'bg-green-900/30 border-green-700/50 text-green-300'
-            : 'bg-slate-700/50 border-slate-600 text-slate-400 hover:border-slate-500'
+          disabled
+            ? 'bg-slate-800/30 border-slate-700/40 text-slate-600 cursor-not-allowed'
+            : label
+              ? 'bg-green-900/30 border-green-700/50 text-green-300'
+              : 'bg-slate-700/50 border-slate-600 text-slate-400 hover:border-slate-500'
         }`}
       >
         <Clock className="w-4 h-4 flex-shrink-0" />
         <span className="flex-1 text-left">{label || placeholder}</span>
-        {label && (
+        {label && !disabled && (
           <button
             type="button"
             onClick={e => { e.stopPropagation(); onChange(null); }}
@@ -95,7 +99,7 @@ export default function TimeSelect({ value, onChange, placeholder = 'Time', comp
           </button>
         )}
       </button>
-      {open && <TimeDropdown listRef={listRef} value={value} onChange={onChange} setOpen={setOpen} onLogNow={logNow} />}
+      {open && !disabled && <TimeDropdown listRef={listRef} value={value} onChange={onChange} setOpen={setOpen} onLogNow={logNow} />}
     </div>
   );
 }

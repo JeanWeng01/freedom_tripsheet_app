@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import type { Driver, TripSheet, AppScreen } from './types';
 import DriverSelectScreen from './screens/DriverSelectScreen';
 import RouteSelectScreen from './screens/RouteSelectScreen';
@@ -6,6 +6,25 @@ import TripSheetScreen from './screens/TripSheetScreen';
 import SubmitScreen from './screens/SubmitScreen';
 import { syncTrip, submitTrip } from './utils/api';
 import type { SubmitResult } from './utils/api';
+
+function loadHistory(): TripSheet[] {
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY);
+    if (raw) return JSON.parse(raw) as TripSheet[];
+  } catch {}
+  return [];
+}
+
+function markTripSubmittedInStorage(tripId: string): void {
+  try {
+    const history = loadHistory();
+    const idx = history.findIndex(t => t.id === tripId);
+    if (idx !== -1) {
+      history[idx] = { ...history[idx], submittedAt: new Date().toISOString() };
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+    }
+  } catch {}
+}
 
 const STORAGE_KEY = 'freedomTripState';
 const HISTORY_KEY = 'freedomTripHistory';
@@ -59,6 +78,16 @@ export default function App() {
   const [trip, setTrip] = useState<TripSheet | null>(saved.trip ?? null);
   const [submittedTrip, setSubmittedTrip] = useState<TripSheet | null>(null);
   const [submitResult, setSubmitResult] = useState<SubmitResult | null>(null);
+  const [historyVersion, setHistoryVersion] = useState(0);
+  const [retryingPending, setRetryingPending] = useState(false);
+
+  const history = useMemo(() => loadHistory(), [historyVersion]);
+  const pendingTrips = useMemo(() => history.filter(t => t.submittedAt === null), [history]);
+
+  function markTripSubmitted(tripId: string) {
+    markTripSubmittedInStorage(tripId);
+    setHistoryVersion(v => v + 1);
+  }
 
   // Auto-save to localStorage on every state change
   useEffect(() => {
@@ -112,6 +141,7 @@ export default function App() {
     let result: SubmitResult | null = null;
     try {
       result = await submitTrip(t);
+      markTripSubmitted(t.id);
     } catch (e) {
       // Backend unavailable — proceed to confirm screen without download link.
       // Data is safe in localStorage history.
@@ -121,6 +151,33 @@ export default function App() {
     setSubmittedTrip(t);
     setSubmitResult(result);
     setScreen('submit-confirm');
+  }
+
+  async function handleRetry() {
+    if (!submittedTrip) return;
+    let result: SubmitResult | null = null;
+    try {
+      result = await submitTrip(submittedTrip);
+      markTripSubmitted(submittedTrip.id);
+    } catch (e) {
+      console.warn('Retry submit failed:', e);
+    }
+    setSubmitResult(result);
+  }
+
+  async function handleRetryPending() {
+    setRetryingPending(true);
+    const pending = loadHistory().filter(t => t.submittedAt === null);
+    for (const t of pending) {
+      try {
+        await submitTrip(t);
+        markTripSubmittedInStorage(t.id);
+      } catch {
+        // one failed — continue with the rest
+      }
+    }
+    setHistoryVersion(v => v + 1);
+    setRetryingPending(false);
   }
 
   function handleDiscard() {
@@ -141,7 +198,12 @@ export default function App() {
   return (
     <div className="min-h-dvh bg-slate-900 text-slate-100">
       {screen === 'driver-select' && (
-        <DriverSelectScreen onSelect={handleDriverSelect} />
+        <DriverSelectScreen
+          onSelect={handleDriverSelect}
+          pendingCount={pendingTrips.length}
+          onRetryPending={handleRetryPending}
+          retryingPending={retryingPending}
+        />
       )}
       {screen === 'route-select' && driver && (
         <RouteSelectScreen
@@ -163,6 +225,8 @@ export default function App() {
           trip={submittedTrip}
           submitResult={submitResult}
           onNewTrip={handleNewTrip}
+          onRetry={handleRetry}
+          history={history}
         />
       )}
     </div>

@@ -181,6 +181,12 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
     # ── Header cells ──────────────────────────────────────────────────────────
     ws["A2"] = header["driverName"]
     ws["C2"] = header["routeNumber"]
+    ws["F2"] = header.get("plateNumber", "")
+    ws["G2"] = header.get("tractorNumber", "")
+    if header.get("startingHub"):
+        ws["H2"] = header["startingHub"]
+    if header.get("finishingHub"):
+        ws["I2"] = header["finishingHub"]
     ws["J2"] = date_obj                         # Excel date value, YYYY-MM-DD display
     ws["J2"].number_format = "YYYY-MM-DD"
     ws["K2"] = trip.get("id", "")              # unique trip sheet code

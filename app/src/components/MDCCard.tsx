@@ -50,7 +50,9 @@ export default function MDCCard({ stop, index: _index, onChange, onDelete, dragH
   const invalidCombo = stop.arrivingWith === 'Bobtail' && stop.leavingWith === 'Bobtail';
 
   let allowanceLabel = '';
-  if (!stop.specialActivity && stop.arrivingWith && stop.leavingWith && !invalidCombo) {
+  if (stop.specialActivity === 'MDC - additional SR trailer') {
+    allowanceLabel = '45 min allowance';
+  } else if (!stop.specialActivity && stop.arrivingWith && stop.leavingWith && !invalidCombo) {
     const a = getMDCAllowance(stop.arrivingWith, stop.leavingWith);
     if (a.isSplit) {
       allowanceLabel = `30 min SR + 15 min LH`;
@@ -251,7 +253,7 @@ export default function MDCCard({ stop, index: _index, onChange, onDelete, dragH
               {allowanceLabel && !invalidCombo && (
                 <div className={`text-sm px-3 py-2 rounded-lg ${isSRtoLH ? 'bg-amber-900/30 text-amber-300 border border-amber-800/40' : 'bg-slate-800 text-slate-400'}`}>
                   {isSRtoLH ? (
-                    <>⚡ <strong>Split billing:</strong> 30 min SR allowance + 15 min LH allowance — enter transition time below</>
+                    <>30 min SR allowance + 15 min LH allowance — enter transition time below</>
                   ) : (
                     <>⏱ {allowanceLabel}</>
                   )}
@@ -303,16 +305,18 @@ export default function MDCCard({ stop, index: _index, onChange, onDelete, dragH
 
           {/* Extra fields */}
           <div className="grid grid-cols-2 gap-2">
-            <div>
-              <label className="block text-base text-slate-400 mb-1">Trailer #</label>
-              <input
-                type="text"
-                value={stop.trailerNumber}
-                onChange={e => update({ trailerNumber: e.target.value })}
-                placeholder="e.g. T4821"
-                className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
-              />
-            </div>
+            {stop.leavingWith !== 'Bobtail' && (
+              <div>
+                <label className="block text-base text-slate-400 mb-1">Trailer #</label>
+                <input
+                  type="text"
+                  value={stop.trailerNumber}
+                  onChange={e => update({ trailerNumber: e.target.value })}
+                  placeholder="e.g. T4821"
+                  className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+            )}
             <div>
               <label className="block text-base text-slate-400 mb-1">Hub km</label>
               <input

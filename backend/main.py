@@ -32,6 +32,12 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/api/health")
+def api_health():
+    """Same as /health but under /api/ prefix so the Vite proxy can reach it."""
+    return {"status": "ok"}
+
+
 # ── Trip sync (auto-save) ─────────────────────────────────────────────────────
 
 @app.post("/api/trips/sync")

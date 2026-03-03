@@ -1,18 +1,22 @@
+import { useState, useEffect, useRef } from 'react';
 import { CheckCircle, RotateCcw, Download, AlertTriangle } from 'lucide-react';
 import type { TripSheet, SRStop, LHStop, MDCStop } from '../types';
 import type { SubmitResult } from '../utils/api';
+import { checkHealth } from '../utils/api';
 import { minutesToLabel } from '../utils/tripUtils';
 
 interface Props {
   trip: TripSheet;
   submitResult: SubmitResult | null;
   onNewTrip: () => void;
+  onRetry: () => Promise<void>;
+  history: TripSheet[];
 }
 
-export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
+export default function SubmitScreen({ trip, submitResult, onNewTrip, onRetry, history }: Props) {
   const { header, stops } = trip;
   const activeStops = stops.filter(
-    (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && !s.skipped
+    (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && s.type !== 'truck' && !s.skipped
   );
   const lastActive = activeStops[activeStops.length - 1];
   const finishTime = lastActive?.departureTime;
@@ -30,8 +34,35 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
   const isFlagged = submitResult?.status === 'flagged';
   const backendDown = submitResult === null;
 
+  const [retrying, setRetrying] = useState(false);
+
+  // Keep a ref so the polling closure always calls the latest onRetry
+  const onRetryRef = useRef(onRetry);
+  onRetryRef.current = onRetry;
+
+  // Auto-retry: poll /api/health every 20s when backend was unreachable
+  useEffect(() => {
+    if (!backendDown || retrying) return;
+    const interval = setInterval(async () => {
+      const alive = await checkHealth();
+      if (alive) {
+        clearInterval(interval);
+        setRetrying(true);
+        try {
+          await onRetryRef.current();
+        } finally {
+          setRetrying(false);
+        }
+      }
+    }, 20_000);
+    return () => clearInterval(interval);
+  }, [backendDown, retrying]);
+
+  // Past trips from history, excluding the current one
+  const pastHistory = history.filter(t => t.id !== trip.id).slice(0, 5);
+
   return (
-    <div className="flex flex-col h-dvh bg-slate-900 px-5">
+    <div className="flex flex-col min-h-dvh bg-slate-900 px-5">
       <div className="flex-1 flex flex-col items-center justify-center text-center">
         <img src="/logo.png" alt="Freedom Transportation" className="h-16 mb-4" />
 
@@ -57,7 +88,9 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
           <div className="w-full max-w-sm flex items-start gap-2.5 bg-slate-800 border border-slate-600 rounded-xl px-3 py-2.5 mb-4 text-left">
             <AlertTriangle className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
             <p className="text-slate-400 text-sm">
-              Could not reach the server — data saved locally. Excel will be generated when the server is back online.
+              {retrying
+                ? 'Server found — retrying submission…'
+                : 'Could not reach the server. Trip data is saved on this device — will retry automatically when the server is back online.'}
             </p>
           </div>
         )}
@@ -92,7 +125,7 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
       </div>
 
       {/* Actions */}
-      <div className="pb-10 space-y-3">
+      <div className="pb-6 space-y-3">
         {submitResult && (
           <a
             href={submitResult.downloadUrl}
@@ -120,6 +153,37 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip }: Props) {
           A copy of this trip is saved locally on this device.
         </p>
       </div>
+
+      {/* Recent submissions history */}
+      {pastHistory.length > 0 && (
+        <div className="pb-8">
+          <div className="text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">
+            Recent submissions
+          </div>
+          <div className="space-y-2">
+            {pastHistory.map(t => {
+              const submitted = t.submittedAt !== null;
+              return (
+                <div
+                  key={t.id}
+                  className="flex items-center gap-3 px-3 py-2.5 bg-slate-800/60 border border-slate-700/60 rounded-xl"
+                >
+                  <div className={`w-2 h-2 rounded-full flex-shrink-0 ${submitted ? 'bg-green-400' : 'bg-amber-400'}`} />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-white truncate">
+                      {t.header.driverName} · Route {t.header.routeNumber}
+                    </div>
+                    <div className="text-xs text-slate-500">{t.header.date}</div>
+                  </div>
+                  <span className={`text-xs flex-shrink-0 ${submitted ? 'text-green-500' : 'text-amber-400'}`}>
+                    {submitted ? 'submitted' : 'pending'}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

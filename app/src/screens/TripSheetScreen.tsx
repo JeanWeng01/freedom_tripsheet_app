@@ -88,11 +88,16 @@ function SortableStop({ stop, index, allStops, onUpdate, onDelete, onPhotoAdd }:
     }
   } else if (stop.type === 'mdc') {
     const mdc = stop as MDCStop;
-    if (!mdc.specialActivity && mdc.arrivingWith && mdc.leavingWith &&
-        !(mdc.arrivingWith === 'Bobtail' && mdc.leavingWith === 'Bobtail')) {
-      if (mdc.arrivalTime !== null && mdc.departureTime !== null && mdc.departureTime > mdc.arrivalTime) {
-        const allowance = getMDCAllowance(mdc.arrivingWith!, mdc.leavingWith!);
-        isOverAllowance = (mdc.departureTime - mdc.arrivalTime) > allowance.total;
+    if (mdc.arrivalTime !== null && mdc.departureTime !== null && mdc.departureTime > mdc.arrivalTime) {
+      let mdcAllowance = 0;
+      if (mdc.specialActivity === 'MDC - additional SR trailer') {
+        mdcAllowance = 45;
+      } else if (!mdc.specialActivity && mdc.arrivingWith && mdc.leavingWith &&
+          !(mdc.arrivingWith === 'Bobtail' && mdc.leavingWith === 'Bobtail')) {
+        mdcAllowance = getMDCAllowance(mdc.arrivingWith!, mdc.leavingWith!).total;
+      }
+      if (mdcAllowance > 0) {
+        isOverAllowance = (mdc.departureTime - mdc.arrivalTime) > mdcAllowance;
       }
     }
   }
@@ -325,7 +330,7 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
           <button type="button" onClick={() => onAdd(makeSegmentStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800/30 hover:bg-slate-800 border border-yellow-700/50 rounded-xl transition-colors text-yellow-700 hover:text-yellow-600">
             <Flag className="w-5 h-5" />
-            <span className="text-sm text-center">New route segment</span>
+            <span className="text-sm text-center">New route number</span>
           </button>
           <button type="button" onClick={() => onAdd(makeTruckStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800/30 hover:bg-slate-800 border border-yellow-700/50 rounded-xl transition-colors text-yellow-700 hover:text-yellow-600">
@@ -358,7 +363,7 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
         </button>
         <button type="button" onClick={() => { onAdd(makeSegmentStop()); onClose(); }}
           className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-yellow-700 hover:bg-slate-700 rounded-lg transition-colors text-left border-t border-slate-700 mt-1 pt-2">
-          <Flag className="w-4 h-4" />New route segment
+          <Flag className="w-4 h-4" />New route number
         </button>
         <button type="button" onClick={() => { onAdd(makeTruckStop()); onClose(); }}
           className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-yellow-700 hover:bg-slate-700 rounded-lg transition-colors text-left">

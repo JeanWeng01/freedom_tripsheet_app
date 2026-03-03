@@ -181,9 +181,9 @@ export default function StopCard({
           <div>
             <label className="block text-sm text-slate-400 mb-1.5">Times</label>
             <div className="flex gap-2">
-              <TimeSelect value={stop.arrivalTime} onChange={v => update({ arrivalTime: v })} placeholder="Arrival" />
+              <TimeSelect value={stop.arrivalTime} onChange={v => update({ arrivalTime: v })} placeholder="Arrival" disabled={isMissing} />
               <div className={`flex-1 ${isOverAllowance ? 'ring-2 ring-orange-500 rounded-xl' : ''}`}>
-                <TimeSelect value={stop.departureTime} onChange={v => update({ departureTime: v })} placeholder="Departure" />
+                <TimeSelect value={stop.departureTime} onChange={v => update({ departureTime: v })} placeholder="Departure" disabled={isMissing} />
               </div>
             </div>
             {isOverAllowance && (

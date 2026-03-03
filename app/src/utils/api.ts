@@ -18,6 +18,18 @@ export async function syncTrip(trip: TripSheet): Promise<void> {
   }
 }
 
+/**
+ * Check if the backend is reachable. Returns true if the server responds.
+ */
+export async function checkHealth(): Promise<boolean> {
+  try {
+    const res = await fetch('/api/health', { signal: AbortSignal.timeout(5_000) });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 export interface SubmitResult {
   filename: string;
   status: 'ready' | 'flagged';

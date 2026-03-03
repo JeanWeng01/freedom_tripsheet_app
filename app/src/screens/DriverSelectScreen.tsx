@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search } from 'lucide-react';
+import { Search, AlertTriangle, RotateCcw } from 'lucide-react';
 import type { Driver } from '../types';
 import driversData from '../data/drivers.json';
 
@@ -7,9 +7,12 @@ const drivers = driversData as Driver[];
 
 interface Props {
   onSelect: (driver: Driver) => void;
+  pendingCount: number;
+  onRetryPending: () => Promise<void>;
+  retryingPending: boolean;
 }
 
-export default function DriverSelectScreen({ onSelect }: Props) {
+export default function DriverSelectScreen({ onSelect, pendingCount, onRetryPending, retryingPending }: Props) {
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -47,6 +50,26 @@ export default function DriverSelectScreen({ onSelect }: Props) {
           />
         </div>
       </div>
+
+      {/* Pending submissions banner */}
+      {pendingCount > 0 && (
+        <div className="px-4 pb-3">
+          <div className="flex items-center gap-3 px-3 py-2.5 bg-amber-900/20 border border-amber-700/50 rounded-xl">
+            <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0" />
+            <p className="flex-1 text-amber-300 text-sm">
+              {pendingCount} trip {pendingCount === 1 ? 'sheet' : 'sheets'} not yet submitted to server
+            </p>
+            <button
+              onClick={onRetryPending}
+              disabled={retryingPending}
+              className="flex items-center gap-1.5 text-xs font-semibold text-amber-300 border border-amber-700/60 rounded-lg px-2.5 py-1.5 hover:bg-amber-900/30 disabled:opacity-50 transition-colors flex-shrink-0"
+            >
+              <RotateCcw className={`w-3 h-3 ${retryingPending ? 'animate-spin' : ''}`} />
+              {retryingPending ? 'Retrying…' : 'Retry now'}
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Driver list */}
       <div className="flex-1 overflow-y-auto px-4 pb-6 space-y-2">
