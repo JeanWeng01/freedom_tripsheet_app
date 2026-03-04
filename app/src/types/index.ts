@@ -70,6 +70,7 @@ export interface LHLegStop {
   departureTime: number | null;    // when driver leaves departure location
   arrivalTime: number | null;      // when driver arrives at destination
   hubReading: string;
+  comment: string;
   skipped: boolean;                // for validation compat
   flag: StopFlag | null;           // for validation compat
 }

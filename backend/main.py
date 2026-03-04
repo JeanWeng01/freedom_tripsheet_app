@@ -10,8 +10,10 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 
-UPLOADS_DIR = Path(__file__).parent / "uploads"
+DATA_DIR = Path(os.environ.get("DATA_DIR", str(Path(__file__).parent)))
+UPLOADS_DIR = DATA_DIR / "uploads"
 
 from database import init_db, upsert_trip, mark_submitted, list_trips, get_trip_data
 from excel_gen import generate_excel, OUTPUT_READY, OUTPUT_FLAGGED, OUTPUT_RECOVERED
@@ -28,8 +30,9 @@ app.add_middleware(
 
 @app.on_event("startup")
 def startup() -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     init_db()
-    UPLOADS_DIR.mkdir(exist_ok=True)
+    UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_RECOVERED.mkdir(parents=True, exist_ok=True)
 
 
@@ -223,3 +226,21 @@ def recover_excel(trip_id: str):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ── SPA static files (production only) ───────────────────────────────────────
+# In production the built React app lives in ./static/ (copied by Dockerfile).
+# This MUST be the last section — the catch-all route would shadow anything below it.
+
+STATIC_DIR = Path(__file__).parent / "static"
+
+if STATIC_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=str(STATIC_DIR / "assets")), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """Serve React SPA. Any non-API route returns index.html."""
+        file_path = STATIC_DIR / full_path
+        if full_path and file_path.exists() and file_path.is_file():
+            return FileResponse(str(file_path))
+        return FileResponse(str(STATIC_DIR / "index.html"))

@@ -1,0 +1,12 @@
+node_modules/
+app/node_modules/
+app/dist/
+backend/venv/
+backend/__pycache__/
+backend/trips.db
+backend/output/
+backend/uploads/
+.git/
+.claude/
+*.pyc
+~$*

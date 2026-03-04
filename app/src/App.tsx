@@ -18,9 +18,15 @@ function loadHistory(): TripSheet[] {
 function markTripSubmittedInStorage(tripId: string): void {
   try {
     const history = loadHistory();
-    const idx = history.findIndex(t => t.id === tripId);
-    if (idx !== -1) {
-      history[idx] = { ...history[idx], submittedAt: new Date().toISOString() };
+    const now = new Date().toISOString();
+    let changed = false;
+    for (let i = 0; i < history.length; i++) {
+      if (history[i].id === tripId && history[i].submittedAt === null) {
+        history[i] = { ...history[i], submittedAt: now };
+        changed = true;
+      }
+    }
+    if (changed) {
       localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
     }
   } catch {}
@@ -48,6 +54,7 @@ function migrateLegacyTrip(trip: TripSheet): TripSheet {
         departureTime: old.departureTime ?? null,
         arrivalTime: old.arrivalTime ?? null,
         hubReading: old.hubReading ?? '',
+        comment: '',
         skipped: old.skipped ?? false,
         flag: null,
       };
@@ -86,7 +93,9 @@ function clearState() {
 function archiveTrip(t: TripSheet) {
   try {
     const raw = localStorage.getItem(HISTORY_KEY);
-    const history: TripSheet[] = raw ? JSON.parse(raw) : [];
+    let history: TripSheet[] = raw ? JSON.parse(raw) : [];
+    // Remove any existing entry with the same ID (prevents duplicates on resubmission)
+    history = history.filter(h => h.id !== t.id);
     history.unshift(t);
     if (history.length > 10) history.splice(10);
     localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
@@ -249,6 +258,7 @@ export default function App() {
           pendingCount={pendingTrips.length}
           onRetryPending={handleRetryPending}
           retryingPending={retryingPending}
+          history={history}
         />
       )}
       {screen === 'route-select' && driver && (

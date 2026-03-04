@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { CheckCircle, RotateCcw, Download, AlertTriangle, ArrowLeft } from 'lucide-react';
-import type { TripSheet, SRStop, LHStop, MDCStop } from '../types';
+import type { TripSheet, SRStop, LHLegStop, MDCStop } from '../types';
 import type { SubmitResult } from '../utils/api';
 import { checkHealth } from '../utils/api';
 import { minutesToLabel } from '../utils/tripUtils';
@@ -17,7 +17,7 @@ interface Props {
 export default function SubmitScreen({ trip, submitResult, onNewTrip, onRetry, onGoBack, history }: Props) {
   const { header, stops } = trip;
   const activeStops = stops.filter(
-    (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && s.type !== 'truck' && !s.skipped
+    (s): s is SRStop | LHLegStop | MDCStop => s.type !== 'segment' && s.type !== 'truck' && !s.skipped
   );
   const lastActive = activeStops[activeStops.length - 1];
   const finishTime = lastActive?.departureTime;

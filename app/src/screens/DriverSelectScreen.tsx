@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
-import { Search, AlertTriangle, RotateCcw } from 'lucide-react';
-import type { Driver } from '../types';
+import { Search, AlertTriangle, RotateCcw, Clock, ChevronDown } from 'lucide-react';
+import type { Driver, TripSheet } from '../types';
 import driversData from '../data/drivers.json';
 
 const drivers = driversData as Driver[];
@@ -10,10 +10,12 @@ interface Props {
   pendingCount: number;
   onRetryPending: () => Promise<void>;
   retryingPending: boolean;
+  history: TripSheet[];
 }
 
-export default function DriverSelectScreen({ onSelect, pendingCount, onRetryPending, retryingPending }: Props) {
+export default function DriverSelectScreen({ onSelect, pendingCount, onRetryPending, retryingPending, history }: Props) {
   const [query, setQuery] = useState('');
+  const [showHistory, setShowHistory] = useState(false);
 
   const filtered = useMemo(() => {
     if (!query.trim()) return drivers;
@@ -29,12 +31,53 @@ export default function DriverSelectScreen({ onSelect, pendingCount, onRetryPend
     <div className="flex flex-col h-dvh bg-slate-900 dark:bg-slate-900">
       {/* Header */}
       <div className="px-4 pt-10 pb-4 bg-slate-900">
-        <div className="mb-1">
-          <img src="/logo.png" alt="Freedom Transportation" className="h-16" />
+        <div className="flex items-start justify-between">
+          <div className="mb-1">
+            <img src="/logo.png" alt="Freedom Transportation" className="h-16" />
+          </div>
+          {history.length > 0 && (
+            <button
+              onClick={() => setShowHistory(v => !v)}
+              className="flex items-center gap-1.5 text-slate-400 hover:text-slate-200 transition-colors mt-2"
+            >
+              <Clock className="w-4 h-4" />
+              <span className="text-xs font-medium">History</span>
+              <ChevronDown className={`w-3 h-3 transition-transform ${showHistory ? 'rotate-180' : ''}`} />
+            </button>
+          )}
         </div>
         <h1 className="text-2xl font-bold text-white mt-3">Who's driving today?</h1>
         <p className="text-slate-400 text-sm mt-1">Select your name to start your trip sheet</p>
       </div>
+
+      {/* History panel */}
+      {showHistory && history.length > 0 && (
+        <div className="px-4 pb-3">
+          <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3 space-y-2">
+            <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recent trips</div>
+            {history.map(t => {
+              const submitted = t.submittedAt !== null;
+              return (
+                <div
+                  key={t.id}
+                  className="flex items-center gap-3 px-3 py-2.5 bg-slate-900/50 border border-slate-700/40 rounded-lg"
+                >
+                  <div className={`w-2 h-2 rounded-full flex-shrink-0 ${submitted ? 'bg-green-400' : 'bg-amber-400'}`} />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-white truncate">
+                      {t.header.driverName} · Route {t.header.routeNumber}
+                    </div>
+                    <div className="text-xs text-slate-500">{t.header.date}</div>
+                  </div>
+                  <span className={`text-xs flex-shrink-0 ${submitted ? 'text-green-500' : 'text-amber-400'}`}>
+                    {submitted ? 'submitted' : 'pending'}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Search */}
       <div className="px-4 pb-3 bg-slate-900">

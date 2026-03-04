@@ -347,19 +347,23 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
                     onDelete={() => updateTrip({ stops: stops.filter((_, i) => i !== index) })}
                     onPhotoAdd={() => {}}
                   />
-                  <div className="flex items-center justify-center py-0.5">
-                    <button type="button"
-                      onClick={() => setShowAddMenu(m => m?.afterIndex === index ? null : { afterIndex: index })}
-                      className="flex items-center gap-1 text-sm text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
-                      <Plus className="w-3 h-3" />insert stop
-                    </button>
-                  </div>
-                  {showAddMenu?.afterIndex === index && (
-                    <AddStopMenu
-                      onAdd={s => insertStop(index, s)}
-                      onClose={() => setShowAddMenu(null)}
-                      isLHMode={isLHMode}
-                    />
+                  {!isLHMode && (
+                    <>
+                      <div className="flex items-center justify-center py-0.5">
+                        <button type="button"
+                          onClick={() => setShowAddMenu(m => m?.afterIndex === index ? null : { afterIndex: index })}
+                          className="flex items-center gap-1 text-sm text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
+                          <Plus className="w-3 h-3" />insert stop
+                        </button>
+                      </div>
+                      {showAddMenu?.afterIndex === index && (
+                        <AddStopMenu
+                          onAdd={s => insertStop(index, s)}
+                          onClose={() => setShowAddMenu(null)}
+                          isLHMode={isLHMode}
+                        />
+                      )}
+                    </>
                   )}
                 </div>
               ))}

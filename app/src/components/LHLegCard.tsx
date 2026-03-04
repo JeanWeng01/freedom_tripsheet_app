@@ -178,6 +178,18 @@ export default function LHLegCard({ stop, legNumber, onChange, onDelete, dragHan
             </div>
           </div>
 
+          {/* Comment */}
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">Comment</label>
+            <input
+              type="text"
+              value={stop.comment}
+              onChange={e => update({ comment: e.target.value })}
+              placeholder="Optional note"
+              className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
           {/* Delete / collapse */}
           {showDeleteConfirm ? (
             <div className="border border-slate-700 rounded-xl p-3 bg-slate-800/50">

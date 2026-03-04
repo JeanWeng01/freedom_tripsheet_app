@@ -3,6 +3,7 @@ Excel generation for Freedom trip sheets.
 Loads the template .xlsx, fills in driver data cells, preserves all formulas.
 """
 
+import os
 from pathlib import Path
 from datetime import datetime
 import shutil
@@ -10,14 +11,16 @@ import shutil
 import openpyxl
 from openpyxl.utils import get_column_letter
 
-TEMPLATE_PATH = (
-    Path(__file__).parent.parent
-    / "Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx"
-)
+# Template: in Docker it's at /app/template.xlsx, locally at repo root
+_DOCKER_TEMPLATE = Path(__file__).parent / "template.xlsx"
+_LOCAL_TEMPLATE = Path(__file__).parent.parent / "Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx"
+TEMPLATE_PATH = _DOCKER_TEMPLATE if _DOCKER_TEMPLATE.exists() else _LOCAL_TEMPLATE
 
-OUTPUT_READY = Path(__file__).parent / "output" / "ready"
-OUTPUT_FLAGGED = Path(__file__).parent / "output" / "flagged"
-OUTPUT_RECOVERED = Path(__file__).parent / "output" / "recovered"
+DATA_DIR = Path(os.environ.get("DATA_DIR", str(Path(__file__).parent)))
+OUTPUT_BASE = DATA_DIR / "output"
+OUTPUT_READY = OUTPUT_BASE / "ready"
+OUTPUT_FLAGGED = OUTPUT_BASE / "flagged"
+OUTPUT_RECOVERED = OUTPUT_BASE / "recovered"
 
 OUTPUT_READY.mkdir(parents=True, exist_ok=True)
 OUTPUT_FLAGGED.mkdir(parents=True, exist_ok=True)
@@ -115,7 +118,7 @@ def _build_excel_rows(stops: list[dict]) -> list[dict]:
                 "flag": flag, "location": dest_loc or "LH LOCATION",
                 "arrival": _minutes_to_fraction(stop.get("arrivalTime")),
                 "departure": dest_depart,
-                "comment": "", "hub": hub.upper(),
+                "comment": comment, "hub": hub.upper(),
                 "trailer": trailer.upper(), "reefer": "", "bol": "",
             })
 

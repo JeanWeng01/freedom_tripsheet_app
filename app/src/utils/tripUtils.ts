@@ -67,6 +67,7 @@ export function makeLHLegStop(departureLocation = '', destinationLocation = ''):
     departureTime: null,
     arrivalTime: null,
     hubReading: '',
+    comment: '',
     skipped: false,
     flag: null,
   };
