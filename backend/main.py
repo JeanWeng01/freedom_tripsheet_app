@@ -14,6 +14,15 @@ from fastapi.staticfiles import StaticFiles
 
 DATA_DIR = Path(os.environ.get("DATA_DIR", str(Path(__file__).parent)))
 UPLOADS_DIR = DATA_DIR / "uploads"
+ADMIN_KEY = os.environ.get("ADMIN_KEY", "")
+
+
+def require_admin(request: Request) -> None:
+    """Check ?key= query param matches ADMIN_KEY. Raises 403 if wrong."""
+    if not ADMIN_KEY:
+        return  # No key configured (local dev) — allow access
+    if request.query_params.get("key") != ADMIN_KEY:
+        raise HTTPException(status_code=403, detail="Forbidden")
 
 from database import init_db, upsert_trip, mark_submitted, list_trips, get_trip_data
 from excel_gen import generate_excel, OUTPUT_READY, OUTPUT_FLAGGED, OUTPUT_RECOVERED
@@ -157,16 +166,19 @@ def serve_photo(filename: str):
 # ── Admin: list trips ─────────────────────────────────────────────────────────
 
 @app.get("/api/trips")
-def get_trips():
+def get_trips(request: Request):
     """List all trips (for admin/debugging)."""
+    require_admin(request)
     return list_trips()
 
 
 # ── Admin page ────────────────────────────────────────────────────────────────
 
 @app.get("/admin", response_class=HTMLResponse)
-def admin_page():
+def admin_page(request: Request):
     """Owner-facing HTML page listing all trips with Download Excel buttons."""
+    require_admin(request)
+    key = request.query_params.get("key", "")
     trips = list_trips()
     rows_html = ""
     for t in trips:
@@ -181,7 +193,7 @@ def admin_page():
             f"<td>{t['date']}</td>"
             f"<td class='{status_class}'>{status_label}</td>"
             f"<td>{updated}</td>"
-            f"<td><a class='btn' href='/api/trips/{t['id']}/recover-excel'>Download Excel</a></td>"
+            f"<td><a class='btn' href='/api/trips/{t['id']}/recover-excel?key={key}'>Download Excel</a></td>"
             f"</tr>"
         )
     html = f"""<!DOCTYPE html>
@@ -212,8 +224,9 @@ a.btn:hover{{background:#2563eb}}
 # ── Recover Excel (for owner, any trip) ───────────────────────────────────────
 
 @app.get("/api/trips/{trip_id}/recover-excel")
-def recover_excel(trip_id: str):
+def recover_excel(trip_id: str, request: Request):
     """Generate (or re-generate) Excel for any trip in the DB. For owner use."""
+    require_admin(request)
     trip = get_trip_data(trip_id)
     if not trip:
         raise HTTPException(status_code=404, detail="Trip not found")
