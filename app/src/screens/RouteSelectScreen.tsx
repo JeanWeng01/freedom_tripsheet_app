@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { ChevronLeft, MapPin, Plus } from 'lucide-react';
+import { ChevronLeft, MapPin, Navigation, Plus } from 'lucide-react';
 import type { Driver, TripSheet } from '../types';
 import { getRoutesForDay, buildStopsFromRoute, buildOffDayStops, generateTripId, makeEmptyLHRequisition } from '../utils/tripUtils';
 
@@ -40,7 +40,7 @@ export default function RouteSelectScreen({ driver, onBack, onStart }: Props) {
       },
       stops,
       lhRequisition: makeEmptyLHRequisition(),
-      photoCount: 0,
+      photos: [],
       submittedAt: null,
     };
   }
@@ -75,6 +75,21 @@ export default function RouteSelectScreen({ driver, onBack, onStart }: Props) {
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 pb-6 space-y-2">
+        {/* Pure Line Haul — for drivers with no pre-built route */}
+        <button
+          onClick={() => setPendingTrip(buildTrip('LH', []))}
+          className="w-full flex items-center gap-4 px-5 py-4 bg-blue-950/30 hover:bg-blue-950/50 border border-blue-800/40 rounded-xl transition-colors text-left"
+        >
+          <div className="w-16 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center border border-blue-800/30 flex-shrink-0">
+            <Navigation className="w-5 h-5 text-blue-400" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="text-blue-300 font-semibold">Pure Line Haul</div>
+            <div className="text-slate-500 text-xs mt-0.5">No pre-built route — add lines as you go</div>
+          </div>
+          <span className="text-slate-600 flex-shrink-0 text-lg">›</span>
+        </button>
+
         <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest px-1 pb-1">
           {todayDay} routes ({filtered.length})
         </div>

@@ -2,6 +2,44 @@ import type { TripSheet } from '../types';
 
 const API_BASE = '/api';
 
+export async function uploadPhoto(
+  tripId: string,
+  file: File,
+  meta: { date: string; route: string; driverCode: string },
+): Promise<string> {
+  const form = new FormData();
+  form.append('file', file);
+  form.append('date', meta.date);
+  form.append('route', meta.route);
+  form.append('driver_code', meta.driverCode);
+
+  const res = await fetch(`${API_BASE}/trips/${tripId}/photos`, {
+    method: 'POST',
+    body: form,
+  });
+
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`Photo upload failed (${res.status}): ${detail}`);
+  }
+
+  const data = await res.json();
+  return data.url as string;
+}
+
+/**
+ * Beacon sync: used on page hide/unload where fetch may not complete.
+ * sendBeacon is fire-and-forget and survives page teardown.
+ */
+export function syncTripBeacon(trip: TripSheet): void {
+  try {
+    const blob = new Blob([JSON.stringify(trip)], { type: 'application/json' });
+    navigator.sendBeacon(`${API_BASE}/trips/sync`, blob);
+  } catch {
+    // Best-effort only
+  }
+}
+
 /**
  * Auto-save: push current trip state to the backend DB.
  * Fire-and-forget — errors are silent so they don't interrupt the driver.

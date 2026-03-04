@@ -3,12 +3,18 @@ Freedom Trip Sheet — FastAPI backend
 SQLite storage + Excel generation
 """
 
-from fastapi import FastAPI, HTTPException, Request
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+import os
+import shutil
+from pathlib import Path
 
-from database import init_db, upsert_trip, mark_submitted, list_trips
-from excel_gen import generate_excel, OUTPUT_READY, OUTPUT_FLAGGED
+from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, HTMLResponse
+
+UPLOADS_DIR = Path(__file__).parent / "uploads"
+
+from database import init_db, upsert_trip, mark_submitted, list_trips, get_trip_data
+from excel_gen import generate_excel, OUTPUT_READY, OUTPUT_FLAGGED, OUTPUT_RECOVERED
 
 app = FastAPI(title="Freedom Trip Sheet API", version="1.0.0")
 
@@ -23,6 +29,8 @@ app.add_middleware(
 @app.on_event("startup")
 def startup() -> None:
     init_db()
+    UPLOADS_DIR.mkdir(exist_ok=True)
+    OUTPUT_RECOVERED.mkdir(parents=True, exist_ok=True)
 
 
 # ── Health ────────────────────────────────────────────────────────────────────
@@ -101,9 +109,117 @@ def download_file(filename: str):
     raise HTTPException(status_code=404, detail="File not found")
 
 
+# ── Photo upload ──────────────────────────────────────────────────────────────
+
+@app.post("/api/trips/{trip_id}/photos")
+async def upload_photo(
+    trip_id: str,
+    file: UploadFile = File(...),
+    date: str = Form(...),
+    route: str = Form(...),
+    driver_code: str = Form(...),
+):
+    """Upload a trip photo. Returns the stored filename and URL."""
+    try:
+        UPLOADS_DIR.mkdir(exist_ok=True)
+
+        # Sequential number: count existing files for this trip's prefix
+        prefix = f"{date}_{route}_{driver_code}_"
+        existing = list(UPLOADS_DIR.glob(f"{prefix}*.jpg"))
+        n = len(existing) + 1
+
+        filename = f"{date}_{route}_{driver_code}_{n}.jpg"
+        dest = UPLOADS_DIR / filename
+
+        with dest.open("wb") as f:
+            shutil.copyfileobj(file.file, f)
+
+        return {
+            "filename": filename,
+            "url": f"/api/uploads/{filename}",
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/uploads/{filename}")
+def serve_photo(filename: str):
+    """Serve a stored trip photo."""
+    path = UPLOADS_DIR / filename
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Photo not found")
+    return FileResponse(str(path))
+
+
 # ── Admin: list trips ─────────────────────────────────────────────────────────
 
 @app.get("/api/trips")
 def get_trips():
     """List all trips (for admin/debugging)."""
     return list_trips()
+
+
+# ── Admin page ────────────────────────────────────────────────────────────────
+
+@app.get("/admin", response_class=HTMLResponse)
+def admin_page():
+    """Owner-facing HTML page listing all trips with Download Excel buttons."""
+    trips = list_trips()
+    rows_html = ""
+    for t in trips:
+        submitted = t.get("submitted_at") or ""
+        status_class = "submitted" if submitted else "pending"
+        status_label = submitted[:16] if submitted else "In progress"
+        updated = (t.get("updated_at") or "")[:16]
+        rows_html += (
+            f"<tr>"
+            f"<td>{t['driver_name']}</td>"
+            f"<td>{t['route_number']}</td>"
+            f"<td>{t['date']}</td>"
+            f"<td class='{status_class}'>{status_label}</td>"
+            f"<td>{updated}</td>"
+            f"<td><a class='btn' href='/api/trips/{t['id']}/recover-excel'>Download Excel</a></td>"
+            f"</tr>"
+        )
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trip Sheet Admin</title>
+<style>
+body{{font-family:sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}}
+h1{{color:#f8fafc;margin-bottom:20px}}
+table{{width:100%;border-collapse:collapse}}
+th{{background:#1e293b;color:#94a3b8;text-align:left;padding:10px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.05em}}
+td{{padding:10px 14px;border-bottom:1px solid #1e293b;font-size:14px}}
+tr:hover td{{background:#1e293b60}}
+a.btn{{display:inline-block;padding:5px 12px;background:#1d4ed8;color:#fff;text-decoration:none;border-radius:6px;font-size:12px;font-weight:600}}
+a.btn:hover{{background:#2563eb}}
+.submitted{{color:#4ade80}}.pending{{color:#fbbf24}}
+</style></head>
+<body>
+<h1>Freedom Trip Sheets — Admin</h1>
+<table>
+<thead><tr><th>Driver</th><th>Route</th><th>Date</th><th>Submitted</th><th>Last Updated</th><th>Action</th></tr></thead>
+<tbody>{rows_html}</tbody>
+</table>
+</body></html>"""
+    return HTMLResponse(content=html)
+
+
+# ── Recover Excel (for owner, any trip) ───────────────────────────────────────
+
+@app.get("/api/trips/{trip_id}/recover-excel")
+def recover_excel(trip_id: str):
+    """Generate (or re-generate) Excel for any trip in the DB. For owner use."""
+    trip = get_trip_data(trip_id)
+    if not trip:
+        raise HTTPException(status_code=404, detail="Trip not found")
+    try:
+        filepath, filename, _status = generate_excel(trip, output_dir=OUTPUT_RECOVERED)
+        return FileResponse(
+            path=str(filepath),
+            filename=filename,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

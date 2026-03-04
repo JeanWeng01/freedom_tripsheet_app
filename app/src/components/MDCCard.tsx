@@ -323,7 +323,7 @@ export default function MDCCard({ stop, index: _index, onChange, onDelete, dragH
                 type="text"
                 value={stop.hubReading}
                 onChange={e => update({ hubReading: e.target.value })}
-                placeholder="km"
+                placeholder="km at destination"
                 className="w-full px-2.5 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>

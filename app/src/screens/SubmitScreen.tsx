@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { CheckCircle, RotateCcw, Download, AlertTriangle } from 'lucide-react';
+import { CheckCircle, RotateCcw, Download, AlertTriangle, ArrowLeft } from 'lucide-react';
 import type { TripSheet, SRStop, LHStop, MDCStop } from '../types';
 import type { SubmitResult } from '../utils/api';
 import { checkHealth } from '../utils/api';
@@ -10,10 +10,11 @@ interface Props {
   submitResult: SubmitResult | null;
   onNewTrip: () => void;
   onRetry: () => Promise<void>;
+  onGoBack: () => void;
   history: TripSheet[];
 }
 
-export default function SubmitScreen({ trip, submitResult, onNewTrip, onRetry, history }: Props) {
+export default function SubmitScreen({ trip, submitResult, onNewTrip, onRetry, onGoBack, history }: Props) {
   const { header, stops } = trip;
   const activeStops = stops.filter(
     (s): s is SRStop | LHStop | MDCStop => s.type !== 'segment' && s.type !== 'truck' && !s.skipped
@@ -140,6 +141,14 @@ export default function SubmitScreen({ trip, submitResult, onNewTrip, onRetry, h
             Download Excel file
           </a>
         )}
+
+        <button
+          onClick={onGoBack}
+          className="w-full py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-2xl transition-colors flex items-center justify-center gap-2 border border-slate-700"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Go back and edit
+        </button>
 
         <button
           onClick={onNewTrip}

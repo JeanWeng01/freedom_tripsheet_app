@@ -1,21 +1,23 @@
-import { useState } from 'react';
-import { Camera, Send, Building2, Navigation, MapPin, Plus, Trash2, Flag, Truck } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { Camera, Loader2, Send, Building2, Navigation, MapPin, Plus, Trash2, Flag, Truck } from 'lucide-react';
 import {
   DndContext, closestCenter, PointerSensor, TouchSensor, useSensor, useSensors,
 } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, useSortable, verticalListSortingStrategy, arrayMove } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import type { TripSheet, TripStop, SRStop, LHStop, MDCStop, SegmentStop, TruckStop } from '../types';
+import type { TripSheet, TripStop, SRStop, LHLegStop, MDCStop, SegmentStop, TruckStop } from '../types';
 import TripHeader from '../components/TripHeader';
 import StopCard from '../components/StopCard';
 import MDCCard from '../components/MDCCard';
+import LHLegCard from '../components/LHLegCard';
 import SegmentCard from '../components/SegmentCard';
 import TruckCard from '../components/TruckCard';
 import ValidationModal from '../components/ValidationModal';
 import LHRequisitionTab from './LHRequisitionTab';
-import { makeSRStop, makeLHStop, makeMDCStop, makeSpecialMDCStop, makeSegmentStop, makeTruckStop, getMDCAllowance } from '../utils/tripUtils';
+import { makeSRStop, makeLHLegStop, makeMDCStop, makeSpecialMDCStop, makeSegmentStop, makeTruckStop, getMDCAllowance } from '../utils/tripUtils';
 import { validateTrip } from '../utils/validation';
+import { uploadPhoto } from '../utils/api';
 
 interface Props {
   trip: TripSheet;
@@ -63,7 +65,23 @@ function SortableStop({ stop, index, allStops, onUpdate, onDelete, onPhotoAdd }:
     );
   }
 
-  // From here: stop is SRStop | LHStop | MDCStop
+  // LH leg stops — line card
+  if (stop.type === 'lh-leg') {
+    const legNumber = allStops.slice(0, index).filter(s => s.type === 'lh-leg').length + 1;
+    return (
+      <div ref={setNodeRef} style={style}>
+        <LHLegCard
+          stop={stop as LHLegStop}
+          legNumber={legNumber}
+          onChange={s => onUpdate(s as TripStop)}
+          onDelete={onDelete}
+          dragHandleProps={dragHandleProps}
+        />
+      </div>
+    );
+  }
+
+  // From here: stop is SRStop | MDCStop
   let trailerMismatch: string | null = null;
   if (stop.type === 'mdc') {
     const mdc = stop as MDCStop;
@@ -116,7 +134,7 @@ function SortableStop({ stop, index, allStops, onUpdate, onDelete, onPhotoAdd }:
         <MDCCard stop={stop as MDCStop} index={index} onChange={onUpdate} onDelete={onDelete}
           dragHandleProps={dragHandleProps} trailerMismatch={trailerMismatch} isOverAllowance={isOverAllowance} />
       ) : (
-        <StopCard stop={stop as SRStop | LHStop} index={index} onChange={s => onUpdate(s as TripStop)}
+        <StopCard stop={stop as SRStop} index={index} onChange={s => onUpdate(s as TripStop)}
           onDelete={onDelete} onPhotoAdd={onPhotoAdd} dragHandleProps={dragHandleProps}
           isOverAllowance={isOverAllowance} isDuplicate={isDuplicate} />
       )}
@@ -129,6 +147,59 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
   const [showAddMenu, setShowAddMenu] = useState<{ afterIndex: number } | null>(null);
   const [showValidation, setShowValidation] = useState(false);
   const [showDiscard, setShowDiscard] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const photoInputRef = useRef<HTMLInputElement>(null);
+  const cameraOpenRef = useRef(false);
+
+  const isLHMode = trip.header.routeNumber === 'LH';
+  const { stops } = trip;
+  const lhLegs = stops.filter(s => s.type === 'lh-leg') as LHLegStop[];
+  const stopCount = stops.filter(s => s.type !== 'segment' && s.type !== 'truck').length;
+
+  // Warn on accidental refresh/close, but suppress when camera is open
+  // (Android Chrome fires beforeunload when the camera app takes over)
+  useEffect(() => {
+    const handler = (e: BeforeUnloadEvent) => {
+      if (cameraOpenRef.current) return;
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handler);
+    return () => window.removeEventListener('beforeunload', handler);
+  }, []);
+
+  // Clear camera flag when user returns to the page (with or without a photo)
+  useEffect(() => {
+    function onVisibilityChange() {
+      if (document.visibilityState === 'visible') {
+        setTimeout(() => { cameraOpenRef.current = false; }, 300);
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
+  }, []);
+
+  async function handlePhotoSelect(e: React.ChangeEvent<HTMLInputElement>) {
+    cameraOpenRef.current = false;
+    // Wait one tick for Android to populate files after first camera close
+    await new Promise<void>(r => setTimeout(r, 0));
+    const file = e.target.files?.[0] ?? photoInputRef.current?.files?.[0];
+    if (!file) return;
+    e.target.value = '';
+    setUploading(true);
+    try {
+      const url = await uploadPhoto(trip.id, file, {
+        date: trip.header.date,
+        route: trip.header.routeNumber,
+        driverCode: trip.header.driverCode3,
+      });
+      updateTrip({ photos: [...(trip.photos ?? []), url] });
+    } catch {
+      alert('Photo upload failed — check your connection and try again.');
+    } finally {
+      setUploading(false);
+    }
+  }
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { delay: 200, tolerance: 8 } }),
@@ -138,8 +209,8 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
   function updateTrip(patch: Partial<TripSheet>) { onTripChange({ ...trip, ...patch }); }
 
   function updateStop(index: number, updated: TripStop) {
-    const stops = [...trip.stops];
-    stops[index] = updated;
+    const newStops = [...trip.stops];
+    newStops[index] = updated;
 
     // Cascade trailer # forward: SR and MDC changes push to subsequent SR stops until next MDC
     if (updated.type === 'sr' || updated.type === 'mdc') {
@@ -153,21 +224,21 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
           ? (oldStop as MDCStop).trailerNumber
           : '';
       if (newTrailer !== oldTrailer) {
-        for (let i = index + 1; i < stops.length; i++) {
-          const s = stops[i];
+        for (let i = index + 1; i < newStops.length; i++) {
+          const s = newStops[i];
           if (s.type === 'mdc') break;
-          if (s.type === 'lh' || s.type === 'segment' || s.type === 'truck') continue;
+          if (s.type === 'lh-leg' || s.type === 'segment' || s.type === 'truck') continue;
           const sr = s as SRStop;
           // MDC defines the whole segment — always overwrite
           // SR change only propagates to matching-or-empty downstream stops
           if (updated.type === 'mdc' || sr.trailerNumber === oldTrailer || sr.trailerNumber === '') {
-            stops[i] = { ...sr, trailerNumber: newTrailer };
+            newStops[i] = { ...sr, trailerNumber: newTrailer };
           }
         }
       }
     }
 
-    updateTrip({ stops });
+    updateTrip({ stops: newStops });
   }
 
   function insertStop(afterIndex: number, stop: TripStop) {
@@ -180,13 +251,15 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
           if (mdcTrailer) stop = { ...stop, trailerNumber: mdcTrailer } as TripStop;
           break;
         }
-        if (s.type === 'segment' || s.type === 'truck' || s.type === 'lh') continue;
+        if (s.type === 'segment' || s.type === 'truck' || s.type === 'lh-leg') continue;
         const trailer = (s as SRStop).trailerNumber;
         if (trailer) { stop = { ...stop, trailerNumber: trailer } as TripStop; break; }
       }
     }
-    const stops = [...trip.stops]; stops.splice(afterIndex + 1, 0, stop);
-    updateTrip({ stops }); setShowAddMenu(null);
+    const newStops = [...trip.stops];
+    newStops.splice(afterIndex + 1, 0, stop);
+    updateTrip({ stops: newStops });
+    setShowAddMenu(null);
   }
 
   function handleDragEnd(event: DragEndEvent) {
@@ -197,81 +270,124 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
     if (oldIdx >= 0 && newIdx >= 0) updateTrip({ stops: arrayMove(trip.stops, oldIdx, newIdx) });
   }
 
-  const { stops } = trip;
-  const stopCount = stops.filter(s => s.type !== 'segment' && s.type !== 'truck').length;
-
   return (
     <div className="flex flex-col h-dvh bg-slate-900">
-      <div className="flex-shrink-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 px-4 py-3 flex items-center gap-3">
-        <div className="flex-1 min-w-0">
-          <div className="font-semibold text-white text-base">Route {trip.header.routeNumber}</div>
-          <div className="text-slate-400 text-sm">{trip.header.driverName.split(' ')[0]} · {trip.header.dayOfWeek}</div>
-        </div>
-        <button
-          onClick={() => setShowDiscard(true)}
-          className="p-2 text-slate-600 hover:text-red-400 transition-colors rounded-lg"
-          title="Discard trip"
-        >
-          <Trash2 className="w-4 h-4" />
-        </button>
-        <button onClick={() => updateTrip({ photoCount: trip.photoCount + 1 })}
-          className="flex items-center gap-1.5 px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-sm transition-colors">
-          <Camera className="w-4 h-4 text-slate-400" /><span className="text-slate-300">{trip.photoCount}</span>
-        </button>
-        <button onClick={() => setShowValidation(true)}
-          className="flex items-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 rounded-xl text-white text-sm font-semibold transition-colors">
-          <Send className="w-4 h-4" />Submit
-        </button>
-      </div>
-
-      <div className="flex-shrink-0 flex border-b border-slate-800 bg-slate-900">
-        {(['trip', 'lh'] as Tab[]).map(tab => (
-          <button key={tab} onClick={() => setActiveTab(tab)}
-            className={`flex-1 py-2.5 text-base font-semibold transition-colors border-b-2 ${
-              activeTab === tab ? 'text-blue-400 border-blue-500' : 'text-slate-500 border-transparent hover:text-slate-300'
-            }`}>
-            {tab === 'trip' ? 'Trip Sheet' : 'LH Requisition'}
-          </button>
-        ))}
-      </div>
-
-      {activeTab === 'trip' && (
-        <div className="flex-1 overflow-y-auto">
-          <div className="px-4 py-4 space-y-3 pb-24">
-            <TripHeader header={trip.header} tripId={trip.id} onChange={h => updateTrip({ header: h })} />
-            <div className="text-sm text-slate-600 px-1">
-              {stopCount} stops · hold to reorder
-            </div>
-            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-              <SortableContext items={stops.map(s => s.id)} strategy={verticalListSortingStrategy}>
-                {stops.map((stop, index) => (
-                  <div key={stop.id}>
-                    <SortableStop stop={stop} index={index} allStops={stops}
-                      onUpdate={u => updateStop(index, u)}
-                      onDelete={() => updateTrip({ stops: stops.filter((_, i) => i !== index) })}
-                      onPhotoAdd={() => updateTrip({ photoCount: trip.photoCount + 1 })}
-                    />
-                    <div className="flex items-center justify-center py-0.5">
-                      <button type="button"
-                        onClick={() => setShowAddMenu(m => m?.afterIndex === index ? null : { afterIndex: index })}
-                        className="flex items-center gap-1 text-sm text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
-                        <Plus className="w-3 h-3" />insert stop
-                      </button>
-                    </div>
-                    {showAddMenu?.afterIndex === index && (
-                      <AddStopMenu onAdd={s => insertStop(index, s)} onClose={() => setShowAddMenu(null)} />
-                    )}
-                  </div>
-                ))}
-              </SortableContext>
-            </DndContext>
-            <AddStopMenu onAdd={s => insertStop(stops.length - 1, s)} onClose={() => {}} inline />
+      <div className="flex-shrink-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <input
+          ref={photoInputRef}
+          type="file"
+          accept="image/*"
+          capture="environment"
+          className="hidden"
+          onChange={handlePhotoSelect}
+        />
+        <div className="px-4 py-3 flex items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <div className="font-semibold text-white text-base">Route {trip.header.routeNumber}</div>
+            <div className="text-slate-400 text-sm">{trip.header.driverName.split(' ')[0]} · {trip.header.dayOfWeek}</div>
           </div>
+          <button
+            onClick={() => setShowDiscard(true)}
+            className="p-2 text-slate-600 hover:text-red-400 transition-colors rounded-lg"
+            title="Discard trip"
+          >
+            <Trash2 className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => { cameraOpenRef.current = true; photoInputRef.current?.click(); }}
+            disabled={uploading}
+            className="flex items-center gap-1.5 px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-sm transition-colors disabled:opacity-50"
+          >
+            {uploading
+              ? <Loader2 className="w-4 h-4 text-slate-400 animate-spin" />
+              : <Camera className="w-4 h-4 text-slate-400" />}
+            <span className="text-slate-300">{(trip.photos ?? []).length}</span>
+          </button>
+          <button onClick={() => setShowValidation(true)}
+            className="flex items-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 rounded-xl text-white text-sm font-semibold transition-colors">
+            <Send className="w-4 h-4" />Submit
+          </button>
+        </div>
+        {(trip.photos ?? []).length > 0 && (
+          <div className="px-4 pb-2 flex gap-2 overflow-x-auto">
+            {(trip.photos ?? []).map((url, i) => (
+              <img key={i} src={url} className="w-12 h-12 rounded object-cover flex-shrink-0" alt={`Photo ${i + 1}`} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Tab bar — hidden in LH driver mode */}
+      {!isLHMode && (
+        <div className="flex-shrink-0 flex border-b border-slate-800 bg-slate-900">
+          {(['trip', 'lh'] as Tab[]).map(tab => (
+            <button key={tab} onClick={() => setActiveTab(tab)}
+              className={`flex-1 py-2.5 text-base font-semibold transition-colors border-b-2 ${
+                activeTab === tab ? 'text-blue-400 border-blue-500' : 'text-slate-500 border-transparent hover:text-slate-300'
+              }`}>
+              {tab === 'trip' ? 'Trip Sheet' : 'LH Requisition'}
+            </button>
+          ))}
         </div>
       )}
 
-      {activeTab === 'lh' && (
-        <LHRequisitionTab req={trip.lhRequisition} tripHeader={trip.header} onChange={r => updateTrip({ lhRequisition: r })} />
+      {/* Trip tab — CSS hidden (not unmounted) to preserve card expand/collapse state */}
+      <div className={!isLHMode && activeTab === 'lh' ? 'hidden' : 'flex-1 overflow-y-auto'}>
+        <div className="px-4 py-4 space-y-3 pb-24">
+          <TripHeader header={trip.header} tripId={trip.id} onChange={h => updateTrip({ header: h })} />
+          <div className="text-sm text-slate-600 px-1">
+            {isLHMode ? `${lhLegs.length} lines` : `${stopCount} stops`} · hold to reorder
+          </div>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+            <SortableContext items={stops.map(s => s.id)} strategy={verticalListSortingStrategy}>
+              {stops.map((stop, index) => (
+                <div key={stop.id}>
+                  <SortableStop stop={stop} index={index} allStops={stops}
+                    onUpdate={u => updateStop(index, u)}
+                    onDelete={() => updateTrip({ stops: stops.filter((_, i) => i !== index) })}
+                    onPhotoAdd={() => {}}
+                  />
+                  <div className="flex items-center justify-center py-0.5">
+                    <button type="button"
+                      onClick={() => setShowAddMenu(m => m?.afterIndex === index ? null : { afterIndex: index })}
+                      className="flex items-center gap-1 text-sm text-slate-700 hover:text-slate-400 transition-colors px-3 py-1 rounded-full hover:bg-slate-800">
+                      <Plus className="w-3 h-3" />insert stop
+                    </button>
+                  </div>
+                  {showAddMenu?.afterIndex === index && (
+                    <AddStopMenu
+                      onAdd={s => insertStop(index, s)}
+                      onClose={() => setShowAddMenu(null)}
+                      isLHMode={isLHMode}
+                    />
+                  )}
+                </div>
+              ))}
+            </SortableContext>
+          </DndContext>
+          <AddStopMenu
+            onAdd={s => insertStop(stops.length - 1, s)}
+            onClose={() => {}}
+            inline
+            isLHMode={isLHMode}
+          />
+        </div>
+      </div>
+
+      {/* LH Requisition tab — not rendered in LH driver mode */}
+      {!isLHMode && (
+        <div className={activeTab === 'lh' ? 'flex-1 overflow-y-auto' : 'hidden'}>
+          <LHRequisitionTab
+            req={trip.lhRequisition}
+            legs={lhLegs}
+            tripHeader={trip.header}
+            onChange={r => updateTrip({ lhRequisition: r })}
+            onUpdateLeg={(id, patch) => {
+              const newStops = trip.stops.map(s => s.id === id ? { ...s, ...patch } as TripStop : s);
+              updateTrip({ stops: newStops });
+            }}
+          />
+        </div>
       )}
 
       {showValidation && (
@@ -308,8 +424,21 @@ export default function TripSheetScreen({ trip, onTripChange, onSubmit, onDiscar
   );
 }
 
-function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) => void; onClose: () => void; inline?: boolean; }) {
+function AddStopMenu({ onAdd, onClose, inline = false, isLHMode = false }: {
+  onAdd: (s: TripStop) => void;
+  onClose: () => void;
+  inline?: boolean;
+  isLHMode?: boolean;
+}) {
   if (inline) {
+    if (isLHMode) {
+      return (
+        <button type="button" onClick={() => onAdd(makeLHLegStop())}
+          className="w-full flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-emerald-900/40 rounded-xl transition-colors">
+          <Navigation className="w-5 h-5 text-emerald-600" /><span className="text-sm text-emerald-600">New Line</span>
+        </button>
+      );
+    }
     return (
       <div className="space-y-2">
         <div className="grid grid-cols-3 gap-2">
@@ -317,9 +446,9 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors">
             <MapPin className="w-5 h-5 text-slate-400" /><span className="text-sm text-slate-400">SR Store</span>
           </button>
-          <button type="button" onClick={() => onAdd(makeLHStop())}
+          <button type="button" onClick={() => onAdd(makeLHLegStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-emerald-900/40 rounded-xl transition-colors">
-            <Navigation className="w-5 h-5 text-emerald-600" /><span className="text-sm text-emerald-600">LH Location</span>
+            <Navigation className="w-5 h-5 text-emerald-600" /><span className="text-sm text-emerald-600">LH Line</span>
           </button>
           <button type="button" onClick={() => onAdd(makeMDCStop())}
             className="flex flex-col items-center gap-1.5 py-3 bg-slate-800 hover:bg-slate-700 border border-blue-900/40 rounded-xl transition-colors">
@@ -341,6 +470,22 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
       </div>
     );
   }
+
+  // Popup insert menu
+  if (isLHMode) {
+    return (
+      <div className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-xl">
+        <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider px-3 py-2 border-b border-slate-700">Insert line</div>
+        <div className="p-2">
+          <button type="button" onClick={() => { onAdd(makeLHLegStop()); onClose(); }}
+            className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-emerald-400 hover:bg-slate-700 rounded-lg transition-colors text-left">
+            <Navigation className="w-4 h-4" />New Line
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-xl">
       <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider px-3 py-2 border-b border-slate-700">Insert stop</div>
@@ -349,9 +494,9 @@ function AddStopMenu({ onAdd, onClose, inline = false }: { onAdd: (s: TripStop) 
           className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-slate-300 hover:bg-slate-700 rounded-lg transition-colors text-left">
           <MapPin className="w-4 h-4 text-slate-400" />SR Store (off-day call / same-day special)
         </button>
-        <button type="button" onClick={() => { onAdd(makeLHStop()); onClose(); }}
+        <button type="button" onClick={() => { onAdd(makeLHLegStop()); onClose(); }}
           className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-emerald-400 hover:bg-slate-700 rounded-lg transition-colors text-left">
-          <Navigation className="w-4 h-4" />LH Location (free text)
+          <Navigation className="w-4 h-4" />LH Line
         </button>
         <button type="button" onClick={() => { onAdd(makeMDCStop()); onClose(); }}
           className="w-full flex items-center gap-2.5 px-3 py-2.5 text-sm text-blue-400 hover:bg-slate-700 rounded-lg transition-colors text-left">

@@ -37,7 +37,7 @@ export type StopFlag = 'SAME DAY SPECIAL' | 'MISSING CALL' | 'OFF DAY CALL' | 'C
 export type MDCArrivingWith = 'Bobtail' | 'SR trailer' | 'Linehaul trailer';
 export type MDCLeavingWith = 'Bobtail' | 'SR trailer' | 'Linehaul trailer';
 
-export type StopType = 'sr' | 'lh' | 'mdc' | 'segment' | 'truck';
+export type StopType = 'sr' | 'lh-leg' | 'mdc' | 'segment' | 'truck';
 
 export interface BaseStop {
   id: string;
@@ -61,9 +61,17 @@ export interface SRStop extends BaseStop {
   isOffDayCall: boolean;
 }
 
-export interface LHStop extends BaseStop {
-  type: 'lh';
-  locationName: string;
+export interface LHLegStop {
+  id: string;
+  type: 'lh-leg';
+  trailerNumber: string;
+  departureLocation: string;
+  destinationLocation: string;
+  departureTime: number | null;    // when driver leaves departure location
+  arrivalTime: number | null;      // when driver arrives at destination
+  hubReading: string;
+  skipped: boolean;                // for validation compat
+  flag: StopFlag | null;           // for validation compat
 }
 
 export interface MDCStop extends BaseStop {
@@ -86,7 +94,7 @@ export interface TruckStop {
   tractorNumber: string;
 }
 
-export type TripStop = SRStop | LHStop | MDCStop | SegmentStop | TruckStop;
+export type TripStop = SRStop | LHLegStop | MDCStop | SegmentStop | TruckStop;
 
 export interface TripHeader {
   driverName: string;
@@ -103,17 +111,6 @@ export interface TripHeader {
 
 // ─── LH Requisition ──────────────────────────────────────────────────────────
 
-export interface LHLeg {
-  id: string;
-  trailerNumber: string;
-  departureLocation: string;
-  destinationLocation: string;
-  scheduledDepartureTime: number | null;
-  actualDepartureTime: number | null;
-  arrivalTime: number | null;
-  weightKg: string;
-}
-
 export interface LHDeliveryRow {
   id: string;
   agentNameRoute: string;
@@ -124,7 +121,6 @@ export interface LHDeliveryRow {
 }
 
 export interface LHRequisition {
-  legs: LHLeg[];
   tempTrailerDeparture: string;
   tempTrailerArrival: string;
   tempWarehouse: string;
@@ -149,7 +145,7 @@ export interface TripSheet {
   header: TripHeader;
   stops: TripStop[];
   lhRequisition: LHRequisition;
-  photoCount: number;
+  photos: string[];
   submittedAt: string | null;
 }
 

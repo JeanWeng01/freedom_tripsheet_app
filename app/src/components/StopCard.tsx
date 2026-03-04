@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
-import { MapPin, Navigation, Trash2, Flag, GripVertical } from 'lucide-react';
-import type { TripStop, SRStop, LHStop, StopFlag } from '../types';
+import { MapPin, Trash2, Flag, GripVertical } from 'lucide-react';
+import type { TripStop, SRStop, StopFlag } from '../types';
 import TimeSelect from './TimeSelect';
 import StoreSearch from './StoreSearch';
 import { minutesToLabel } from '../utils/tripUtils';
@@ -16,7 +16,7 @@ const FLAG_STYLES: Record<StopFlag, string> = {
 };
 
 interface Props {
-  stop: TripStop & (SRStop | LHStop);
+  stop: SRStop;
   index: number;
   onChange: (updated: TripStop) => void;
   onDelete: () => void;
@@ -49,20 +49,15 @@ export default function StopCard({
     onChange({ ...stop, ...patch } as TripStop);
   }
 
-  const isSR = stop.type === 'sr';
-  const isLH = stop.type === 'lh';
-  const sr = isSR ? stop as SRStop : null;
-  const lh = isLH ? stop as LHStop : null;
+  const sr = stop;
 
-  const displayName = isSR
-    ? (sr!.storeName || sr!.storeCode || '')
-    : (lh!.locationName || '');
+  const displayName = sr.storeName || sr.storeCode || '';
 
   const hasAllTimes = stop.arrivalTime !== null && stop.departureTime !== null;
   const isMissing = stop.flag === 'MISSING CALL';
 
-  const borderClass = isSR ? 'border-slate-700' : 'border-emerald-800/50';
-  const bgClass = isSR ? 'bg-slate-800/60' : 'bg-emerald-950/20';
+  const borderClass = 'border-slate-700';
+  const bgClass = 'bg-slate-800/60';
 
   return (
     <div ref={cardRef} className={`border rounded-2xl overflow-hidden ${borderClass} ${bgClass}`}>
@@ -85,16 +80,7 @@ export default function StopCard({
         >
           {/* Badges row */}
           <div className="flex items-center gap-1.5 flex-wrap mb-0.5">
-            {isSR ? (
-              <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
-            ) : (
-              <Navigation className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
-            )}
-            {isLH && (
-              <span className="text-sm px-1.5 py-0.5 rounded border border-emerald-800/50 text-emerald-500 font-medium">
-                LH
-              </span>
-            )}
+            <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
             {isDuplicate && (
               <span className="text-sm px-2 py-0.5 rounded border border-amber-600 bg-amber-900/30 text-amber-400 font-bold">
                 ×2
@@ -109,11 +95,11 @@ export default function StopCard({
 
           {/* Store/location name */}
           <div className={`font-medium text-base ${isMissing ? 'line-through text-slate-500' : 'text-white'}`}>
-            {isSR && sr!.storeCode && (
-              <span className="font-mono text-slate-400 text-sm mr-1.5">{sr!.storeCode}</span>
+            {sr.storeCode && (
+              <span className="font-mono text-slate-400 text-sm mr-1.5">{sr.storeCode}</span>
             )}
             <span className={!displayName ? 'text-slate-500 italic' : ''}>
-              {displayName || (isSR ? 'Select store →' : 'Enter location →')}
+              {displayName || 'Select store →'}
             </span>
           </div>
 
@@ -127,8 +113,8 @@ export default function StopCard({
                 {minutesToLabel(stop.departureTime)} →{isOverAllowance && ' ⚠'}
               </span>
             )}
-            {isSR && sr!.allowanceMinutes && (
-              <span className="text-slate-600">{sr!.allowanceMinutes}min</span>
+            {sr.allowanceMinutes && (
+              <span className="text-slate-600">{sr.allowanceMinutes}min</span>
             )}
             {!hasAllTimes && (
               <span className="text-amber-600/70">⏱ tap to log times</span>
@@ -150,32 +136,18 @@ export default function StopCard({
         <div className="px-4 pb-4 border-t border-slate-700/50 pt-3 space-y-3">
 
           {/* Location entry */}
-          {isSR && (
-            <div>
-              <label className="block text-sm text-slate-400 mb-1">Store</label>
-              <StoreSearch
-                value={sr!.storeName}
-                storeCode={sr!.storeCode}
-                onSelect={store => update({
-                  storeCode: store.code,
-                  storeName: store.name,
-                  allowanceMinutes: store.allowanceMinutes,
-                } as Partial<SRStop>)}
-              />
-            </div>
-          )}
-          {isLH && (
-            <div>
-              <label className="block text-sm text-slate-400 mb-1">Location name</label>
-              <input
-                type="text"
-                value={lh!.locationName}
-                onChange={e => update({ locationName: e.target.value } as Partial<LHStop>)}
-                placeholder="Destination name"
-                className="w-full px-3 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-base placeholder-slate-600 focus:outline-none focus:border-emerald-600"
-              />
-            </div>
-          )}
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">Store</label>
+            <StoreSearch
+              value={sr.storeName}
+              storeCode={sr.storeCode}
+              onSelect={store => update({
+                storeCode: store.code,
+                storeName: store.name,
+                allowanceMinutes: store.allowanceMinutes,
+              } as Partial<SRStop>)}
+            />
+          </div>
 
           {/* Times */}
           <div>
@@ -219,7 +191,7 @@ export default function StopCard({
                 type="text"
                 value={stop.hubReading}
                 onChange={e => update({ hubReading: e.target.value })}
-                placeholder="km"
+                placeholder="km at destination"
                 className="w-full px-2 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-base placeholder-slate-600 focus:outline-none focus:border-blue-500"
               />
             </div>

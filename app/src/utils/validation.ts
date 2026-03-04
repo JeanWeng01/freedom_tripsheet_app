@@ -1,7 +1,7 @@
-import type { TripSheet, TripStop, SRStop, LHStop, MDCStop, ValidationResult } from '../types';
+import type { TripSheet, TripStop, SRStop, LHLegStop, MDCStop, ValidationResult } from '../types';
 
-function isRegularStop(s: TripStop): s is SRStop | LHStop | MDCStop {
-  return s.type !== 'segment';
+function isRegularStop(s: TripStop): s is SRStop | MDCStop | LHLegStop {
+  return s.type !== 'segment' && s.type !== 'truck';
 }
 
 export function validateTrip(trip: TripSheet): ValidationResult {
@@ -43,8 +43,8 @@ export function validateTrip(trip: TripSheet): ValidationResult {
   activeStops.forEach((stop, idx) => {
     const num = idx + 1;
 
-    // Arrival before departure
-    if (stop.arrivalTime !== null && stop.departureTime !== null) {
+    // Arrival before departure (skip lh-leg — departure is from origin, arrival is at destination)
+    if (stop.type !== 'lh-leg' && stop.arrivalTime !== null && stop.departureTime !== null) {
       if (stop.departureTime < stop.arrivalTime) {
         hardBlocks.push(`Stop #${num} shows departure before arrival — this needs to be corrected.`);
       }
@@ -100,7 +100,7 @@ export function validateTrip(trip: TripSheet): ValidationResult {
   }
 
   // Photo check
-  if (trip.photoCount < 2) {
+  if ((trip.photos ?? []).length < 2) {
     softWarnings.push("Have you finished taking all your BOL/POD photos?");
   }
 

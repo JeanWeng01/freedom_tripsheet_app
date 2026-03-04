@@ -64,10 +64,20 @@ def mark_submitted(trip_id: str, filename: str, status: str) -> None:
         conn.commit()
 
 
+def get_trip_data(trip_id: str) -> dict | None:
+    with get_conn() as conn:
+        row = conn.execute(
+            "SELECT data FROM trips WHERE id = ?", (trip_id,)
+        ).fetchone()
+        if row is None:
+            return None
+        return json.loads(row["data"])
+
+
 def list_trips(limit: int = 100) -> list[dict]:
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT id, driver_name, route_number, date, submitted_at, excel_filename, excel_status "
+            "SELECT id, driver_name, route_number, date, submitted_at, excel_filename, excel_status, updated_at "
             "FROM trips ORDER BY updated_at DESC LIMIT ?",
             (limit,)
         ).fetchall()

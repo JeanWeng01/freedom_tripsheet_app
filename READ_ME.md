@@ -28,3 +28,17 @@ The order is the same: clock-in → MDC → stores → MDC → submit. Drivers a
 SAME DAY SPECIAL, OFF DAY CALL, MISSING CALL — one tap instead of scribbling in a comment cell that the owner then has to interpret.
 
 The core argument in one sentence: **the app does everything Sheets does, but it's built for thumbs, not mice**
+
+
+# Data preservation — save events
+
+| Trigger | What fires | Where data lands |
+|---------|------------|-----------------|
+| Any field changes | `saveState()` to localStorage | Driver's phone, instant |
+| Every 10 seconds | `syncTrip()` via fetch | Backend SQLite |
+| App backgrounded / screen locked | `syncTrip()` via fetch on `visibilitychange: hidden` | Backend SQLite |
+| Browser closing / navigating away | `syncTripBeacon()` via sendBeacon on `pagehide` | Backend SQLite |
+| Photo taken | Upload to `/api/trips/{id}/photos` | Backend filesystem, immediately |
+| Driver hits Submit | `submitTrip()` + localStorage archive | Backend DB + Excel file |
+| Backend down at submit | localStorage "pending" flag | Retried automatically when server returns |
+| App reopened after crash | Restored from localStorage | Driver continues exactly where they left off |

@@ -17,9 +17,11 @@ TEMPLATE_PATH = (
 
 OUTPUT_READY = Path(__file__).parent / "output" / "ready"
 OUTPUT_FLAGGED = Path(__file__).parent / "output" / "flagged"
+OUTPUT_RECOVERED = Path(__file__).parent / "output" / "recovered"
 
 OUTPUT_READY.mkdir(parents=True, exist_ok=True)
 OUTPUT_FLAGGED.mkdir(parents=True, exist_ok=True)
+OUTPUT_RECOVERED.mkdir(parents=True, exist_ok=True)
 
 # Rows available for stop data in the template
 STOP_ROW_START = 4
@@ -68,7 +70,7 @@ def _build_excel_rows(stops: list[dict]) -> list[dict]:
     """
     rows: list[dict] = []
 
-    for stop in stops:
+    for idx, stop in enumerate(stops):
         stype = stop.get("type", "")
 
         if stype in ("segment", "truck"):
@@ -98,13 +100,23 @@ def _build_excel_rows(stops: list[dict]) -> list[dict]:
                 "trailer": trailer, "reefer": reefer, "bol": bol,
             })
 
-        elif stype == "lh":
-            location = stop.get("locationName", "") or "LH Location"
+        elif stype == "lh-leg":
+            # Each leg → one row for the destination location.
+            # Arrival = this leg's arrivalTime.
+            # Departure = next lh-leg's departureTime if it departs from this destination.
+            dest_loc = (stop.get("destinationLocation") or "").upper()
+            dest_depart = None
+            for j in range(idx + 1, len(stops)):
+                nxt = stops[j]
+                if nxt.get("type") == "lh-leg" and nxt.get("departureLocation") == stop.get("destinationLocation"):
+                    dest_depart = _minutes_to_fraction(nxt.get("departureTime"))
+                    break
             rows.append({
-                "flag": flag, "location": location,
-                "arrival": arrival, "departure": departure,
-                "comment": comment, "hub": hub,
-                "trailer": trailer, "reefer": reefer, "bol": bol,
+                "flag": flag, "location": dest_loc or "LH LOCATION",
+                "arrival": _minutes_to_fraction(stop.get("arrivalTime")),
+                "departure": dest_depart,
+                "comment": "", "hub": hub.upper(),
+                "trailer": trailer.upper(), "reefer": "", "bol": "",
             })
 
         elif stype == "mdc":
@@ -153,10 +165,13 @@ def _build_excel_rows(stops: list[dict]) -> list[dict]:
     return rows
 
 
-def generate_excel(trip: dict) -> tuple[str, str, str]:
+def generate_excel(trip: dict, output_dir: Path | None = None) -> tuple[str, str, str]:
     """
     Generate a filled Excel file from trip data.
 
+    Args:
+        output_dir: Override save location (used for recovery). If None, saves to
+                    OUTPUT_READY or OUTPUT_FLAGGED based on validation status.
     Returns:
         (absolute_filepath, filename, status)
         status is 'ready' or 'flagged'
@@ -167,12 +182,19 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
     # ── Filename ──────────────────────────────────────────────────────────────
     date_obj = datetime.strptime(header["date"], "%Y-%m-%d")
     first_name = header["driverName"].split()[0]
-    filename = (
+    base_name = (
         f"{date_obj.strftime('%m.%d')} "
         f"{header['routeNumber']} "
         f"{first_name} "
-        f"{date_obj.strftime('%Y')}.xlsx"
+        f"{date_obj.strftime('%Y')}"
     )
+
+    # Check if a file with this base name already exists (resubmission)
+    existing = any(
+        (d / f"{base_name}.xlsx").exists()
+        for d in (OUTPUT_READY, OUTPUT_FLAGGED)
+    )
+    filename = f"{base_name}-resubmission.xlsx" if existing else f"{base_name}.xlsx"
 
     # ── Load template ──────────────────────────────────────────────────────────
     wb = openpyxl.load_workbook(TEMPLATE_PATH)
@@ -258,7 +280,7 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
 
     # ── LH Requisition tab ────────────────────────────────────────────────────
     ws_lh = wb["LH Requisition"]
-    lh_legs = trip.get("lhRequisition", {}).get("legs", [])
+    lh_legs = [s for s in stops if s.get("type") == "lh-leg"]
     for i, leg in enumerate(lh_legs):
         col = get_column_letter(3 + i)  # C=leg0, D=leg1, E=leg2, …
 
@@ -266,19 +288,23 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
         if trailer:
             ws_lh[f"{col}12"] = trailer
 
-        dep_loc = leg.get("departureLocation") or ""
+        dep_loc = (leg.get("departureLocation") or "").upper()
         if dep_loc:
             ws_lh[f"{col}13"] = dep_loc
 
-        dest_loc = leg.get("destinationLocation") or ""
+        dest_loc = (leg.get("destinationLocation") or "").upper()
         if dest_loc:
             ws_lh[f"{col}14"] = dest_loc
 
-        _write_time(ws_lh, f"{col}16", leg.get("actualDepartureTime"))
+        _write_time(ws_lh, f"{col}16", leg.get("departureTime"))
         _write_time(ws_lh, f"{col}17", leg.get("arrivalTime"))
 
     # ── Save ──────────────────────────────────────────────────────────────────
-    out_path = (OUTPUT_READY if status == "ready" else OUTPUT_FLAGGED) / filename
+    if output_dir is not None:
+        output_dir.mkdir(parents=True, exist_ok=True)
+        out_path = output_dir / filename
+    else:
+        out_path = (OUTPUT_READY if status == "ready" else OUTPUT_FLAGGED) / filename
     wb.save(out_path)
 
     # ── Basic verification (re-open, check cells we wrote) ────────────────────
@@ -292,7 +318,7 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
         if excel_rows and ws2["C4"].value is None:
             error_reasons.append("C4 first stop location is empty after save")
 
-        if error_reasons and status == "ready":
+        if error_reasons and status == "ready" and output_dir is None:
             status = "flagged"
             flagged_path = OUTPUT_FLAGGED / filename
             shutil.move(str(out_path), str(flagged_path))
@@ -300,7 +326,7 @@ def generate_excel(trip: dict) -> tuple[str, str, str]:
 
     except Exception as e:
         error_reasons.append(f"Verification error: {e}")
-        if status == "ready":
+        if status == "ready" and output_dir is None:
             status = "flagged"
             flagged_path = OUTPUT_FLAGGED / filename
             shutil.move(str(out_path), str(flagged_path))

@@ -4,7 +4,7 @@ import DriverSelectScreen from './screens/DriverSelectScreen';
 import RouteSelectScreen from './screens/RouteSelectScreen';
 import TripSheetScreen from './screens/TripSheetScreen';
 import SubmitScreen from './screens/SubmitScreen';
-import { syncTrip, submitTrip } from './utils/api';
+import { syncTrip, syncTripBeacon, submitTrip } from './utils/api';
 import type { SubmitResult } from './utils/api';
 
 function loadHistory(): TripSheet[] {
@@ -35,10 +35,36 @@ interface PersistedState {
   trip: TripSheet | null;
 }
 
+function migrateLegacyTrip(trip: TripSheet): TripSheet {
+  const stops = trip.stops.map(s => {
+    if ((s as { type: string }).type === 'lh') {
+      const old = s as { id: string; trailerNumber?: string; locationName?: string; departureTime?: number | null; arrivalTime?: number | null; hubReading?: string; skipped?: boolean; flag?: unknown };
+      return {
+        id: old.id,
+        type: 'lh-leg' as const,
+        trailerNumber: old.trailerNumber ?? '',
+        departureLocation: '',
+        destinationLocation: old.locationName ?? '',
+        departureTime: old.departureTime ?? null,
+        arrivalTime: old.arrivalTime ?? null,
+        hubReading: old.hubReading ?? '',
+        skipped: old.skipped ?? false,
+        flag: null,
+      };
+    }
+    return s;
+  });
+  return { ...trip, stops };
+}
+
 function loadState(): Partial<PersistedState> {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw) as Partial<PersistedState>;
+      if (parsed.trip) parsed.trip = migrateLegacyTrip(parsed.trip);
+      return parsed;
+    }
   } catch {}
   return {};
 }
@@ -94,7 +120,7 @@ export default function App() {
     saveState({ screen, driver, trip });
   }, [screen, driver, trip]);
 
-  // Periodic backend sync every 30s while trip is active
+  // Periodic backend sync every 10s while trip is active
   const syncRef = useRef<ReturnType<typeof setInterval> | null>(null);
   useEffect(() => {
     if (screen !== 'trip-sheet' || !trip) {
@@ -103,22 +129,35 @@ export default function App() {
     }
     syncRef.current = setInterval(() => {
       if (trip) syncTrip(trip);
-    }, 30_000);
+    }, 10_000);
     return () => {
       if (syncRef.current) clearInterval(syncRef.current);
     };
   }, [screen, trip]);
 
-  // Warn browser on refresh/close when trip is in progress
+  // Sync immediately when app is backgrounded (visibilitychange: hidden)
+  const tripRef = useRef<typeof trip>(trip);
+  tripRef.current = trip;
   useEffect(() => {
-    if (screen !== 'trip-sheet') return;
-    const handler = (e: BeforeUnloadEvent) => {
-      e.preventDefault();
-      e.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [screen]);
+    function onHide() {
+      if (document.visibilityState === 'hidden' && tripRef.current) {
+        syncTrip(tripRef.current);
+      }
+    }
+    document.addEventListener('visibilitychange', onHide);
+    return () => document.removeEventListener('visibilitychange', onHide);
+  }, []);
+
+  // Beacon sync on page unload (covers hard close / OS kill)
+  useEffect(() => {
+    function onPageHide() {
+      if (tripRef.current) syncTripBeacon(tripRef.current);
+    }
+    window.addEventListener('pagehide', onPageHide);
+    return () => window.removeEventListener('pagehide', onPageHide);
+  }, []);
+
+  // beforeunload protection is handled in TripSheetScreen (camera-aware)
 
   function handleDriverSelect(d: Driver) {
     setDriver(d);
@@ -187,6 +226,13 @@ export default function App() {
     setScreen('driver-select');
   }
 
+  function handleGoBackToEdit() {
+    setTrip(submittedTrip);
+    setSubmittedTrip(null);
+    setSubmitResult(null);
+    setScreen('trip-sheet');
+  }
+
   function handleNewTrip() {
     setTrip(null);
     setSubmittedTrip(null);
@@ -226,6 +272,7 @@ export default function App() {
           submitResult={submitResult}
           onNewTrip={handleNewTrip}
           onRetry={handleRetry}
+          onGoBack={handleGoBackToEdit}
           history={history}
         />
       )}

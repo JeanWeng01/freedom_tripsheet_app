@@ -1,4 +1,4 @@
-import type { TripStop, SRStop, LHStop, MDCStop, SegmentStop, TruckStop, MDCArrivingWith, MDCLeavingWith, Route, RouteStop, Store, LHRequisition, LHLeg, LHDeliveryRow } from '../types';
+import type { TripStop, SRStop, LHLegStop, MDCStop, SegmentStop, TruckStop, MDCArrivingWith, MDCLeavingWith, Route, RouteStop, Store, LHRequisition, LHDeliveryRow } from '../types';
 import routesData from '../data/routes.json';
 import storesData from '../data/stores.json';
 
@@ -57,13 +57,18 @@ export function makeSRStop(storeCode: string, storeName: string, allowanceMinute
   };
 }
 
-export function makeLHStop(locationName = ''): LHStop {
+export function makeLHLegStop(departureLocation = '', destinationLocation = ''): LHLegStop {
   return {
-    id: newId(), type: 'lh',
-    locationName,
-    arrivalTime: null, departureTime: null,
-    hubReading: '', trailerNumber: '', reeferTemp: '', bolNumber: '', comment: '',
-    skipped: false, flag: null,
+    id: newId(),
+    type: 'lh-leg',
+    trailerNumber: '',
+    departureLocation,
+    destinationLocation,
+    departureTime: null,
+    arrivalTime: null,
+    hubReading: '',
+    skipped: false,
+    flag: null,
   };
 }
 
@@ -177,7 +182,11 @@ export function buildOffDayStops(): TripStop[] {
 
 export function stopDisplayName(stop: TripStop): string {
   if (stop.type === 'sr') return stop.storeName || stop.storeCode || 'Unknown store';
-  if (stop.type === 'lh') return stop.locationName || 'LH Location (tap to enter)';
+  if (stop.type === 'lh-leg') {
+    const dep = stop.departureLocation || '?';
+    const dest = stop.destinationLocation || '?';
+    return `${dep} → ${dest}`;
+  }
   if (stop.type === 'mdc') {
     if (stop.specialActivity) return stop.specialActivity;
     if (stop.arrivingWith && stop.leavingWith) {
@@ -192,7 +201,7 @@ export function stopDisplayName(stop: TripStop): string {
 
 export function stopShortCode(stop: TripStop): string {
   if (stop.type === 'sr') return stop.storeCode || '';
-  if (stop.type === 'lh') return 'LH';
+  if (stop.type === 'lh-leg') return 'LH';
   if (stop.type === 'mdc') return 'MDC';
   if (stop.type === 'segment') return '—';
   if (stop.type === 'truck') return 'TRK';
@@ -200,19 +209,6 @@ export function stopShortCode(stop: TripStop): string {
 }
 
 // ─── LH Requisition factory ──────────────────────────────────────────────────
-
-export function makeLHLeg(): LHLeg {
-  return {
-    id: newId(),
-    trailerNumber: '',
-    departureLocation: '',
-    destinationLocation: '',
-    scheduledDepartureTime: null,
-    actualDepartureTime: null,
-    arrivalTime: null,
-    weightKg: '',
-  };
-}
 
 export function makeLHDeliveryRow(): LHDeliveryRow {
   return {
@@ -227,7 +223,6 @@ export function makeLHDeliveryRow(): LHDeliveryRow {
 
 export function makeEmptyLHRequisition(): LHRequisition {
   return {
-    legs: [makeLHLeg()],
     tempTrailerDeparture: '',
     tempTrailerArrival: '',
     tempWarehouse: '',
