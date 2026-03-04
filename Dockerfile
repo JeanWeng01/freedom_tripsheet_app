@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/*.py ./
 
 # Copy Excel template (read-only, baked into image)
-COPY "Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx" ./template.xlsx
+COPY ["Freedom Trip Sheet Template - ADAPTED FOR APP.xlsx", "./template.xlsx"]
 
 # Copy built React SPA from stage 1
 COPY --from=builder /build/dist ./static
