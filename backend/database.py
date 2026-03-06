@@ -79,8 +79,22 @@ def get_trip_data(trip_id: str) -> dict | None:
 def list_trips(limit: int = 100) -> list[dict]:
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT id, driver_name, route_number, date, submitted_at, excel_filename, excel_status, updated_at "
+            "SELECT id, driver_name, driver_code, route_number, date, "
+            "submitted_at, excel_filename, excel_status, created_at, updated_at "
             "FROM trips ORDER BY updated_at DESC LIMIT ?",
             (limit,)
         ).fetchall()
         return [dict(r) for r in rows]
+
+
+def delete_trips(trip_ids: list[str]) -> int:
+    """Delete trips by ID. Returns number of rows deleted."""
+    if not trip_ids:
+        return 0
+    with get_conn() as conn:
+        placeholders = ",".join("?" for _ in trip_ids)
+        cursor = conn.execute(
+            f"DELETE FROM trips WHERE id IN ({placeholders})", trip_ids
+        )
+        conn.commit()
+        return cursor.rowcount
